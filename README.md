@@ -41,7 +41,7 @@ Entre los productos que se pueden comprar en MaryJane se encuentran los siguient
 
 Cada vez son más los países que se apuntan a la legalización de la marihuana, no solo para **aliviar enfermedades** como el cáncer, el sida, la esclerosis múltiple o la epilepsia a través de su uso medicinal, sino también para el **uso lúdico**.
 
-Este fenómeno impulso a la industria del cannabis para la creación de clubes sociales y diversos negocios que promueven _el autocultivo y la agricultura ecológica_, porque no venden cannabis, sino las semillas para producirlo, fertilizantes naturales, abonos y el material de cultivo necesarios para hacer crecer esta planta
+Este fenómeno impulso a la industria del cannabis para la creación de clubes sociales y diversos negocios que promueven _el autocultivo y la agricultura ecológica_, porque no vendemos cannabis, sino las semillas para producirlo, fertilizantes naturales, abonos y el material de cultivo necesarios para hacer crecer esta planta
 
 ***
 
