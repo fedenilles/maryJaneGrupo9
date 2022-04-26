@@ -60,6 +60,11 @@ Este fenómeno impulso a la industria del cannabis para la creación de clubes s
 
     Newbie en programación | Diseñadora UX/UI | Me gustan los gatos
 
+###   Martin Ordoñez
+
+    Estudio programacion en DH. Actualmente trabajo en el area de Backoffice de una financiera, programo en VBA y Administro centrales IP.
+    Tengo 46 años y tengo una hija.-
+
 ***
 ### Paginas de referencia
 
@@ -95,6 +100,9 @@ Carrito
 
 Pasarela
 
+
+seccion de cultivos (enseñar)
+
 -->
 
 
@@ -102,7 +110,6 @@ Pasarela
 
 
 
-seccion de cultivos (enseñar)
 
 
 
