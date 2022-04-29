@@ -20,7 +20,9 @@ sitio. También agregar una breve descripción del público al que apunta el sit
 ## Descripción del producto: 
 
 Nos encargamos de asesorar y vender productos relacionados al cultivo de cannabis. Somos una tienda especializada en productos para el cultivo de forma natural y en el hogar de plantas de marihuana, que ofrece una gran variedad de opciones para que el proceso sea eficiente, seguro y fácil de llevar a cabo.
-Ofrecemos un asesoramiento personalizado a cada uno de nuestros clientes, como también tenemos un sector "educativo", donde cualquier puede aprender a cultivar.
+Ofrecemos un asesoramiento personalizado a cada uno de nuestros clientes, como también tenemos un sector "educativo", donde cualquier puede aprender a cultivar. 
+
+Así mismo, ofrecemos una gama de productos ya procesados, para aquellos que no estén interesados en el cultivo pero si en el consumo de esta planta.
 
 Entre los productos que se pueden comprar en MaryJane se encuentran los siguientes: 
 - Fertilizantes
@@ -39,9 +41,9 @@ Entre los productos que se pueden comprar en MaryJane se encuentran los siguient
 ## Nuestro público:
 
 
-Cada vez son más los países que se apuntan a la legalización de la marihuana, no solo para **aliviar enfermedades** como el cáncer, el sida, la esclerosis múltiple o la epilepsia a través de su uso medicinal, sino también para el **uso lúdico**.
+Cada vez son más los países que se apuntan a la legalización de la marihuana, no solo para **aliviar enfermedades** como el cáncer, el sida, la esclerosis múltiple o la epilepsia a través de su uso medicinal, sino también para el **uso lúdico**. Este sitio está orientado al un público mayor de 18 años.
 
-Este fenómeno impulso a la industria del cannabis para la creación de clubes sociales y diversos negocios que promueven _el autocultivo y la agricultura ecológica_, porque no vendemos cannabis, sino las semillas para producirlo, fertilizantes naturales, abonos y el material de cultivo necesarios para hacer crecer esta planta
+Este fenómeno impulso a la industria del cannabis para la creación de clubes sociales y diversos negocios que promueven _el autocultivo y la agricultura ecológica_, porque no vendemos cannabis, sino las semillas para producirlo, fertilizantes naturales, abonos y el material de cultivo necesarios para hacer crecer esta planta. 
 
 ***
 
@@ -58,7 +60,7 @@ Este fenómeno impulso a la industria del cannabis para la creación de clubes s
 
 ###   Daniela Ayluardo 
 
-    Newbie en programación | Diseñadora UX/UI | Me gustan los gatos
+    Newbie en programación | Diseñadora Industrial con especialización en UX/UI | Tengo 26 años y trabajo en la industria Tecnológica.
 
 ###   Martin Ordoñez
 
