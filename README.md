@@ -49,7 +49,7 @@ Este fenómeno impulso a la industria del cannabis para la creación de clubes s
 
 ***
 
-## Descripción integrantes: 
+## Descripción integrantes:   
 
 
 ###   Joaquin Wolf 
