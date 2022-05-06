@@ -49,7 +49,7 @@ Este fenómeno impulso a la industria del cannabis para la creación de clubes s
 
 ***
 
-## Descripción integrantes: 
+## Descripción integrantes:   
 
 
 ###   Joaquin Wolf 
@@ -64,7 +64,7 @@ Este fenómeno impulso a la industria del cannabis para la creación de clubes s
 
     Newbie en programación | Diseñadora Industrial con especialización en UX/UI | Tengo 26 años y trabajo en la industria Tecnológica.
 
-###   Martin Ordoñez
+###   Martin Ordoñez   
 
     Estudio programacion en DH. Actualmente trabajo en el area de Backoffice de una financiera, programo en VBA y Administro centrales IP.
     Tengo 46 años y tengo una hija.-
