@@ -1,0 +1,177 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.exhibitor{
+    display: flex;
+    background-color: gray;
+    justify-content: space-between;
+    height: 170px;
+    border-bottom: solid 1px black;
+}
+.back {
+    align-self: center;
+    padding-left: 10px;
+}
+.next {
+    align-self: center;
+    padding-right: 10px;
+}
+.product-exhibitor {
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name{
+    font-weight: bold;
+
+}
+.exhibitor-button{
+    padding-top: 20px;
+}
+.growing{
+    background-color: beige;
+    border-bottom: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.title-growing{
+    text-align: center;
+    margin: 20px 0;
+}
+.growing-steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.step-div{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-step{
+    width: 100%;
+}
+.title-step{
+    font-weight: bold;
+    padding: 10px 0;
+}
+.paraf-step {
+    padding: 5px 0;
+    font-size: 8px;
+}
+.start-now{
+    background-color: beige;
+    border-bottom: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-startnow{
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.start-boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.start-div{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-workshops{
+    text-align: center;
+    margin: 20px 0;
+}
+.title-packages{
+    text-align: center;
+    margin: 20px 0;
+
+}
+.title-seeds{
+    text-align: center;
+    margin: 20px 0;
+
+}
+.most-popular{
+    background-color: rgb(221, 212, 212);
+    border-bottom: solid 1px black;
+}
+.title-most-popular{
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.most-popular-box{
+    display: flex;
+    justify-content: space-between;
+}
+.product-conteiner{
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+}
+.product-exhibitor-first{
+    display: flex;
+    justify-content: space-around;
+}
+.product-exhibitor-second{
+    display: none;
+}
+.product-div{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 6px;
+    justify-content: space-between;
+}
+.product-price{
+    font-weight: 500;
+}
+@media (min-width: 375px){
+    .growing-steps{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    .step-div{
+        width: 30%;
+        padding: 0 5px;
+    }
+    .start-boxes{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .start-div{
+        width: 30%;
+        padding: 0 5px;
+    }
+    .product-exhibitor-first{
+        display: none;
+    }
+    .product-exhibitor-second{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+}
