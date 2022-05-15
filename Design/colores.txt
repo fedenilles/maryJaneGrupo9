@@ -1,0 +1,9 @@
+Verde claro (#6f9a37), Verde oscuro (#2E7A14) y Color oscuro negro (#101711) - Estilo de página
+
+Botones - #E5E216 (dorado), algunos trasparentes con borde, otros rellenos.
+
+Texto botones transparentes #E5E216 (dorado) - Texto botones rellenos (#101711 o #000000)
+
+Iconos - #E5E216 (dorado)
+
+Texto blanco (#FFFFFF) o claro (#DCECDF)
