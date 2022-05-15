@@ -28,7 +28,6 @@ body {
         padding: 0;
     */
     justify-content:space-between;
-    padding: 0px 50px 0px 50px;
 }
 
 .navbar ul {
@@ -159,17 +158,32 @@ footer .social-networks a {
     }
     .navbar {
         width: 100%;
+        box-sizing: border-box;
+        padding: 0;
     }
     .navbar ul {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content:space-evenly;
     width: 30vw;
     }
     
     .navbar ul li {
         padding: 10px;
     }
+
+    .navbar .shop-menu{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
     
     
+}
+
+@media (min-width: 780px) {
+    .navbar{
+        justify-content: center;
+    }
 }

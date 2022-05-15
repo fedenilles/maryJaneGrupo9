@@ -1,15 +1,14 @@
-*{
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-}
 .exhibitor{
     display: flex;
-    background-color: gray;
     justify-content: space-between;
     height: 170px;
     border-bottom: solid 1px black;
+    background: url('/img/img.png');
+    background-size: cover;
+    background-position: center;
 }
+
+
 .back {
     align-self: center;
     padding-left: 10px;
@@ -37,6 +36,7 @@
     background-color: beige;
     border-bottom: solid 1px black;
     display: flex;
+    justify-content: center;
     flex-direction: column;
     align-items: center;
 
@@ -53,7 +53,6 @@
 }
 .step-div{
     margin: auto;
-    text-align: center;
     width: 80%;
     height: auto;
     display: flex;
@@ -61,7 +60,7 @@
     align-items: center;
 }
 .image-step{
-    width: 100%;
+    margin-top:5px;
 }
 .title-step{
     font-weight: bold;
@@ -70,6 +69,7 @@
 .paraf-step {
     padding: 5px 0;
     font-size: 8px;
+    margin-bottom: 15px;
 }
 .start-now{
     background-color: beige;
@@ -98,6 +98,8 @@
     flex-direction: column;
     align-items: center;
 }
+
+
 .title-workshops{
     text-align: center;
     margin: 20px 0;
@@ -144,13 +146,88 @@
     margin: 6px;
     justify-content: space-between;
 }
+
+.product-div img{
+    width:100%
+}
+
 .product-price{
     font-weight: 500;
 }
+
+/* ------- Subscription --------- */ 
+
+.subscription {
+    border-top: 2px solid lightgray;
+    width: 100%;
+    height: 300px;
+    padding: 30px;
+}
+
+.subscription .container-subscr {
+    width: 80%;
+    margin: 0 auto
+}
+
+.subscription .title-subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-subscription p {
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+.subscription .title-subscription h3 {
+    font-size: 2em;
+}
+
+.subscription .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px
+}
+
+.inp-subscribe {
+    outline: none;
+    border: 1px solid lightgray;
+    height: 30px;
+    border-radius: 5px;
+    color: lightgray;
+    background-color: white;
+    width: 70%;
+    padding: 10px;
+}
+
+.subscription .subscribe .btn-subscribe {
+    margin-top:30px;
+    background-color: #3E7AAD;
+    outline: none;
+    border: none;
+    width: 70%;
+    height: 30px;
+    border-radius: 5px;
+    color:white;
+    letter-spacing: 0.2em;
+}
+
+
 @media (min-width: 375px){
+
+    .growing .grow-articles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
     .growing-steps{
         flex-direction: row;
-        justify-content: space-around;
+        justify-content: space-between;
     }
     .step-div{
         width: 30%;
@@ -165,6 +242,12 @@
         width: 30%;
         padding: 0 5px;
     }
+
+    .start-div img{
+        width: 100%;
+        padding: 0 5px;
+    }
+
     .product-exhibitor-first{
         display: none;
     }
