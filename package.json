@@ -1,0 +1,23 @@
+{
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "name": "grupo9",
+  "description": "<!-- Markdown -->\r <!-- https://markdown.es/ -->\r <!-- Nombres\r Descripcion de la Pagina\r Paginas que usamos de modelo (minimo4) que tomamos de cada pagina y porque -->\r <!-- información del proyecto.\r A quien apunta de que se trata, integrantes, como se configura si alguien lo instala\r readme \"express\" en github/expressjs/express -->\r <!-- Grupo en Discord https://discord.gg/x2EUr3MXYk -->",
+  "version": "1.0.0",
+  "main": "app.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fedenilles/maryJaneGrupo9.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fedenilles/maryJaneGrupo9/issues"
+  },
+  "homepage": "https://github.com/fedenilles/maryJaneGrupo9#readme"
+}
