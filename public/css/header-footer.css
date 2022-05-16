@@ -80,6 +80,7 @@ body {
 footer {
     border-top: 2px solid lightgray;
     position: relative;
+    margin-top: 20px;
 }
 
 .footer-container {
