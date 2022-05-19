@@ -1,3 +1,6 @@
+/* ------------ EXHIBIDOR DE PRODUCTOS ----------- */ 
+
+
 .exhibitor{
     display: flex;
     justify-content: space-between;
@@ -32,6 +35,10 @@
 .exhibitor-button{
     padding-top: 20px;
 }
+
+
+/* --------------- Paso a Paso como cultivar marihuana -------------- */
+
 .growing{
     background-color: beige;
     border-bottom: solid 1px black;
@@ -71,6 +78,9 @@
     font-size: 8px;
     margin-bottom: 15px;
 }
+
+/* --------------- venta de articulos para cosechar  ------------------- */
+
 .start-now{
     background-color: beige;
     border-bottom: solid 1px black;
@@ -114,6 +124,9 @@
     margin: 20px 0;
 
 }
+
+/* ----------- MOST POPULAR --------------- */
+
 .most-popular{
     background-color: rgb(221, 212, 212);
     border-bottom: solid 1px black;
@@ -160,6 +173,8 @@
 .product-price{
     font-weight: 500;
 }
+
+/* -----------------  Slider Most Popular ---------------- */
 
 .slider-controler {
 	position: relative;
@@ -296,6 +311,7 @@
     letter-spacing: 0.2em;
 }
 
+/* ----------- MEDIA QUERIES ------------- */
 
 @media (min-width: 375px){
 
