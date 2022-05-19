@@ -188,6 +188,54 @@
 	font-size: 1.5rem;
 }
 
+/* ------------- Listo para consumir ------------ */
+
+.title-consume-conteiner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-ready{
+    padding: 15px 0 8px 0;
+    font-weight: bold;
+}
+.title-consume-conteiner p {
+    font-size: 10px;
+}
+.divisions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.mobil-genero{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+.genero-div{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+.genero-div img {
+    width: 100%;
+}
+.genero-div h5 {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+}
+.laptok-div{
+    display: none;
+}
 
 /* ------- Subscription --------- */ 
 
