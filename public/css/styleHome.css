@@ -1,3 +1,7 @@
+
+
+
+/*  exhibidor de productos */
 .exhibitor{
     display: flex;
     justify-content: space-between;
@@ -32,6 +36,8 @@
 .exhibitor-button{
     padding-top: 20px;
 }
+
+/* Paso a Paso como cultivar marihuana */
 .growing{
     background-color: beige;
     border-bottom: solid 1px black;
@@ -71,6 +77,8 @@
     font-size: 8px;
     margin-bottom: 15px;
 }
+
+/* venta de articulos para cosechar */
 .start-now{
     background-color: beige;
     border-bottom: solid 1px black;
@@ -114,6 +122,9 @@
     margin: 20px 0;
 
 }
+
+/* mas populares */
+
 .most-popular{
     background-color: rgb(221, 212, 212);
     border-bottom: solid 1px black;
@@ -153,6 +164,56 @@
 
 .product-price{
     font-weight: 500;
+}
+
+
+/* listo para consumir */
+
+.title-consume-conteiner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-ready{
+    padding: 15px 0 8px 0;
+    font-weight: bold;
+}
+.title-consume-conteiner p {
+    font-size: 10px;
+}
+.divisions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.mobil-genero{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+}
+.genero-div{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+}
+.genero-div img {
+    width: 100%;
+}
+.genero-div h5 {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+}
+.laptok-div{
+    display: none;
 }
 
 /* ------- Subscription --------- */ 
@@ -255,6 +316,16 @@
         display: flex;
         width: 100%;
         justify-content: space-around;
+    }
+    .mobil-genero{
+        display: none;
+    }
+    .laptok-div{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+        align-items: center;
+        padding: 8px;
     }
 
 }
