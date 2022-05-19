@@ -14,7 +14,6 @@ rel="stylesheet" />
     <title>MaryJane GrowShop</title>
 </head>
 <body>
-        
 	    <div class="container">
             <header>
             <div class="navbar">
@@ -31,7 +30,7 @@ rel="stylesheet" />
                     <li class="nav-item"><a href="#" class="nav-link">Learn</a></li>
                 </ul>
                 <div class="shop-menu">
-                    <i class="fa-solid fa-cart-shopping cart"></i>
+                    <i class="fa-solid fa-cart-shopping cart"></i> 
                     <a href="/login.html"><i class="fa-solid fa-user profile"></i> </a>
                 </div>
             </div>
@@ -50,8 +49,8 @@ rel="stylesheet" />
                         <a href="/"> <h1><strong>Maryjane</strong> Growshop </h1> </a>
                             <div class="description">
                             	<p>
-	                            	Logeate para conseguir todos los beneficios de la página
-                            	</p>
+                                    Registrate para conocer<br> todos los beneficios                            	
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -62,36 +61,42 @@ rel="stylesheet" />
                         	<div class="form-top">
                                 
                         		<div class="form-top-left">
-                        			<h3>Login</h3>
-                            		<p class="parrafo-hide">Ingresa tu email y <br> contraseña:</p>
+                        			<h3>Registro</h3>
                         		</div>
                         	</div>
                             <div class="form-bottom">
 			                    <form action="#" method="get" class="login-form">
 			                    	<div class="form-group">
-			                    		<span>Email </span>
-			                        	<input type="text" name="username_login" placeholder="Email" class="form-username form-control" id="username_login">
+			                    		<span>Nombre </span>
+			                        	<input type="text" name="name" placeholder="Nombre" class="form-name form-control" id="name_login">
 			                        </div>
 			                        <div class="form-group">
-			                        	<span>Contraseña </span>
-			                        	<input type="password" name="password_login" placeholder="Contraseña" class="form-password form-control" id="password_login">
+			                        	<span>Apellido </span>
+			                        	<input type="text" name="apellido" placeholder="Apellido" class="form-apellido form-control" id="apellido_login">
 			                        </div>
-                                    <div class="password">
-                                        <div class="password-remember">
-                                            <input type="checkbox"> Recordar contraseña 
-                                        </div>
+                                    <div class="form-group">
+			                        	<span>Email </span>
+			                        	<input type="email" name="email" placeholder="Email" class="form-email form-control" id="email_login">
+			                        </div>
+                                    <div class="form-group">
+			                        	<span>Contraseña </span>
+			                        	<input type="password" name="password" placeholder="Contraseña" class="form-password-reg form-control" id="password_login">
+			                        </div>
+                                    <div class="form-group">
+			                        	<span>Confirmar Contraseña </span>
+			                        	<input type="password" name="repassword" placeholder="Confirmar contraseña" class="form-repassword form-control" id="repassword_login">
+			                        </div>
+			                        <input type="button" class="btn btnIn" value="Ingresa!">
+                                    <div class="password form-group">
                                         <div class="password-recovery"> 
-                                            <a href="#"> Olvidaste la contraseña?</a> 
+                                            <a href="/login.html"> Ya tenés una cuenta?</a> 
                                         </div>
                                     </div>
-			                        <input type="button" class="btn btnIn" value="Ingresa!">
 			                    </form>
                                 
 		                    </div>
                         </div>
                     </div>
-                    <div class="bottom-bottom-form">
-                    <h3>No tenés una cuenta? <a href="/register.html"> Registrate acá</a></h3>
                     
                     </div>
                 </div>

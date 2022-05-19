@@ -218,6 +218,10 @@ input[type=button]:hover{
 	color: gray;
 }
 
+.bottom-bottom-form a,
+.bottom-bottom-form h3{
+		color: #444;
+}
 
 .password {
 	padding: 5px 0px 0px 0px;

@@ -23,21 +23,12 @@ body {
     display: flex;
     align-items: center;
     background-color: lightgray;
-    /* 
-        justify-content: space-around; 
-        padding: 0;
-    */
     justify-content:center;
     
 }
 
 .navbar ul {
     width: 70%;
-    /* 
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    */
     display: none;
 }
 
@@ -68,12 +59,6 @@ body {
 .shop-menu {
     display: flex;
 }
-
-/* ----------- MAIN ----------- */
-
-/* main {
-    height: 500px
-} */
 
 
 /* ------- FOOTER -------- */
@@ -154,21 +139,14 @@ footer .social-networks a {
 }
 
 
-@media (min-width: 375px) {
-    .burger-menu {
-        display: none;
-    }
+@media (min-width: 390px) {
+    
     .navbar {
         width: 100%;
         box-sizing: border-box;
         padding: 0;
     }
-    .navbar ul {
-    display: flex;
-    align-items: center;
-    justify-content:space-evenly;
-    width: 30vw;
-    }
+    
     
     .navbar ul li {
         padding: 10px;
@@ -176,7 +154,7 @@ footer .social-networks a {
 
     .navbar .shop-menu{
         display: flex;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         justify-content: center;
         align-items: center;
     }
@@ -186,6 +164,25 @@ footer .social-networks a {
 
 @media (min-width: 780px) {
     .navbar{
-        justify-content: center;
+        justify-content:center;
     }
+    .burger-menu {
+        display: none;
+        width:0%;
+    }
+    .navbar ul {
+        display: flex;
+        align-items: center;
+        justify-content:space-evenly;
+        width: 30vw;
+    }
+
+    .nav1 {
+        padding-left:70px;
+    }
+
+    .nav-img {
+        margin-left:50px;
+    }
+    
 }
