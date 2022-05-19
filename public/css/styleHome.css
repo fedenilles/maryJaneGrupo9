@@ -117,6 +117,7 @@
 .most-popular{
     background-color: rgb(221, 212, 212);
     border-bottom: solid 1px black;
+    padding:30px 0;
 }
 .title-most-popular{
     text-align: center;
@@ -129,14 +130,19 @@
 }
 .product-conteiner{
     display: flex;
+    flex-direction: column;
     width: 80%;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
 }
 .product-exhibitor-first{
     display: flex;
     justify-content: space-around;
 }
 .product-exhibitor-second{
+    display: none;
+}
+.product-exhibitor-third{
     display: none;
 }
 .product-div{
@@ -154,6 +160,34 @@
 .product-price{
     font-weight: 500;
 }
+
+.slider-controler {
+	position: relative;
+	width:30%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+	text-align: center;
+    background-color: rgba(0,0,0,0.3);
+	padding: 5px;
+	z-index: 100;
+    border-radius: 5px;
+}
+
+.slider-controler li {
+	margin: 0 0.3rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
 
 /* ------- Subscription --------- */ 
 
@@ -257,4 +291,17 @@
         justify-content: space-around;
     }
 
+}
+
+
+@media (min-width: 760px){
+    .product-exhibitor-third{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .product-exhibitor-second{
+        display: none;
+    }
 }
