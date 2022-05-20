@@ -1,0 +1,371 @@
+/* ------------ EXHIBIDOR DE PRODUCTOS ----------- */ 
+
+
+.exhibitor{
+    display: flex;
+    justify-content: space-between;
+    height: 170px;
+    border-bottom: solid 1px black;
+    background: url('/img/img.png');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.back {
+    align-self: center;
+    padding-left: 10px;
+}
+.next {
+    align-self: center;
+    padding-right: 10px;
+}
+.product-exhibitor {
+    height: 100%;
+    width: 50%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.name{
+    font-weight: bold;
+
+}
+.exhibitor-button{
+    padding-top: 20px;
+}
+
+
+/* --------------- Paso a Paso como cultivar marihuana -------------- */
+
+.growing{
+    background-color: beige;
+    border-bottom: solid 1px black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+}
+.title-growing{
+    text-align: center;
+    margin: 20px 0;
+}
+.growing-steps{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.step-div{
+    margin: auto;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.image-step{
+    margin-top:5px;
+}
+.title-step{
+    font-weight: bold;
+    padding: 10px 0;
+}
+.paraf-step {
+    padding: 5px 0;
+    font-size: 8px;
+    margin-bottom: 15px;
+}
+
+/* --------------- venta de articulos para cosechar  ------------------- */
+
+.start-now{
+    background-color: beige;
+    border-bottom: solid 1px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-startnow{
+    text-align: center;
+    margin: 20px 0;
+    font-weight: bold;
+}
+.start-boxes{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+.start-div{
+    margin: auto;
+    text-align: center;
+    width: 80%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.title-workshops{
+    text-align: center;
+    margin: 20px 0;
+}
+.title-packages{
+    text-align: center;
+    margin: 20px 0;
+
+}
+.title-seeds{
+    text-align: center;
+    margin: 20px 0;
+
+}
+
+/* ----------- MOST POPULAR --------------- */
+
+.most-popular{
+    background-color: rgb(221, 212, 212);
+    border-bottom: solid 1px black;
+    padding:30px 0;
+}
+.title-most-popular{
+    text-align: center;
+    font-weight: bold;
+    padding: 5px 0;
+}
+.most-popular-box{
+    display: flex;
+    justify-content: space-between;
+}
+.product-conteiner{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    justify-content: center;
+    align-items: center;
+}
+.product-exhibitor-first{
+    display: flex;
+    justify-content: space-around;
+}
+.product-exhibitor-second{
+    display: none;
+}
+.product-exhibitor-third{
+    display: none;
+}
+.product-div{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    margin: 6px;
+    justify-content: space-between;
+}
+
+.product-div img{
+    width:100%
+}
+
+.product-price{
+    font-weight: 500;
+}
+
+/* -----------------  Slider Most Popular ---------------- */
+
+.slider-controler {
+	position: relative;
+	width:30%;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+	text-align: center;
+    background-color: rgba(0,0,0,0.3);
+	padding: 5px;
+	z-index: 100;
+    border-radius: 5px;
+}
+
+.slider-controler li {
+	margin: 0 0.3rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: #fff;
+	font-size: 1.5rem;
+}
+
+/* ------------- Listo para consumir ------------ */
+
+.title-consume-conteiner{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.title-ready{
+    padding: 15px 0 8px 0;
+    font-weight: bold;
+}
+.title-consume-conteiner p {
+    font-size: 10px;
+}
+.divisions{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px 0;
+}
+.mobil-genero{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+}
+.genero-div{
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+}
+.genero-div img {
+    width: 100%;
+}
+.genero-div h5 {
+    font-weight: bold;
+    text-align: center;
+    padding-top: 5px;
+}
+.laptok-div{
+    display: none;
+}
+
+/* ------- Subscription --------- */ 
+
+.subscription {
+    border-top: 2px solid lightgray;
+    width: 100%;
+    height: 50%;
+    padding: 20px 0px;
+}
+
+.subscription .container-subscr {
+    width: 80%;
+    margin: 0 auto
+}
+
+.subscription .title-subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-subscription p {
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+.subscription .title-subscription h3 {
+    font-size: 2em;
+}
+
+.subscription .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px
+}
+
+.inp-subscribe {
+    outline: none;
+    border: 1px solid lightgray;
+    height: 30px;
+    border-radius: 5px;
+    color: lightgray;
+    background-color: white;
+    width: 30vw;
+    padding: 10px;
+}
+
+.subscription .subscribe .btn-subscribe {
+    margin-top:30px;
+    background-color: #3E7AAD;
+    outline: none;
+    border: none;
+    width: 30vw;
+    height: 30px;
+    border-radius: 5px;
+    color:white;
+    letter-spacing: 0.2em;
+}
+
+/* ----------- MEDIA QUERIES ------------- */
+
+@media (min-width: 375px){
+
+    .growing .grow-articles{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+    .growing-steps{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .step-div{
+        width: 30%;
+        padding: 0 5px;
+    }
+    .start-boxes{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .start-div{
+        width: 30%;
+        padding: 0 5px;
+    }
+
+    .start-div img{
+        width: 100%;
+        padding: 0 5px;
+    }
+
+    .product-exhibitor-first{
+        display: none;
+    }
+    .product-exhibitor-second{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+}
+
+
+@media (min-width: 760px){
+    .product-exhibitor-third{
+        display: flex;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .product-exhibitor-second{
+        display: none;
+    }
+}
