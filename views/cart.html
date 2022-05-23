@@ -5,14 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shopping Cart</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/header-footer.css">
-    <link rel="stylesheet" href="/css/cart.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-rel="stylesheet" />
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    
+    <link rel="stylesheet" href="/css/stylescart.css">    
 </head>
 <body>
     <header>
@@ -37,15 +35,18 @@ rel="stylesheet" />
     </header>
     <main>
         <h2>Cart</h2>
-        <section class="purchase-detail">
-            <div>
+        <section>
+            <div class="product">
                 <h4>Product</h4>
-                <div>
-                    <i class="fa-regular fa-rectangle-xmark"></i><img src="/img/img.png" alt="Tu Compra">
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, veniam?</p>
+                <div class="photo-ico-desc">
+                    <div class="ico-photo-desc">
+                        <i class="fa-regular fa-rectangle-xmark">
+                        </i><img src="/img/img.png" alt="Tu Compra">
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                    </div>
                 </div>
             </div>
-            <div>
+            <div class="detail">
                 <div>
                     <h4>Price</h4>
                     <p>U$D</p>
@@ -53,9 +54,9 @@ rel="stylesheet" />
                 <div>
                     <h4>Quantity</h4>
                     <div>
-                        <i class="fa-solid fa-circle-left"></i>
-                        <p> "1" </p>
-                        <i class="fa-solid fa-circle-right"></i>                            
+                        <input type="button" value="-" class="minus">
+                        <input type="number" id="quantity" min="1" name="quantity" value="1">
+                        <input type="button" value="+" class="plus">                           
                     </div>
                 </div>
                 <div>
@@ -63,47 +64,49 @@ rel="stylesheet" />
                     <p>U$D</p>
                 </div>                        
             </div>
-            <div>
+            <div class="cupon">
                 <form action="/" method="get">
-                    <label for="cipon">Coupon Code</label>
+                    <label for="cupon">Coupon Code</label>
                     <input type="text" name="cupon" id="cupon" placeholder="Enter your Code">
                     <button type="submit">Submit</button>
                 </form>
             </div>      
         </section>
-        <section class="offers">
-            <h4>Special Offers</h4>
-            <div>
-                <i class="fa-solid fa-circle-left"></i>
-                <img src="/img/img.png" alt="Tu Compra">
-                <i class="fa-solid fa-circle-right"></i>
+        <section>
+            <div class="offers">
+                <h4>Special Offers</h4>
+                <div>
+                    <i class="fa-solid fa-circle-left"></i>
+                    <img src="/img/img.png" alt="Tu Compra">
+                    <i class="fa-solid fa-circle-right"></i>
+                </div>
+                <div>
+                    <button>Add to Cart</button>
+                </div>
             </div>
-            <div>
-                <button>Add to Cart</button>
+        </section>        
+        <section>
+            <div class="total">
+                <h3>Cart Totals</h3>
+                <div>
+                    <p>Subtotal</p>
+                    <p>$$$$$</p>
+                </div>
+                <div>
+                    <p>TOTAL</p>
+                    <p>$$$$$</p>
+                </div>
+                <div>
+                    <p>Shipping and tax calculated at checkout</p>
+                </div>
+                <div>
+                    <a href=""><button>Go to check out</button></a><!-- esto es asi?? -->                
+                </div>
+                <div>
+                    <img src="/img/paypal-checkout.png" alt="Check out whith Paypal" width="200px">
+                    <img src="/img/paypal-credit.png" alt="Check out whith Paypal" width="200px">
+                </div>
             </div>
-        </section>
-        <section class="totals">
-            <h3>Cart Totals</h3>
-            <div>
-                <p>Subtotal</p>
-                <p>$$$$$</p>
-            </div>
-            <div>
-                <p>TOTAL</p>
-                <p>$$$$$</p>
-            </div>
-            <div>
-                <p>Shipping and tax calculated at checkout</p>
-            </div>
-            <div>
-                <a href=""><button>Go to check out</button></a><!-- esto es asi?? -->                
-            </div>
-            <div>
-                <img src="/img/paypal-checkout.png" alt="Check out whith Paypal" width="200px">
-                <img src="/img/paypal-credit.png" alt="Check out whith Paypal" width="200px">
-
-            </div>
-
         </section>                                 
     </main>
         <footer>

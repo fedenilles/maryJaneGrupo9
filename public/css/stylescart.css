@@ -2,45 +2,42 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+body main {
     font-family: 'Roboto', sans-serif;
+    font-size: 12px;
     font-weight: 300;
     color: #888;
     line-height: 30px;
     text-align: center;
     background: #fff;
-
 }
-main .strong {
-    font-weight: 500;   
-    border: 1px solid blue;
+div.product h4{
+    text-align: center;
 }
 
+/*Media queries*/
 
-/***** Media queries ****
+/*Mobile SmartPhones*/
 
-/*Mobile SmartPhones
+
+
 @media (max-width: 480px) {
-
-
+   
 }
 
-/*Tablet
+/*Tablet*/
 @media (min-width: 800px) {
-
 
 
 }
 
 @media (min-width: 1024px) {
 
-
-
 }
+
 
 @media (min-width: 1400px) {
 
 
 
 }
-*/
