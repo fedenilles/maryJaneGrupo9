@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="/css/header-footer.css">
     <link rel="stylesheet" href="/css/cart.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
@@ -11,59 +12,70 @@ rel="stylesheet" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
-    <title>MaryJane GrowShop</title>
+    
 </head>
 <body>
-            <header>
-            <div class="navbar">
-                <div class="burger-menu">
-                    <i class="fas fa-bars bars"></i>
-                </div>
-                <ul class="navbar-nav nav1">
-                    <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-                </ul>
-                    <img class="nav-img" src="/img/mj-logo.png" alt="Logo">
-                <ul class="navbar-nav nav2">
-                    <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Learn</a></li>
-                </ul>
-                <div class="shop-menu">
-                    <i class="fa-solid fa-cart-shopping cart"></i>
-                    <i class="fa-solid fa-user profile"></i>
+    <header>
+        <div class="navbar">
+            <div class="burger-menu">
+                <i class="fas fa-bars bars"></i>
+            </div>
+            <ul class="navbar-nav nav1">
+                <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+            </ul>
+               <img class="nav-img" src="/img/mj-logo.png" alt="Logo">
+            <ul class="navbar-nav nav2">
+                <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
+                <li class="nav-item"><a href="#" class="nav-link">Learn</a></li>
+            </ul>
+            <div class="shop-menu">
+                <i class="fa-solid fa-cart-shopping cart"></i>
+                <i class="fa-solid fa-user profile"></i>
+            </div>
+        </div>
+    </header>
+    <main>
+        <h2>Cart</h2>
+        <section class="purchase-detail">
+            <div>
+                <h4>Product</h4>
+                <div>
+                    <i class="fa-regular fa-rectangle-xmark"></i><img src="/img/img.png" alt="Tu Compra">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim, veniam?</p>
                 </div>
             </div>
-            </header>
-
-            <main>
-                <div class="top"><h3>Cart</h3></div>
-                <!--producto-->
-                <section class="titulos">
-                    <div class="det-prod">
-                        <p><h5>Product</h5></p>
+            <div>
+                <div>
+                    <h4>Price</h4>
+                    <p>U$D</p>
+                </div>
+                <div>
+                    <h4>Quantity</h4>
+                    <div>
+                        <i class="fa-solid fa-circle-left"></i>
+                        <p> "1" </p>
+                        <i class="fa-solid fa-circle-right"></i>                            
                     </div>
-                    <div class="det-compra">
-                        <p><h5>Price</h5></p>
-                        <p><h5>Quantity</h5></p>
-                        <p><h5>Subtotal</h5></p>
-                    </div>
-                </section>
-                <section>
-                    <article>
-                        
-                        <div class="product-img-left">
-                            <p><i class="fa-regular fa-rectangle-xmark"></i><img src="/img/img.png" alt="Tu Compra"></p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, error?</p>
-                        </div>
-                    </article>
-
-                    <article class>
-
-                    </article>
-                </section>
-
-                
-            </main>
+                </div>
+                <div>
+                    <h4>Subtotal</h4>
+                    <p>U$D</p>
+                </div>                        
+            </div>
+            <div>
+                <form action="/" method="get">
+                    <label for="cipon">Coupon Code</label>
+                    <input type="text" name="cupon" id="cupon" placeholder="Enter your Code">
+                    <button type="submit">Submit</button>
+                </form>
+            </div>      
+        </section>
+        <section class="offers">
+            
+        </section>
+                                      
+    </main>
 
         <footer>
             <div class="footer-container">
@@ -98,7 +110,7 @@ rel="stylesheet" />
                 <img src="/img/mj-logo.png" alt="logo MaryJane">
             </div>
 
-            <p>Donec convallis orci lacus, nec varius justo laoreet eu. Proin sem erat, euismod eu neque eu, semper consectetur libero. Morbi vestibulum dapibus laoreet. </p>
+            Donec convallis orci lacus, nec varius justo laoreet eu. Proin sem erat, euismod eu neque eu, semper consectetur libero. Morbi vestibulum dapibus laoreet. 
             <div class="social-networks">
                 <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
                 <a href="#"> <i class="fa-brands fa-linkedin"></i> </a>
@@ -106,7 +118,7 @@ rel="stylesheet" />
                 <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
             </div>
 
-            <p class="copyright"> <i> Copyright 2022 Lorem Ipsum </i></p>
+            <p class="copyright"> <i> Copyright 2022 Lorem Ipsum </i>
         </div>
         
 
