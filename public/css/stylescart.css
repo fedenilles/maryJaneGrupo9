@@ -1,7 +1,3 @@
-* { margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
 body main {
     font-family: 'Roboto', sans-serif;
     font-size: 12px;
@@ -15,13 +11,49 @@ div.product h4{
     text-align: center;
 }
 
+.product {
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.fa-rectangle-xmark{
+    font-size: 20px;
+}
+.product_box{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    width: 90%;
+    justify-content: space-between;
+}
+
+.photo-ico-desc {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.photo-ico-desc img {
+    width: 90%;
+}
+
+.product-descr {
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    justify-content: center;
+}
+.product-descr p {
+    text-align: justify;
+}
+
+
 /*Media queries*/
 
 /*Mobile SmartPhones*/
-
-
-
-@media (max-width: 480px) {
+@media (min-width: 480px) {
    
 }
 
