@@ -10,7 +10,6 @@ body main {
 div.product h4{
     text-align: center;
 }
-
 .product {
     display:flex;
     align-items: center;
@@ -27,18 +26,15 @@ div.product h4{
     width: 90%;
     justify-content: space-between;
 }
-
-.photo-ico-desc {
+.product-img {
     display:flex;
     justify-content: center;
     align-items: center;
     width: 60%;
 }
-
-.photo-ico-desc img {
+.product-img img {
     width: 90%;
 }
-
 .product-descr {
     display: flex;
     width: 40%;
@@ -49,6 +45,162 @@ div.product h4{
     text-align: justify;
 }
 
+
+/* detalle de la compra */
+.detail{
+    display: flex;
+    margin: 10px 0px;
+    justify-content: center;
+    align-items: center;
+}
+.price{
+    font-size: 16px;
+    margin-right: 5px;
+}
+.price h4,
+.quantity h4{
+    display: none;
+}
+.quantity-form{
+    display: flex;
+}
+.minus,
+.plus{
+    font-size: 16px;
+    border: none;
+    font-weight: bold;
+}
+input.number{
+    font-size: 16px;
+    text-align: center;
+    width: 20px;
+    border: none;
+    background-color: #ABA8A7;
+}
+.subtotal{
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+.subtotal h4{
+    display: none;
+}
+
+
+/* Cupon */
+.discount-coupon{    
+    width: 95%;
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.coupon{
+    display: flex;
+    width: 100%;
+}
+.label{
+    margin-left: 5px;
+}
+div.coupon form input{
+    width: 70%;
+    padding: 3px;
+    background-color: #979595;
+    text-align: center;
+}
+div.coupon form button{
+    border-radius: 10px;
+    padding: 3px;
+    margin-left: 2px;
+    text-align: center;
+    background-color: #005BBB;
+    color: white;
+}
+
+
+
+/* linea */
+.line{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+hr{
+    width: 95%;
+    margin: 10px 0px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+
+/* Special Offers */
+.offers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.special-offers{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.special-offers img{
+    width: 80%;
+}
+.special-offers i{
+    padding: 5px;
+    font-size: 20px;
+}
+.add-cart button{
+    border-radius: 10px;
+    margin-top: 5px;
+    padding: 3px;
+    text-align: center;
+    background-color: #005BBB;
+    color: white;
+}
+
+/* linea-1 */
+.line-1{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+/* Totales */
+
+.details-amounts{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+}
+.concepts{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.shipping h3{
+    text-align: cente;
+}
+.checkout button{
+    width: 40%;
+    border-radius: 10px;
+    padding: 3px;
+    text-align: center;
+    background-color: #005BBB;
+    color: white;    
+}
+.pay{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+
+}
+.paypal,
+.credit-card{
+    width: 25%;
+}
 
 /*Media queries*/
 

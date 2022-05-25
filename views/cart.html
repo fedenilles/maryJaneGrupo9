@@ -39,79 +39,95 @@
             <div class="product">
                 <i class="fa-regular fa-rectangle-xmark"></i>
                 <div class="product_box">
-                    <div class="photo-ico-desc">
+                    <div class="product-img">
                         <img src="/img/img.png" alt="Tu Compra">                  
                     </div>
                     <div class="product-descr">
                          <h4>Product Name</h4>
-                         <p>Lorem ipsum dolor, sit amet.</p>
+                         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, veniam.</p>
                     </div>    
                 </div>          
             </div>
             <div class="detail">
-                <div>
+                <div class="price">
                     <h4>Price</h4>
-                    <p>U$D</p>
+                    <p>U$D XX.xx</p>
                 </div>
-                <div>
+                <div class="quantity">
                     <h4>Quantity</h4>
-                    <div>
+                    <div quantity-form>
                         <input type="button" value="-" class="minus">
-                        <input type="number" id="quantity" min="1" name="quantity" value="1">
+                        <input type="number" id="quantity" min="1" name="quantity" value="1" class="number">
                         <input type="button" value="+" class="plus">                           
                     </div>
                 </div>
-                <div>
+                <div class="subtotal">
                     <h4>Subtotal</h4>
-                    <p>U$D</p>
-                </div>                        
+                    <p>U$D XX.xx</p>
+                </div>                     
             </div>
-            <div class="cupon">
-                <form action="/" method="get">
-                    <label for="cupon">Coupon Code</label>
-                    <input type="text" name="cupon" id="cupon" placeholder="Enter your Code">
-                    <button type="submit">Submit</button>
-                </form>
+            <div class="discount-coupon">
+                <div class="label">
+                    <h3>
+                        <label for="cupon">Coupon Code</label>
+                    </h3>
+                </div>
+                <div class="coupon">
+                    <form action="/" method="get">
+                        <input type="text" name="cupon" id="cupon" placeholder="xxxx - xxxx - xxxx">
+                        <button type="submit">Submit</button>
+                    </form>
+                </div>
             </div>      
         </section>
+        <div class="line">
+            <hr>
+        </div>
         <section>
             <div class="offers">
-                <h4>Special Offers</h4>
                 <div>
+                    <h3>Special Offers</h3>
+                </div>
+                <div class="special-offers">
                     <i class="fa-solid fa-circle-left"></i>
                     <img src="/img/img.png" alt="Tu Compra">
-                    <i class="fa-solid fa-circle-right"></i>
+                    <i class="fa-solid fa-circle-right"></i>                    
                 </div>
-                <div>
+                <div class="add-cart">
                     <button>Add to Cart</button>
                 </div>
             </div>
-        </section>        
-        <section>
-            <div class="total">
-                <h3>Cart Totals</h3>
-                <div>
-                    <p>Subtotal</p>
-                    <p>$$$$$</p>
+        </section>
+        <div class="line-1">
+            <hr>
+        </div>        
+        <section>            
+            <div class="cart-totals">
+                <div class="details-amounts">
+                    <div class="concepts">
+                        <h3>Cart Totals</h3>
+                        <h3>Subtotal</h3> 
+                        <h3>TOTAL</h3>                        
+                    </div>
+                    <div class="amounts">
+                        <h3>U$D XX.xx</h3>
+                        <h3 >U$D XX.xx</h3>
+                    </div>
                 </div>
-                <div>
-                    <p>TOTAL</p>
-                    <p>$$$$$</p>
+                <div class="shipping">
+                    <h3>Shipping and tax calculated at checkout</h3>
                 </div>
-                <div>
-                    <p>Shipping and tax calculated at checkout</p>
-                </div>
-                <div>
+                <div class="checkout">
                     <a href=""><button>Go to check out</button></a><!-- esto es asi?? -->                
                 </div>
-                <div>
-                    <img src="/img/paypal-checkout.png" alt="Check out whith Paypal" width="200px">
-                    <img src="/img/paypal-credit.png" alt="Check out whith Paypal" width="200px">
+                <div class="pay">
+                    <img src="/img/paypal-checkout.png" alt="Check out whith Paypal" class="paypal">
+                    <img src="/img/paypal-credit.png" alt="Check out whith Credit Card" class="credit-card">
                 </div>
             </div>
         </section>                                 
     </main>
-        <footer>
+         <footer>
             <div class="footer-container">
             <div class="footer-columns">
                 <div class="col-1">
