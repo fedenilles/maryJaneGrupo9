@@ -1,0 +1,408 @@
+.productsection{
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+.carrouselcontainer{
+  display: block;
+  width: 100%;
+}
+.carrouselcontainer h4{
+  margin-bottom: 20px;
+}
+.imageProduct{
+  display: block;
+  width: 100%;
+}
+.imagenGrande{
+  width: 100%;
+  margin: auto;
+}
+.imagenGrande img {
+  width:100%;
+}
+.imagenTriple{
+  display: none;
+}
+
+/* ------- SLIDER ------- */
+
+.slider-controler {
+	position: relative;
+	width:30%;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+	text-align: center;
+	padding: 5px;
+	z-index: 100;
+  border-radius: 5px;
+  margin: 0 auto;
+}
+
+.slider-controler li {
+	margin: 0 0.3rem;
+	display: inline-block;
+	vertical-align: top;
+}
+
+.slider-controler a {
+	display: inline-block;
+	vertical-align: top;
+	text-decoration: none;
+	color: lightgray;
+	font-size: 1.5rem;
+}
+.slider-controler a:hover {
+  color: #2a9008
+}
+
+/* ----------- Product name  ------------ */
+.productname{
+    text-align: center;
+}
+
+/* ---------- Star rating component ---------- */
+.star-rating {
+    /* border:solid 1px #ccc; */
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:1.5em;
+    justify-content:space-around;
+    padding:0 .2em;
+    text-align:center;
+    width:5em;
+    margin: 0 auto;
+  }
+  
+  .star-rating input {
+    display:none;
+  }
+  
+  .star-rating label {
+    color:#ccc;
+    cursor:pointer;
+  }
+  
+  .star-rating :checked ~ label {
+    color:#f90;
+  }
+  
+  .star-rating label:hover,
+  .star-rating label:hover ~ label {
+    color:#fc0;
+  }
+
+  /* Price */
+  .price{
+      font-size: 20px;
+      text-align: center;
+      font-weight: bold;
+      margin-top: 5px;
+  }
+  
+  /* Options */
+
+.option {
+  width: 100%;
+  margin-top: 5px;
+}
+.option select {
+  width: 100%;
+  border-radius: 5px;
+  height: 30px;
+}
+
+  /* cartform */
+
+.cart-form {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  display: flex;
+}
+.quantity-form{
+  display: flex;
+  width: 30%;
+  border-color: grey;
+  justify-content: space-between;
+  align-items: center
+}
+
+form .quantity-form input[type="number"] {
+  width: 30%;
+  height: 40px;
+  text-align: center;
+  background-color: transparent;
+  border: 2px solid lightgray;
+  font-size: 20px;
+}
+
+form .quantity-form input[type="button"] {
+  width: 30%;
+  background-color: transparent;
+  color: gray;
+  border: none;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.cart-form form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+  /* Form Button */
+
+.cart-form .formBtn {
+  width:50%;
+}
+
+.cart-form .formBtn button{
+  width: 100%;
+  height: 40px;
+  background-color: #2a9008;
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  border: none;
+}
+
+
+
+/* Accordion */
+  .accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    margin-top: 20px;
+  }
+
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  
+  .panel {
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
+
+/* Recommended for you */
+
+.most-popular{
+  padding:30px 0;
+}
+.title-most-popular{
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 0;
+}
+.most-popular-box{
+  display: flex;
+  justify-content: space-between;
+}
+.product-conteiner{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+}
+.product-exhibitor-first{
+  display: flex;
+  justify-content: space-around;
+}
+.product-exhibitor-second{
+  display: none;
+}
+.product-exhibitor-third{
+  display: none;
+}
+.product-div{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  margin: 6px;
+  justify-content: space-between;
+}
+
+.product-div img{
+  width:100%
+}
+
+.product-price{
+  font-weight: 500;
+}
+
+.back {
+  align-self: center;
+  padding-left: 10px;
+}
+.next {
+  align-self: center;
+  padding-right: 10px;
+}
+
+
+
+/* Reviews */
+.reviews{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 10px
+}
+.reviewstitle{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    margin: 30px 0;
+}
+.containerReviews{
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  align-items: center;
+  width: 100%;
+}
+.imagenReviews{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+}
+.imagenReviews img{
+  width: 100%;
+  
+}
+
+
+
+
+
+
+.boxReviews { 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+}
+
+.boxReviews .nameReview {
+  display: flex;
+  justify-content: space-between;
+}
+
+.star-rating-2 {
+    /* border:solid 1px #ccc; */
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:1.5em;
+    justify-content:space-around;
+    width:60%;
+    margin-right: 0;
+  }
+  
+  .star-rating-2 input {
+    display:none;
+  }
+  
+  .star-rating-2 label {
+    color:#ccc;
+    cursor:pointer;
+  }
+  
+  .star-rating-2 :checked ~ label {
+    color:#f90;
+  }
+  
+  .star-rating-2 label:hover,
+  .star-rating-2 label:hover ~ label {
+    color:#fc0;
+  }
+
+.boxHelp {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-start;
+}
+
+.reviews-help{
+    padding-right: 24px;
+}
+
+.fa-thumbs-up{
+    padding-right: 8px;
+}
+
+
+/* --------------- Subscription ---------- */
+
+  .subscription {
+    border-top: 2px solid lightgray;
+    width: 100%;
+    height: 50%;
+    padding: 20px 0px;
+}
+
+.subscription .container-subscr {
+    width: 80%;
+    margin: 0 auto
+}
+
+.subscription .title-subscription {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-subscription p {
+    margin-top: 20px;
+    line-height: 1.5em;
+}
+
+.subscription .title-subscription h3 {
+    font-size: 2em;
+}
+
+.subscription .subscribe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px
+}
+
+.inp-subscribe {
+    outline: none;
+    border: 1px solid lightgray;
+    height: 30px;
+    border-radius: 5px;
+    color: lightgray;
+    background-color: white;
+    width: 30vw;
+    padding: 10px;
+}
+
+.subscription .subscribe .btn-subscribe {
+    margin-top:30px;
+    background-color: #3E7AAD;
+    outline: none;
+    border: none;
+    width: 30vw;
+    height: 30px;
+    border-radius: 5px;
+    color:white;
+    letter-spacing: 0.2em;
+}
