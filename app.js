@@ -19,3 +19,6 @@ app.get('/login.html', (req,res) => {
 app.get('/cart.html', (req,res) => {
     res.sendFile(__dirname + '/views/cart.html');
 });
+app.get('/register.html', (req,res) => {
+    res.sendFile(__dirname + '/views/register.html');
+});
