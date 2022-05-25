@@ -89,26 +89,25 @@ input.number{
 
 /* Cupon */
 .discount-coupon{    
-    width: 95%;
     margin-left: 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
-.coupon{
-    display: flex;
-    width: 100%;
+
+div.coupon-form form{
+    display: flex;   
 }
-.label{
-    margin-left: 5px;
-}
-div.coupon form input{
+
+
+div.coupon-form form input{
     width: 70%;
     padding: 3px;
     background-color: #979595;
     text-align: center;
 }
-div.coupon form button{
+div.coupon-form form button{
+    width: 30%;
     border-radius: 10px;
     padding: 3px;
     margin-left: 2px;
@@ -116,8 +115,6 @@ div.coupon form button{
     background-color: #005BBB;
     color: white;
 }
-
-
 
 /* linea */
 .line{
@@ -161,12 +158,6 @@ hr{
     color: white;
 }
 
-/* linea-1 */
-.line-1{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
 
 /* Totales */
 
@@ -194,8 +185,7 @@ hr{
 .pay{
     display: flex;
     justify-content: center;
-    margin-top: 10px;
-
+    margin: 5px 0px;
 }
 .paypal,
 .credit-card{
