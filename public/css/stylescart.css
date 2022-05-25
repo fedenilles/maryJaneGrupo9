@@ -55,15 +55,17 @@ div.product h4{
 }
 .price{
     font-size: 16px;
-    margin-right: 5px;
-}
+    }
+    
 .price h4,
-.quantity h4{
+.quantity h4,
+.subtotal h4{
     display: none;
 }
-.quantity-form{
-    display: flex;
+.quantity{
+    font-size: 16px;
 }
+
 .minus,
 .plus{
     font-size: 16px;
@@ -82,14 +84,10 @@ input.number{
     font-weight: bold;
     margin-left: 5px;
 }
-.subtotal h4{
-    display: none;
-}
-
 
 /* Cupon */
 .discount-coupon{    
-    margin-left: 10px;
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -117,11 +115,7 @@ div.coupon-form form button{
 }
 
 /* linea */
-.line{
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
+
 hr{
     width: 95%;
     margin: 10px 0px;
@@ -149,7 +143,11 @@ hr{
     padding: 5px;
     font-size: 20px;
 }
+.add-cart{
+    width: 100%;
+}
 .add-cart button{
+    width: 40%;
     border-radius: 10px;
     margin-top: 5px;
     padding: 3px;
@@ -194,12 +192,60 @@ hr{
 
 /*Media queries*/
 
-/*Mobile SmartPhones*/
+
 @media (min-width: 480px) {
-   
+
+    .upper-section{
+        display: flex;
+        flex-direction: column;
+    }
+    .top1{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+    }
+    .price h4,
+    .quantity h4,
+    .subtotal h4{
+        display: block;
+    }
+    .price,
+    .quantity,
+    .subtotal{
+        margin: 10px;
+    }
+    .product{
+        width: 45%;
+    }
+    .detail{
+        width: 45%;
+    }
+    .discount-coupon{
+        margin-left: 5%;
+    }
+    .bottom-section{
+        display: flex;
+    }
+    .line2{
+        display: none;
+    }
+    .offers{
+        width: 50%;
+    }
+    .cart-totals{
+        width: 40%;
+        border-left: 1px solid gray;
+        display: flex;
+        flex-direction: column;
+    }
+    .paypal,
+    .credit-card {
+        width: 35%;
+    }
 }
 
-/*Tablet*/
+
 @media (min-width: 800px) {
 
 
