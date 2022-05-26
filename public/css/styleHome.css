@@ -187,6 +187,7 @@
 	padding: 5px;
 	z-index: 100;
     border-radius: 5px;
+    margin: 0 auto;
 }
 
 .slider-controler li {
