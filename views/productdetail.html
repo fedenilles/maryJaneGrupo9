@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/header-footer.css">
+    <link rel="stylesheet" href="/css/productdetail.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <title>MaryJane GrowShop</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="navbar">
+                <div class="burger-menu">
+                    <i class="fas fa-bars bars"></i>
+                </div>
+                <ul class="navbar-nav nav1">
+                    <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
+                </ul>
+                    <img class="nav-img" src="/img/mj-logo.png" alt="Logo">
+                <ul class="navbar-nav nav2">
+                    <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Learn</a></li>
+                </ul>
+                <div class="shop-menu">
+                    <a href="/cart.html"> <i class="fa-solid fa-cart-shopping cart"></i></a>
+                    <a href="/login.html"> <i class="fa-solid fa-user profile"></i></a>
+                </div>
+            </div>            
+            </header>
+
+           
+            <section class="productsection">
+            
+                <!-- Carrousel -->
+
+                <div class="carrouselcontainer">
+                    
+                    <h4> Breadcrumbs </h4>
+                    <div class="imageProduct">
+                        <div class="imagenTriple">
+                            <img src="/img/img.png" alt="">
+                            <img src="/img/img.png" alt="">
+                            <img src="/img/img.png" alt="">
+                        </div>
+                        <div class="imagenGrande">
+                            <img src="/img/img.png" alt="ImagenGrande">
+                        </div>                    
+                    </div>
+                    <ul class="slider-controler">
+                        <li><a href="#">&bullet;</a></li>
+                        <li><a href="#">&bullet;</a></li>
+                        <li><a href="#">&bullet;</a></li>
+                        <li><a href="#">&bullet;</a></li>
+                    </ul>
+                    
+                </div>
+
+
+                
+                <div class="productname">
+                    <h2> Product name </h2> 
+                </div>
+
+                <div class="star-rating">
+                    <input type="radio" id="5-stars" name="rating" value="5" />
+                    <label for="5-stars" class="star">&#9733;</label>
+                    <input type="radio" id="4-stars" name="rating" value="4" />
+                    <label for="4-stars" class="star">&#9733;</label>
+                    <input type="radio" id="3-stars" name="rating" value="3" />
+                    <label for="3-stars" class="star">&#9733;</label>
+                    <input type="radio" id="2-stars" name="rating" value="2" />
+                    <label for="2-stars" class="star">&#9733;</label>
+                    <input type="radio" id="1-star" name="rating" value="1" />
+                    <label for="1-star" class="star">&#9733;</label>
+                </div>  
+
+                <p class="price"> $5.99 </p>
+
+                <div class="option">
+                        <select name="opciones" id="opciones">
+                        <option value="opcion-1">Option 1</option>
+                        <option value="opcion-2">Option 2</option>
+                        <option value="opcion-3">Option 3</option>
+                        <option value="opción-4">Option 4</option>
+                        </select>
+                </div>
+
+                <div class="cart-form">
+                        <form action="" method="">
+                            <div class="quantity-form">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" id="quantity" min="1" name="quantity" value="1" class="number">
+                                <input type="button" value="+" class="plus"> 
+                            </div>
+                            <div class="formBtn">
+                                <button type="submit"> Add to cart </button> 
+                            </div>
+                        </form>
+                </div>
+
+    
+
+                    <!-- Descripción del artículo -->
+                    <div class="productDescription">
+                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec pellentesque ante. Phasellus sem erat, ornare id venenatis eget, tempus quis nisl. </p>
+                    </div>
+                    
+
+                    <!-- Acordion -->
+                    <div>
+                        <button class="accordion">Other details</button>
+                        <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec pellentesque ante. Phasellus sem erat, ornare id venenatis eget, tempus quis nisl.</p>
+                    </div>
+
+            </section>
+
+            <!-- Recommended for you -->
+
+            <section class="most-popular">
+                <h3 class="title-most-popular">Recommended for you</h3>
+                <article class="most-popular-box">
+                    <div class="back">
+                        <i class="fa-regular fa-square-caret-left"></i>
+                    </div>
+                    <div class="product-conteiner">
+                        <div class="product-exhibitor-first">
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                        </div>
+                        
+                        <div class="product-exhibitor-second">
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                        </div>
+                        <div class="product-exhibitor-third">
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                            <div class="product-div">
+                                <img src="/img/img.png" alt="Producto">
+                                <p class="product-name">Product 1</p>   
+                                <h5 class="product-price"> $10.00</h5>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="next">
+                        <i class="fa-regular fa-square-caret-right"></i>
+                    </div>
+
+                </article>
+                <ul class="slider-controler">
+                    <li><a href="#">&bullet;</a></li>
+                    <li><a href="#">&bullet;</a></li>
+                    <li><a href="#">&bullet;</a></li>
+                    <li><a href="#">&bullet;</a></li>
+                </ul>
+            </section>
+
+
+            
+            <!-- Reviews -->
+
+            <section class="reviews">
+                <h3 class="reviewstitle"> Reviews </h3>
+                <div class="containerReviews">
+                    <div class="imagenReviews">
+                        <img src="/img/img.png" alt="ImagenReviews">
+                    </div>
+                    <div class="boxReviews">
+                        <div class="nameReview"> 
+                            <h4> John Doe </h4>
+                            <p> 4/23/2022</p>
+                        </div>
+                        <div class="star-rating-2">
+                            <input type="radio" id="5-stars" name="rating" value="5" disabled/>
+                            <label for="5-stars" class="star">&#9733;</label>
+                            <input type="radio" id="4-stars" name="rating" value="4" disabled/>
+                            <label for="4-stars" class="star">&#9733;</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" disabled/>
+                            <label for="3-stars" class="star">&#9733;</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" disabled/>
+                            <label for="2-stars" class="star">&#9733;</label>
+                            <input type="radio" id="1-star" name="rating" value="1" disabled/>
+                            <label for="1-star" class="star">&#9733;</label>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec pellentesque ante. Phasellus sem erat, ornare id venenatis eget, tempus quis nisl.</p>
+                    </div>
+                </div>    
+                    <div class="boxHelp">
+                        <p class="reviews-help"> Did this help? </p> 
+                        <i class="fa-solid fa-thumbs-up"></i> <i class="fa-solid fa-thumbs-down"></i> 
+                    </div> 
+
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">&raquo;</a>
+                    </div> 
+
+            </section>
+
+
+
+            <!-- Suscripción -->
+            <section class="subscription">
+                <div class="container-subscr">    
+                    <div class="title-subscription">
+                        <h3>Subscribe</h3>
+                        <p>Etiam in quam rhoncus, posuere arcu et, feugiat sem. Phasellus scelerisque mi in mattis hendrerit.</p>
+                    </div>
+                    <form action="#" class="subscribe">
+                        <input type="text" placeholder="youremail@gmail.com" class="inp-subscribe">
+                        <input type="button" value="Send" class="btn btn-subscribe">
+                    </form>
+                </div>
+            </section>
+
+
+
+
+            <footer>
+                <div class="footer-container">
+                <div class="footer-columns">
+                    <div class="col-1">
+                        <h4>Titulo</h4>
+                        <ul>
+                            <li><a href="#"> Item 1 </a></li>
+                            <li><a href="#"> Item 2 </a></li>
+                            <li><a href="#"> Item 3 </a></li>
+                            <li><a href="#"> Item 4 </a></li>
+                            <li><a href="#"> Item 5 </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <h4>Titulo</h4>
+                        <ul>
+                            <li><a href="#"> Item 1 </a></li>
+                            <li><a href="#"> Item 2 </a></li>
+                            <li><a href="#"> Item 3 </a></li>
+                        </ul>
+                    </div>
+                    <div class="col-1">
+                        <h4>Titulo</h4>
+                        <ul>
+                            <li><a href="#"> Item 2 </a></li>
+                            <li><a href="#"> Item 3 </a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-img">
+                    <img src="/img/mj-logo.png" alt="logo MaryJane">
+                </div>
+    
+                <p>Donec convallis orci lacus, nec varius justo laoreet eu. Proin sem erat, euismod eu neque eu, semper consectetur libero. Morbi vestibulum dapibus laoreet. </p>
+                <div class="social-networks">
+                    <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
+                    <a href="#"> <i class="fa-brands fa-linkedin"></i> </a>
+                    <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
+                    <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
+                </div>
+    
+                <p class="copyright"> <i> Copyright 2022 Lorem Ipsum </i></p>
+            </div>
+            
+    
+            
+    
+            </footer>
+            </div>
+
+</body>
+</html>
