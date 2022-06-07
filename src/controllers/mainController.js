@@ -21,6 +21,10 @@ const controller = {
 
     productDetail: (req, res) => {
         return res.render("productdetail")
+    },
+
+    productForm: (req, res) => {
+        return res.render("productForm")
     }
 }
 
