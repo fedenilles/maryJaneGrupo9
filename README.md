@@ -96,7 +96,7 @@ Nos agrado el diseño y la cantidad de productos
 ***
 
 ## Link al tablero
-https://www.notion.so/48eed829a6b6409984aea82432d732f2?v=b4cde2179e454394a965935cbec0e387
+https://ninth-emery-c9e.notion.site/48eed829a6b6409984aea82432d732f2?v=b4cde2179e454394a965935cbec0e387
 
 <!--
 

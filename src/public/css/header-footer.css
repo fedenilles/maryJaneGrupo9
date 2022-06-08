@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #EDEFEE;
+    background-color: #fff;
     font-family: 'Quicksand';
 }
 
@@ -139,14 +139,21 @@ footer .social-networks a {
 }
 
 
-@media (min-width: 390px) {
-    
+@media (min-width: 375px) {
+    .burger-menu {
+        display: none;
+    }
     .navbar {
         width: 100%;
         box-sizing: border-box;
         padding: 0;
     }
-    
+    .navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    width: 30vw;
+    }
     
     .navbar ul li {
         padding: 10px;
