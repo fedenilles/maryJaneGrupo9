@@ -16,26 +16,7 @@ rel="stylesheet" />
 <body>
         
 	    <div class="container">
-            <header>
-                <div class="navbar">
-                    <div class="burger-menu">
-                        <i class="fas fa-bars bars"></i>
-                    </div>
-                    <ul class="navbar-nav nav1">
-                        <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Shop</a></li>
-                    </ul>
-                        <img class="nav-img" src="/img/mj-logo.png" alt="Logo">
-                    <ul class="navbar-nav nav2">
-                        <li class="nav-item"><a href="#" class="nav-link">About us</a></li>
-                        <li class="nav-item"><a href="#" class="nav-link">Learn</a></li>
-                    </ul>
-                    <div class="shop-menu">
-                        <a href="/cart.html"> <i class="fa-solid fa-cart-shopping cart"></i></a>
-                        <a href="/login.html"> <i class="fa-solid fa-user profile"></i></a>
-                    </div>
-                </div>            
-                </header>
+            <%-include ("./partials/header.ejs") %>
             <main>
                 
                 <!-- Top content -->
@@ -98,51 +79,7 @@ rel="stylesheet" />
         </div>
 
             </main>
-            <footer>
-                <div class="footer-container">
-                <div class="footer-columns">
-                    <div class="col-1">
-                        <h4>Titulo</h4>
-                        <ul>
-                            <li><a href="#"> Item 1 </a></li>
-                            <li><a href="#"> Item 2 </a></li>
-                            <li><a href="#"> Item 3 </a></li>
-                            <li><a href="#"> Item 4 </a></li>
-                            <li><a href="#"> Item 5 </a></li>
-                        </ul>
-                    </div>
-                    <div class="col-1">
-                        <h4>Titulo</h4>
-                        <ul>
-                            <li><a href="#"> Item 1 </a></li>
-                            <li><a href="#"> Item 2 </a></li>
-                            <li><a href="#"> Item 3 </a></li>
-                        </ul>
-                    </div>
-                    <div class="col-1">
-                        <h4>Titulo</h4>
-                        <ul>
-                            <li><a href="#"> Item 2 </a></li>
-                            <li><a href="#"> Item 3 </a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="footer-img">
-                    <img src="/img/mj-logo.png" alt="logo MaryJane">
-                </div>
-    
-                <p>Donec convallis orci lacus, nec varius justo laoreet eu. Proin sem erat, euismod eu neque eu, semper consectetur libero. Morbi vestibulum dapibus laoreet. </p>
-                <div class="social-networks">
-                    <a href="#"> <i class="fa-brands fa-facebook"></i> </a>
-                    <a href="#"> <i class="fa-brands fa-linkedin"></i> </a>
-                    <a href="#"> <i class="fa-brands fa-instagram"></i> </a>
-                    <a href="#"> <i class="fa-brands fa-twitter"></i> </a>
-                </div>
-    
-                <p class="copyright"> <i> Copyright 2022 Lorem Ipsum </i></p>
-            </div>
-            </footer>
-
+            <%-include ("./partials/footer.ejs") %> 
     
 </body>
 </html>
