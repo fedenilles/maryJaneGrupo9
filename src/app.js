@@ -19,7 +19,9 @@ app.get("/",mainRoutes);
 // app.get("/cart",mainController.cart);
 // app.get("/productdetail",mainController.productDetail);
 
-
+app.get("/productForm.html", (req,res) => {
+    res.sendFile(__dirname + '/views/productForm.html');
+})
 
 
 // app.get('/', (req,res) => {
