@@ -37,6 +37,7 @@ padding: 20px;
     width: 100%;
 }
 
+
 .imgs-add img{
     width: 100%;
     margin-bottom: 20px
@@ -239,4 +240,29 @@ button {
     width: 40%;
     margin: 0 auto;
     text-align: center;
+}
+
+
+@media (min-width: 800px) {
+    .imgs-add {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+    }
+
+    .imgs-add img {
+        width: 24%;
+    }
+
+    .coloresProd {
+        width:45%;
+        margin: 0 auto;
+    }
+
+    button {
+        width: 25%;
+        margin: 0 auto;
+        text-align: center;
+    }
 }
