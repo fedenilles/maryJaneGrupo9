@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include ("./partials/head.ejs") %>
+    <link rel="stylesheet" href="/css/shop.css">
+
+<body>
+        
+	    <div class="container">
+            <%-include ("./partials/header.ejs") %>
+
+
+                <main>
+                    <div class="product-filter">
+
+                        <div class="title"><h1>Products</h1></div>
+                      
+                        <div class="sort">
+                      
+                          <div class="collection-sort">
+                            <label>Filter by:</label>
+                            <select>
+                              <option value="/">Todos</option>
+                            </select>
+                          </div>
+                      
+                          <div class="collection-sort">
+                            <label>Sort by:</label>
+                            <select>
+                              <option value="/">Categoria</option>
+                            </select>
+                          </div>
+                      
+                        </div>
+                      
+                    </div>
+                    <section class="products">
+
+                    
+                        <div class="product-card">
+                          <article>
+                            <div class="product-image">
+                            <img src="/img/img.png">
+                          </div>
+                          <div class="product-info">
+                            <h5>Product name</h5>
+                            <h6>$PRICE</h6>
+                          </div>
+                          </article>
+                        </div>
+                      
+                        <!-- otros productos -->
+                        <div class="product-card">
+                          <article>
+                            <div class="product-image">
+                            <img src="/img/img.png">
+                          </div>
+                          <div class="product-info">
+                            <h5>Product name</h5>
+                            <h6>$PRICE</h6>
+                          </div>
+                          </article>
+                        </div>
+
+                        <div class="product-card">
+                          <article>
+                            <div class="product-image">
+                            <img src="/img/img.png">
+                          </div>
+                          <div class="product-info">
+                            <h5>Product name</h5>
+                            <h6>$PRICE</h6>
+                          </div>
+                          </article>
+                        </div>
+                      
+                        <div class="product-card">
+                          <article>
+                            <div class="product-image">
+                            <img src="/img/img.png">
+                          </div>
+                          <div class="product-info">
+                            <h5>Product name</h5>
+                            <h6>$PRICE</h6>
+                          </div>
+                          </article>
+                        </div>
+
+                        <div class="product-card">
+                          <article>
+                            <div class="product-image">
+                            <img src="/img/img.png">
+                          </div>
+                          <div class="product-info">
+                            <h5>Product name</h5>
+                            <h6>$PRICE</h6>
+                          </div>
+                          </article>
+                        </div>
+
+                       
+                      </section>
+                </main>
+
+
+
+
+            <%-include ("./partials/footer.ejs") %>
+        
+
+        </div>
+
+</body>
+</html>
