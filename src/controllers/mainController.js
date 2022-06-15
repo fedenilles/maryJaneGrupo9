@@ -11,7 +11,7 @@ const controller = {
 	index: (req, res) => {
 		id = req.params.id;
 		return res.render("index", {products})
-	},
+	}
 
 };
 
