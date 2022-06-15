@@ -1,7 +1,8 @@
 .productsection{
   display: block;
-  width: 100%;
+  width: 60%;
   padding: 10px;
+  margin: 0 auto;
 }
 .carrouselcontainer{
   display: block;
@@ -231,13 +232,15 @@ form .quantity-form input[type="button"] {
 .product-div{
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 90%;
   margin: 6px;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-div img{
-  width:100%
+  width: 100px;
+  height: 100px
 }
 
 .product-price{
@@ -273,7 +276,7 @@ form .quantity-form input[type="button"] {
 .containerReviews{
   display: flex;
   flex-direction: row;
-  justify-content:space-between;
+  justify-content:space-around;
   align-items: center;
   width: 100%;
 }
@@ -281,7 +284,7 @@ form .quantity-form input[type="button"] {
     width: 40%;
     display: flex;
     flex-direction: column;
-    align-self: flex-start;
+    align-self: center;
 }
 .imagenReviews img{
   width: 100%;
@@ -341,6 +344,7 @@ form .quantity-form input[type="button"] {
 
 .reviews-help{
     padding-right: 24px;
+    margin-left: 40px;
 }
 
 .fa-thumbs-up{
@@ -405,4 +409,29 @@ form .quantity-form input[type="button"] {
     border-radius: 5px;
     color:white;
     letter-spacing: 0.2em;
+}
+
+
+@media (min-width: 375px){
+
+  .product-exhibitor-first{
+    display: flex;
+}
+.product-exhibitor-second{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+}
+
+@media (min-width: 760px){
+  .product-exhibitor-third{
+      display: flex;
+      width: 100%;
+      justify-content: space-around;
+  }
+
+  .product-exhibitor-first{
+      display: none;
+  }
 }

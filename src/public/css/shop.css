@@ -1,0 +1,51 @@
+.product-filter {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+.product-filter .title {
+  justify-self: flex-start;
+}
+
+.sort {
+    display: flex;
+    justify-self: flex-end;
+  }
+
+.collection-sort {
+    display: flex;
+    flex-direction: column;
+  }
+
+.products {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1%;
+  }
+
+.product-card {
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    width: 18%;
+    border: 1px solid rgba(137, 131, 131, 0.6);
+  }
+
+
+.product-image img {
+    max-width: 100%;
+  }
+
+.product-info h5 {
+  font-size: 20px;
+}
+
+.product-info h6 {
+  font-size: 16px;
+}
+
+.product-info {
+    margin-top: auto;
+  }
+

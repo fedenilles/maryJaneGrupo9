@@ -11,6 +11,10 @@ const controller = {
         return res.render("login")
     },
 
+    shop: (req, res) => {
+        return res.render("shop")
+    },
+
     register: (req, res) => {
         return res.render("register")
     },
