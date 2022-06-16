@@ -44,7 +44,7 @@ const controller = {
 		return res.send("Producto borrado exitosamente")
 	},
 	shop: (req, res) => {
-        return res.render("shop")
+        return res.render("shop", )
     },
 	cart: (req, res) => {
         return res.render("cart")
