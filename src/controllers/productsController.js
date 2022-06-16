@@ -25,7 +25,20 @@ const controller = {
 	
 	// Create -  Method to store
 	store: (req, res) => {
-		return res.send("Producto agreagdo correctamente")
+		const products = readJsonFile(productsFilePath)
+		const producto = {
+			id: products[products.length -1].id + 1,
+			name: req.body.name,/* revisar value */
+			price: req.body.price,/* revisar value */
+			discount: req.body.discount,/* revisar value */
+			category: req.body.category,/* revisar value */
+			description: req.body.description,/* revisar value */
+			image: req.file?.filename || "default-image.png"
+		}
+
+		products.push(producto);
+		fs.writeFileSync(productsFilePath, JSON.stringify(products, null, 2));
+		return res.redirect("/products")
 	},
 
 	// Update - Form to edit
@@ -44,7 +57,8 @@ const controller = {
 		return res.send("Producto borrado exitosamente")
 	},
 	shop: (req, res) => {
-        return res.render("shop", )
+		id = req.params.id;
+		return res.render("shop", {products})
     },
 	cart: (req, res) => {
         return res.render("cart")
