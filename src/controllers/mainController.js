@@ -2,34 +2,17 @@ const res = require("express/lib/response");
 const fs = require ("fs");
 const path = require ("path");
 
+const productsFilePath = path.join(__dirname, '../db/products.json');
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
+
 const controller = {
-    index: (req, res) => {
-        return res.render("index")
-    },
+	// Root - Show all products
+	index: (req, res) => {
+		id = req.params.id;
+		return res.render("index", {products})
+	}
 
-    login: (req, res) => {
-        return res.render("login")
-    },
+};
 
-    shop: (req, res) => {
-        return res.render("shop")
-    },
-
-    register: (req, res) => {
-        return res.render("register")
-    },
-
-    cart: (req, res) => {
-        return res.render("cart")
-    },
-
-    productDetail: (req, res) => {
-        return res.render("productdetail")
-    },
-
-    productForm: (req, res) => {
-        return res.render("productForm")
-    }
-}
-
-module.exports=controller;
+module.exports = controller;
