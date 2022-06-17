@@ -256,10 +256,6 @@ header {
     width: 60%;
 }
 
-.cat-columns {
-    
-}
-
 @media (max-width:767px)
     {
     .social-icons li.title

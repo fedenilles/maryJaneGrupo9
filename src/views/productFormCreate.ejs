@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include ("./partials/head.ejs") %>
+<body>
+    <%-include ("./partials/header.ejs") %>
+
+    <main>
+        
+        <div class="container products-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="products-title">Create New Product <i></i></h2>
+                </div>
+            </div>
+            <div class="col-12"> 
+                <form action="/products/" method="POST">
+                    <div class="row product-detail">
+                        <div class="col-12 col-md-6">
+                            <label for="name" class="form-label">Product Name</label>
+                            <input type="text" id="name" name="name" placeholder="Eg: Delta 8 Gummies" class="form-input" value="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="text" id="price" name="price" placeholder="Eg: 5678" class="form-input" value="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="discount" class="form-label">Discount</label>
+                            <input type="text" id="discount" name="discount" placeholder="Eg: 15" class="form-input" value="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="category" class="form-label">Category</label>
+                            <select name="category" id="category" class="form-input">
+                                <option value="">Choose an option</option>
+                                <option value="Semillas"  >Seeds</option>
+                                <option value="Fertilizantes" >Fertilizers</option>
+                                <option value="Kits"  >Harvest Kits</option>
+                                <option value="Consumo" >Ready to Consume</option>
+                            </select>
+                        </div>
+                        <div class="col-12">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea name="description" id="description" class="form-input"></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="buy-now-button">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+    
+        </div>
+
+    </main>
+
+    <%-include ("./partials/footer.ejs") %>
+</body>
+</html>

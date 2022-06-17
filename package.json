@@ -1,7 +1,12 @@
 {
   "dependencies": {
+    "body-parser": "^1.20.0",
+    "cookie-parser": "^1.4.6",
     "ejs": "^3.1.8",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "method-override": "^3.0.0",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1"
   },
   "name": "grupo9",
   "description": "<!-- Markdown -->\r <!-- https://markdown.es/ -->\r <!-- Nombres\r Descripcion de la Pagina\r Paginas que usamos de modelo (minimo4) que tomamos de cada pagina y porque -->\r <!-- información del proyecto.\r A quien apunta de que se trata, integrantes, como se configura si alguien lo instala\r readme \"express\" en github/expressjs/express -->\r <!-- Grupo en Discord https://discord.gg/x2EUr3MXYk -->",

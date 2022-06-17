@@ -41,21 +41,91 @@
                       
                     </div>
                     <section class="products">
+                      <div class="productosCategory">
+                        <h3 class="prductTitle">Seeds</h3>
+                        <div class="categoryRow">
 
-                    <% for(i=0; ) %>
-                        <div class="product-card">
-                          <article>
-                            <div class="product-image">
-                            <img src="/img/img.png">
-                          </div>
-                          <div class="product-info">
-                            <h5>Product name</h5>
-                            <h6>$PRICE</h6>
-                          </div>
-                          </article>
+                          <%for(let i = 0; i < products.length; i++){ %>
+                            <% if( products[i].category == "Semillas"){ %>
+                            <div class="product-card">
+                              <article>
+                                <div class="product-image">
+                                  <img src="/img/img.png">
+                                </div>
+                                <div class="product-info">
+                                  <h5><%= products[i].product %></h5>
+                                  <h6>$ <%= products[i].price %></h6>
+                                </div>
+                              </article>
+                            </div>
+                            <% } %>
+			                    <% } %>
                         </div>
-                      
-                      </section>
+                      </div>
+                      <div class="productosCategory">
+                        <h3 class="prductTitle">Fertizers</h3>
+                        <div class="categoryRow">
+
+                          <%for(let i = 0; i < products.length; i++){ %>
+                            <% if( products[i].category == "Fertilizantes"){ %>
+                            <div class="product-card">
+                              <article>
+                                <div class="product-image">
+                                  <img src="/img/img.png">
+                                </div>
+                                <div class="product-info">
+                                  <h5><%= products[i].product %></h5>
+                                  <h6>$ <%= products[i].price %></h6>
+                                </div>
+                              </article>
+                            </div>
+                            <% } %>
+			                    <% } %>
+                        </div>
+                      </div>
+                      <div class="productosCategory">
+                        <h3 class="prductTitle">Harvest Kits</h3>
+                        <div class="categoryRow">
+
+                          <%for(let i = 0; i < products.length; i++){ %>
+                            <% if( products[i].category == "Kits"){ %>
+                            <div class="product-card">
+                              <article>
+                                <div class="product-image">
+                                  <img src="/img/img.png">
+                                </div>
+                                <div class="product-info">
+                                  <h5><%= products[i].product %></h5>
+                                  <h6>$ <%= products[i].price %></h6>
+                                </div>
+                              </article>
+                            </div>
+                            <% } %>
+			                    <% } %>
+                        </div>
+                      </div>
+                      <div class="productosCategory">
+                        <h3 class="prductTitle">Ready to Consume</h3>
+                        <div class="categoryRow">
+
+                          <%for(let i = 0; i < products.length; i++){ %>
+                            <% if( products[i].category == "Consumo"){ %>
+                            <div class="product-card">
+                              <article>
+                                <div class="product-image">
+                                  <img src="/img/img.png">
+                                </div>
+                                <div class="product-info">
+                                  <h5><%= products[i].product %></h5>
+                                  <h6>$ <%= products[i].price %></h6>
+                                </div>
+                              </article>
+                            </div>
+                            <% } %>
+			                    <% } %>
+                        </div>
+                      </div>
+                    </section>
                 </main>
 
 
