@@ -1,20 +1,36 @@
+const createError = require('http-errors');
+const cookieParser = require('cookie-parser');
 const express = require ("express");
 const app = express();
 const PORT = process.env.PORT || 3000;
 const path = require ("path");
+const logger = require('morgan');
+const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
+const bodyParser = require("body-parser")
+
+
 const mainRoutes =require("./routes/mainRoutes");
 const productsRoutes =require("./routes/productsRoutes");
 const usersRoutes =require("./routes/usersRoutes");
+
 
 
 app.listen(3000, () => console.log(`servidor corriendo en el puerto ${PORT}`));
 
 app.use(express.static(__dirname + '/public'));
 
-app.use("/",mainRoutes)
-app.use("/product",productsRoutes)
-app.use("/user",usersRoutes)
-
+app.use(methodOverride('_method'))
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json())
+app.use(logger('dev'));
+app.use(cookieParser());
+app.use(bodyParser.json())
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
+
+app.use("/",mainRoutes)
+app.use("/products",productsRoutes)
+app.use("/user",usersRoutes)
+
+

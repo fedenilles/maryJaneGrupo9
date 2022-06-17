@@ -5,27 +5,34 @@ const multer = require('multer');
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
-router.get('/', productsController.index); 
-router.get("/cart", productsController.cart);
-router.get("/productdetail/:id?", productsController.detail) /* /products/:id (GET) Detalle de un producto particular */
-router.get("/productform", productsController.create); //lleva al formulario de creacion /products/create (GET) Formulario de creación de productos*/
-router.post('/', productsController.store);  /*Acción de creación (a donde se envía el formulario)*/
-router.get("/shop", productsController.shop) /* /products (GET) Listado de productos */
-/*** GET ALL PRODUCTS ***/ 
 
-/* 4. /products (POST) editar el form y poner los value
-Acción de creación (a donde se envía el formulario)
-5. /products/:id/edit (GET)
-Formulario de edición de productos
-6. /products/:id (PUT)
-Acción de edición (a donde se envía el formulario):
-7. /products/:id (DELETE)
-Acción de borrado */
+/*** GET CART***/
+router.get("/cart", productsController.cart);
+
+/*** GET ALL PRODUCTS ***/
+router.get("/", productsController.shop) /* /products (GET) Listado de productos */
+
+/*** SHOW CREATE FORM ***///lleva al formulario de creacion /products/create (GET) */
+router.get("/create", productsController.create); 
+
+/*** STORE PRODUCT FORM ***//*Acción de creación (a donde se envía el formulario)*/
+router.post('/', productsController.store);  
+
+/*** EDIT PRODUCT FORM ***/
+router.get('/edit/:id', productsController.edit)
+router.put('/:id', productsController.update);
+
+/*** DELETE ONE PRODUCT***/ 
+router.delete('/:id', productsController.destroy); 
+
+/*** SHOW PRODUCT DETAIL BY ID ***//* /products/:id (GET) Detalle de un producto particular */
+router.get("/:id?", productsController.detail) 
+
+
 
 /*** EDIT ONE PRODUCT ***/ 
 /* router.get('/edit/:id', productsController.edit); 
 router.put('/:id', productsController.update); 
-
 
 /*** DELETE ONE PRODUCT***/ 
 /* router.delete('/:id', productsController.destroy);  */
@@ -34,14 +41,12 @@ router.put('/:id', productsController.update);
 /* router.get('/create/', productsController.create); 
 router.post('/', productsController.store);  */
 
-
 /*** GET ONE PRODUCT ***/ 
-router.get('/product/:id/', productsController.detail); 
+router.get('product/:id/', productsController.detail); 
 
 /*** EDIT ONE PRODUCT ***/ 
 /* router.put('/:id/edit', productsController.edit); 
 router.put('/:id', productsController.update);  */
-
 
 /*** DELETE ONE PRODUCT***/ 
 /* router.delete('/:id', productsController.destroy);  */
