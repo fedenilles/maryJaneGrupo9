@@ -130,11 +130,21 @@
 
     .prod-search {
       width: 90%;
+      margin: 0 auto;
     }
 
-    .sort {
+    .product-filter .title {
+      width: 100%;
+      text-align: center;
+    }
+
+    .title h1 {
       width: 90%;
-      justify-content: center;
-      align-items: space-around;
+      text-align: center;
+    }
+
+    .product-filter .sort {
+      width: 100%;
+      justify-content: space-evenly;
     }
 }
