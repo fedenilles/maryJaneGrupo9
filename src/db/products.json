@@ -310,5 +310,23 @@
     "category": "Semillas",
     "description": "asdjhaskdjahskjdsahf",
     "image": "default-image.png"
+  },
+  {
+    "id": 41,
+    "product": "Black Widow",
+    "price": "3000",
+    "discount": "",
+    "category": "Semillas",
+    "description": "aksjlksjhsalkjghG",
+    "image": "default-image.png"
+  },
+  {
+    "id": 42,
+    "product": "ASLKDJASLD",
+    "price": "123123",
+    "discount": "",
+    "category": "Fertilizantes",
+    "description": "ASDASDAS",
+    "image": "default-image.png"
   }
 ]

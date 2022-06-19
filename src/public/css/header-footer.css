@@ -252,8 +252,8 @@ header {
 
 .sector-categories {
     display: inline-flex;
-    justify-content: space-between;
-    width: 60%;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 @media (max-width:767px)
@@ -273,6 +273,12 @@ header {
 
     .burger-menu {
         display: none
+    }
+
+    .sector-categories {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 60%;
     }
 }
 
