@@ -6,28 +6,71 @@ textarea {
   font-family: inherit;
 }
 
+.products-title {
+  font-weight: bolder;
+  font-size: 50px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
 hr {
   border: none;
   border-bottom: solid 1px var(--light-gray);
 }
+
+.col-12 form {
+  padding: 1% 2%;
+  width: 80%;
+  margin: 10px auto;
+}
+
+
 .form-label {
     display: inline-block;
-    font-size: 1.6em;
-    margin: 10px 0;
+    font-size: 2.4em;
+    margin: 20px 0;
   }
   
 .form-input {
     display: block;
-    width: 100%;
+    width: 80%;
     height: 45px;
-    margin-bottom: 15px;
     font-size: 1.5em;
     border-radius: 8px;
-    border: none;
-    border: solid 1px var(--gray);
+    margin: 15px auto;
+    border: solid 1px rgba(137, 131, 131, 0.8);
     padding: 0 15px;
 }
-  
+
+
+
+.file-input {
+  padding: 7px;
+  margin: 0 auto;
+}
+
+.buy-now-button {
+  width: 25%;
+  margin: 0 auto;
+  text-align: center;
+  height: 50px;
+  background-color: rgb(190, 163, 43);
+  border: none;
+  border-radius: 5px;
+  color: white
+}
+
+.delete {
+  background-color: rgb(190, 77, 43);
+  color: white;
+}
+
+.edit {
+  background-color: #3a3c42;
+  color: white;
+}
+
+
 textarea.form-input {
     min-height: 140px;
     resize: vertical;

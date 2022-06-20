@@ -46,7 +46,7 @@ header {
 .navbar li {
     display: inline-block;
     float: none;
-    color: #737373;
+    color: #9e9a9a;
     padding-bottom: 5px;
 }
 
@@ -54,7 +54,7 @@ header {
     padding-left: 30px;
     padding-right: 30px;
     text-decoration: none;
-    color: #737373;
+    color: #9e9a9a;
 }
 
 .nav-notmobile {
@@ -252,8 +252,8 @@ header {
 
 .sector-categories {
     display: inline-flex;
-    justify-content: space-between;
-    width: 60%;
+    justify-content: flex-start;
+    width: 100%;
 }
 
 @media (max-width:767px)
@@ -273,6 +273,12 @@ header {
 
     .burger-menu {
         display: none
+    }
+
+    .sector-categories {
+        display: inline-flex;
+        justify-content: space-between;
+        width: 60%;
     }
 }
 
