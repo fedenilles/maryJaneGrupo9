@@ -328,5 +328,13 @@
     "category": "Fertilizantes",
     "description": "ASDASDAS",
     "image": "default-image.png"
+  },
+  {
+    "id": 43,
+    "product": "",
+    "price": "",
+    "category": "",
+    "description": "",
+    "image": "default-image.png"
   }
 ]
