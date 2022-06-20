@@ -9,21 +9,23 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
  */
 
 const controller = {
-	// Detail - Detail from one product
+	/* productGet */
+	shop: (req, res) => {
+		return res.render("shop", {products})
+    },
+	// Create - Form to create
+	create: (req, res) => {
+		
+		return res.render("productFormCreate")
+	},
+	//  Get Id Detail - Detail from one product
 	detail: (req, res) => {
 		
 		id = req.params.id;
 		const product = products.find(product => product.id == id)
 		return res.render("productdetail", {product})
 	},
-
-	// Create - Form to create
-	create: (req, res) => {
-		
-		return res.render("productFormCreate")
-	},
-	
-	// Create -  Method to store
+	// POST Create -  Method to store
 	store: (req, res) => {
 		const producto = {
 			id: products[products.length -1].id + 1,
@@ -46,7 +48,7 @@ const controller = {
 		const product = products.find(product => product.id == id)
 		return res.render("productFormEdit", {product})
 	},
-	// Update - Method to update
+	//  PUT Update - Method to update
 	update: (req, res) => { 
 			for(let i = 0; i < products.length; i++) {
 				if(products[i].id == req.params.id){
@@ -67,23 +69,25 @@ const controller = {
 
 
 	// Delete - Delete one product from DB
-	destroy : (req, res) => {
-		return res.send("Producto borrado exitosamente")
+	destroy : (req, res) =>{
+		const productosFiltrados = products.filter(product => product.id != req.params.id);
+
+		fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, 2));
+		return res.redirect("/products");
 	},
-	shop: (req, res) => {
-		return res.render("shop", {products})
-    },
+	
 	cart: (req, res) => {
         return res.render("cart")
     },
 
-    productDetail: (req, res) => {
-        return res.render("productdetail")
-    },
-
-    productForm: (req, res) => {
-        return res.render("productForm")
-    }
 };
 
 module.exports = controller;
+
+/* productDetail: (req, res) => {
+	return res.render("productdetail")
+},
+
+productForm: (req, res) => {
+	return res.render("productForm")
+} */

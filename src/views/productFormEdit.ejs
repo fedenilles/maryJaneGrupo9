@@ -43,9 +43,12 @@
                         </div>
                         <div class="col-12">
                             <button type="submit" class="buy-now-button edit">Save</button>
-                            <button type="submit" class="buy-now-button delete">Delete</button>
+                
                         </div>
                     </div>
+                </form>
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button type="submit" class="buy-now-button delete">Delete</button>
                 </form>
             </div>
     

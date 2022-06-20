@@ -1,20 +1,12 @@
 [
   {
-    "id": 1,
-    "category": "Fertilizantes",
-    "product": "WHITE WIDOW",
-    "description": "FUERA",
-    "type": "feminizadas",
-    "price": "3000",
-    "discount": ""
-  },
-  {
     "id": 2,
     "category": "Semillas",
-    "product": "JACK HERER",
+    "product": "JACK HERERs",
     "description": "Sativa - Lorem Ipsum",
     "type": "feminizadas",
-    "price": 1309
+    "price": "1500",
+    "discount": ""
   },
   {
     "id": 3,

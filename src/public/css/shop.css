@@ -103,6 +103,10 @@
     margin: 10px 10px;
     border: 1px solid rgba(137, 131, 131, 0.6);
   }
+.product-card a {
+  text-decoration: none;
+  color: rgba(137, 131, 131, 0.6);
+}
 
 .product-image img {
     width: 100% ;
