@@ -46,7 +46,7 @@ header {
 .navbar li {
     display: inline-block;
     float: none;
-    color: #737373;
+    color: #9e9a9a;
     padding-bottom: 5px;
 }
 
@@ -54,7 +54,7 @@ header {
     padding-left: 30px;
     padding-right: 30px;
     text-decoration: none;
-    color: #737373;
+    color: #9e9a9a;
 }
 
 .nav-notmobile {
