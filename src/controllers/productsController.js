@@ -23,18 +23,18 @@ const controller = {
 		
 		id = req.params.id;
 		const product = products.find(product => product.id == id)
-		return res.render("productdetail", {product})
+		return res.render("productdetail", {product, products})
 	},
 	// POST Create -  Method to store
 	store: (req, res) => {
 		const producto = {
 			id: products[products.length -1].id + 1,
-			product: req.body.name,
+			name: req.body.name,
 			price: req.body.price,
 			discount: req.body.discount,
-			category: req.body.category,
+			product: req.body.product,
 			description: req.body.description,
-			image: req.file?.filename || "default-image.png",	
+			image: req.file?.filename || "img.png",	
 		}
 		
 		products.push(producto);
@@ -54,10 +54,10 @@ const controller = {
 				if(products[i].id == req.params.id){
 					products[i] = {
 						...products[i],
-						product: req.body.name,
+						name: req.body.name,
 						price: req.body.price,
 						discount: req.body.discount,
-						category: req.body.category,
+						product: req.body.product,
 						description: req.body.description
 						//image: req.file?.filename || "default-image.png"
 					} 

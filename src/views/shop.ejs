@@ -46,15 +46,15 @@
                         <div class="categoryRow">
 
                           <%for(let i = 0; i < products.length; i++){ %>
-                            <% if( products[i].category == "Semillas"){ %>
+                            <% if( products[i].product == "Semillas"){ %>
                             <div class="product-card">
                               <a href="/products/<%= products[i].id %>">
                               <article>
                                 <div class="product-image">
-                                  <img src="/img/img.png">
+                                  <img src="/img/<%= products[i].image %>">
                                 </div>
                                 <div class="product-info">
-                                  <h5><%= products[i].product %></h5>
+                                  <h5><%= products[i].name %></h5>
                                   <h6>$ <%= products[i].price %></h6>
                                 </div>
                               </article>
@@ -69,15 +69,15 @@
                         <div class="categoryRow">
 
                           <%for(let i = 0; i < products.length; i++){ %>
-                            <% if( products[i].category == "Fertilizantes"){ %>
+                            <% if( products[i].product == "Fertilizantes"){ %>
                             <div class="product-card">
                               <a href="/products/<%= products[i].id %>">
                               <article>
                                 <div class="product-image">
-                                  <img src="/img/img.png">
+                                  <img src="/img/<%= products[i].image %>">
                                 </div>
                                 <div class="product-info">
-                                  <h5><%= products[i].product %></h5>
+                                  <h5><%= products[i].name %></h5>
                                   <h6>$ <%= products[i].price %></h6>
                                 </div>
                               </article>
@@ -92,15 +92,15 @@
                         <div class="categoryRow">
 
                           <%for(let i = 0; i < products.length; i++){ %>
-                            <% if( products[i].category == "Kits"){ %>
+                            <% if( products[i].product == "Kits"){ %>
                             <div class="product-card">
                               <a href="/products/<%= products[i].id %>">
                               <article>
                                 <div class="product-image">
-                                  <img src="/img/img.png">
+                                  <img src="/img/<%= products[i].image %>">
                                 </div>
                                 <div class="product-info">
-                                  <h5><%= products[i].product %></h5>
+                                  <h5><%= products[i].name %></h5>
                                   <h6>$ <%= products[i].price %></h6>
                                 </div>
                               </article>
@@ -115,15 +115,15 @@
                         <div class="categoryRow">
 
                           <%for(let i = 0; i < products.length; i++){ %>
-                            <% if( products[i].category == "Consumo"){ %>
+                            <% if( products[i].product == "Consumo"){ %>
                             <div class="product-card">
                               <a href="/products/<%= products[i].id %>">
                               <article>
                                 <div class="product-image">
-                                  <img src="/img/img.png">
+                                  <img src="/img/<%= products[i].image %>">
                                 </div>
                                 <div class="product-info">
-                                  <h5><%= products[i].product %></h5>
+                                  <h5><%= products[i].name %></h5>
                                   <h6>$ <%= products[i].price %></h6>
                                 </div>
                               </article>

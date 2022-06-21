@@ -33,193 +33,139 @@
                 <section class="growing">
                     <h4 class="title-growing">Cultivar nunca fue tán fácil!</h4>
                     <div class="grow-articles">
-                    <article class="growing-steps">
-                        <div class="step-div">
-                            <div class="image-step"><img src="/img/germinar.jpg" alt="Paso 1"></div>
-                            <h5 class="title-step">Germinar</h5>
-                            <p class="paraf-step">Descripcion primer paso para tu propia cosecha</p>
-                        </div>
-                    </article>
-                    <article class="growing-steps">
-                        <div class="step-div">
-                            <div class="image-step"><img src="/img/sustrato.jpg" alt="Paso 1"></div>
-                            <h5 class="title-step">Sustrato</h5>
-                            <p class="paraf-step">Descripcion segundo paso para tu propia cosecha</p>
-                        </div>
-                    </article>
-                    <article>
-                        <div class="step-div">
-                            <div class="image-step"><img src="/img/transplanta.jpg" alt="Paso 1"></div>
-                            <h5 class="title-step">Trasplantá</h5>
-                            <p class="paraf-step">Descripcion tercer paso para tu propia cosecha</p>
-                        </div>
-                    </article>
+                        <article class="growing-steps-div">
+                            <div class="step-div-growing">
+                                <div class="image-step"><img src="/img/germinar.jpg" alt="Paso 1"></div>
+                                <h5 class="title-step">Germinar</h5>
+                                <p class="paraf-step">Descripcion primer paso para tu propia cosecha</p>
+                            </div>
+                        </article>
+                        <article class="growing-steps-div">
+                            <div class="step-div-growing">
+                                <div class="image-step"><img src="/img/sustrato.jpg" alt="Paso 1"></div>
+                                <h5 class="title-step">Sustrato</h5>
+                                <p class="paraf-step">Descripcion segundo paso para tu propia cosecha</p>
+                            </div>
+                        </article>
+                        <article class="growing-steps-div">
+                            <div class="step-div-growing">
+                                <div class="image-step"><img src="/img/transplanta.jpg" alt="Paso 1"></div>
+                                <h5 class="title-step">Trasplantá</h5>
+                                <p class="paraf-step">Descripcion tercer paso para tu propia cosecha</p>
+                            </div>
+                        </article>
                     </div>
                 </section>
 
                 <!-- venta de articulos para cosechar -->
 
-                <section class="start-now">
-                    <h4 class="title-startnow">¡Empezá ahora!</h4>
-                    <article class="start-boxes">
-                        <div class="start-div">
-                            <div class="image-workshops"><img src="/img/workshop.jpeg" alt="Paso 1"></div>
-                            <h6 class="title-workshops">Workshops</h6>
-                        </div>
-                        <div class="start-div">
-                            <div class="image-workshops"><img src="/img/packages.jpg" alt="Paso 1"></div>
-                            <h6 class="title-workshops">Paquetes</h6>
-                        </div>
-                        <div class="start-div">
-                            <div class="image-workshops"><img src="/img/seeds.jpg" alt="Paso 1"></div>
-                            <h6 class="title-workshops">Semillas</h6>
-                        </div>
-                    </article>
+                <section class="growing">
+                    <h4 class="title-growing">¡Empezá ahora!</h4>
+                    <div class="grow-articles">
+                        <article class="growing-steps">
+                            <div class="step-div">
+                                <div class="image-step"><img src="/img/fertilizantes.jpg" alt="Paso 1"></div>
+                                <h5 class="title-step">Fertilizantes</h5>
+                            </div>
+                        </article>
+                        <article class="growing-steps">
+                            <div class="step-div">
+                                <div class="image-step"><img src="/img/kit2.jpg" alt="Paso 1"></div>
+                                <h5 class="title-step">Kits</h5>
+                            </div>
+                        </article>
+                        <article class="growing-steps">
+                            <div class="step-div">
+                                <div class="image-step"><img src="/img/seeds2.png" alt="Paso 1"></div>
+                                <h5 class="title-step">Semillas</h5>
+                            </div>
+                        </article>
+                    </div>
                 </section>
 
                 <!-- mas populares -->
                 <!-- falta armar paquetes de productos para que se vayan mostrando -->
 
-                <section class="most-popular">
-                    <h4 class="title-most-popular">Nuestros más populares</h4>
-                    <article class="most-popular-box">
+                <section class="growing">
+                    <h4 class="title-growing">¡Los más populares!</h4>
+                     
+                    <div class="grow-articles">
+                        <%for(let i = 0; i < products.length; i++){ %>
+                            <% if( products[i].category == "popular"){ %>
+                        <article class="popular-steps">
+                            <div class="step-div">
+                                <a href="#">
+                                <div class="image-step"><img src="/img/<%=products[i].image %>" alt="Paso 1"></div>
+                                <h5 class="title-step"><%=products[i].name %></h5>
+                                <p class="product-price"> $<%=products[i].price %></p>
+                                </a>
+                            </div>
+                        </article>
+                        <% } %>
+                    <% } %>                         
+                    </div>
+                    <ul class="slider-controler1">
                         <div class="back">
-                            <i class="fa-regular fa-square-caret-left"></i>
+                            <li><a href="#"><i class="fa-regular fa-square-caret-left"></i></a></li>
                         </div>
-                        <div class="product-conteiner">
-                            <div class="product-exhibitor-first">
-                                <a href="/products/"><div class="product-div">
-                                    <img src="/img/crystalweedoil.jpg" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                                <a href="/productdetail"><div class="product-div">
-                                    <img src="/img/creamcaramel.jpg" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                            </div>
-                            
-                            <!-- <div class="product-exhibitor-second">
-                                <a href="/productdetail.html"><div class="product-div">
-                                    <img src="/img/crystalweedoil.jpg" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                                <a href="/productdetail.html"><div class="product-div">
-                                    <img src="/img/creamcaramel.jpg" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                                <a href="/productdetail.html"><div class="product-div">
-                                    <img src="/img/img.png" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                            </div> -->
-                            <div class="product-exhibitor-third">
-                                <a href="/productdetail"><div class="product-div">
-                                    <img src="/img/crystalweedoil.jpg" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                                <a href="/productdetail"><div class="product-div">
-                                    <img src="/img/creamcaramel.jpg" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                                <a href="/productdetail"><div class="product-div">
-                                    <img src="/img/amnesialemon.jpg" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                                <a href="/productdetail"><div class="product-div">
-                                    <img src="/img/noratropical.jpg" alt="Producto">
-                                    <p class="product-name">Product 1</p>   
-                                    <h5 class="product-price"> $10.00</h5>
-                                </div></a>
-                            </div>
-
+                        <div>
+                            <li><a href="#">&bullet;</a></li>
+                            <li><a href="#">&bullet;</a></li>
+                            <li><a href="#">&bullet;</a></li>
                         </div>
                         <div class="next">
-                            <i class="fa-regular fa-square-caret-right"></i>
+                            <li><a href="#"><i class="fa-regular fa-square-caret-right"></i></a></li>
                         </div>
-                    </article>
-                            <ul class="slider-controler">
-                                <li><a href="#">&bullet;</a></li>
-                                <li><a href="#">&bullet;</a></li>
-                                <li><a href="#">&bullet;</a></li>
-                                <li><a href="#">&bullet;</a></li>
-                            </ul>
+                    </ul>
+                    
                 </section>
+
+               
                 
                 <!-- listo para consumir -->
-                <section class="ready-to-consume">
-                    <div class="title-consume-conteiner">
-                        <h4 class="title-ready">Not interested in growing?</h4>
-                        <p>Check out our product line</p>
-                    </div>
-                    <div class="divisions">
-                        <div class="mobil-genero">
-                            <div class="genero-div">
-                                <img src="/img/oil.jfif" alt="Oils">
-                                <h5 class="title-genero">Oils</h5>
-                            </div>
-                            <div class="genero-div">
-                                <img src="/img/gummies.jfif" alt="Gummies">
-                                <h5 class="title-genero">Gummies</h5>
-                            </div>
-                        </div>
-                        <div class="mobil-genero">
-                            <div class="genero-div">
-                                <img src="/img/capsules.jpg" alt="Capsules">
-                                <h5 class="title-genero">Capsules</h5>
-                            </div>
-                            <div class="genero-div">
-                                <img src="/img/topicals.jpg" alt="Topicals">
-                                <h5 class="title-genero">Topicals</h5>
-                            </div>
-                        </div>
-                        <div class="mobil-genero">
-                            <div class="genero-div">
-                                <img src="/img/edibles.jpg" alt="Edibles">
-                                <h5 class="title-genero">Edibles</h5>
-                            </div>
-                            <div class="genero-div">
-                                <img src="/img/pets.png" alt="Pets">
-                                <h5 class="title-genero">Pets</h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="laptok-div">
-                        <div class="genero-div">
-                            <img src="/img/oil.jfif" alt="Oils">
-                            <h5 class="title-genero">Oils</h5>
-                        </div>
-                        <div class="genero-div">
-                            <img src="/img/gummies.jfif" alt="Gummies">
-                            <h5 class="title-genero">Gummies</h5>
-                        </div>
-                        <div class="genero-div">
-                            <img src="/img/capsules.jpg" alt="Capsules">
-                            <h5 class="title-genero">Capsules</h5>
-                        </div>
-                    </div>
-                    <div class="laptok-div">
-                        <div class="genero-div">
-                            <img src="/img/topicals.jpg" alt="Topicals">
-                            <h5 class="title-genero">Topicals</h5>
-                        </div>
-                        <div class="genero-div">
-                            <img src="/img/edibles.jpg" alt="Edibles">
-                            <h5 class="title-genero">Edibles</h5>
-                        </div>
-                        <div class="genero-div">
-                            <img src="/img/pets.png" alt="Pets">
-                            <h5 class="title-genero">Pets</h5>
-                        </div>
-                    </div>
 
+                <section class="consume">
+                    <h4 class="title-growing">Not interested in growing?</h4>
+                        <p>Check out our product line</p>
+                    <div class="consume-articles">
+                        <article class="consume-steps">
+                            <div class="consume-div">
+                                <p class="title-genero">Oils</p>
+                                <img src="/img/seeds1.png" alt="Oils">
+                                
+                            </div>
+                        </article>
+                        <article class="consume-steps">
+                            <div class="consume-div">
+                                <p class="title-genero">Gummies</p>
+                                <img src="/img/seeds1.png" alt="Gummies">
+                            </div>
+                        </article>
+                        <article class="consume-steps">
+                            <div class="consume-div">
+                                <p class="title-genero">Capsules</p>
+                                <img src="/img/seeds1.png" alt="Capsules">
+                            </div>
+                        </article>
+                        <article class="consume-steps">
+                            <div class="consume-div">
+                                <p class="title-genero">Topicals</p>
+                                <img src="/img/seeds1.png" alt="Topicals">
+                            </div>
+                        </article>
+                        <article class="consume-steps">
+                            <div class="consume-div">
+                                <p class="title-genero">Edibles</p>
+                                <img src="/img/seeds1.png" alt="Edibles">
+                            </div>
+                        </article>
+                        <article class="consume-steps">
+                            <div class="consume-div">
+                                <p class="title-genero">Pets</p>
+                                <img src="/img/seeds1.png" alt="Pets">
+                            </div>
+                        </article>
+                    </div>
                 </section>
 
 
@@ -227,7 +173,7 @@
 
                 <section class="subscription">
                     <div class="container-subscr">    
-                        <div class="title-subscription">
+                        <div class="title-subscription1">
                             <h3>Subscribe</h3>
                             <p>Etiam in quam rhoncus, posuere arcu et, feugiat sem. Phasellus scelerisque mi in mattis hendrerit.</p>
                         </div>

@@ -12,30 +12,18 @@
 
                 <div class="carrouselcontainer">
                     
-                    <h4> Breadcrumbs </h4>
+                    <h4> <%= product.product %> </h4>
                     <div class="imageProduct">
-                        <div class="imagenTriple">
-                            <img src="/img/img.png" alt="">
-                            <img src="/img/img.png" alt="">
-                            <img src="/img/img.png" alt="">
-                        </div>
                         <div class="imagenGrande">
-                            <img src="/img/img.png" alt="ImagenGrande">
+                            <img src="/img/<%= product.image %>" alt="ImagenGrande">
                         </div>                    
                     </div>
-                    <ul class="slider-controler">
-                        <li><a href="#">&bullet;</a></li>
-                        <li><a href="#">&bullet;</a></li>
-                        <li><a href="#">&bullet;</a></li>
-                        <li><a href="#">&bullet;</a></li>
-                    </ul>
-                    
                 </div>
 
 
                 
                 <div class="productname">
-                    <h2> Product name </h2> 
+                    <h2> <%= product.name %> </h2> 
                 </div>
 
                 <div class="star-rating">
@@ -51,7 +39,7 @@
                     <label for="1-star" class="star">&#9733;</label>
                 </div>  
 
-                <p class="price"> $5.99 </p>
+                <p class="price-prod"> $<%= product.price %> </p>
 
                 <div class="option">
                         <select name="opciones" id="opciones">
@@ -79,7 +67,7 @@
 
                     <!-- Descripción del artículo -->
                     <div class="productDescription">
-                        <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec pellentesque ante. Phasellus sem erat, ornare id venenatis eget, tempus quis nisl. </p>
+                        <p> <%= product.description %> </p>
                     </div>
                     
 
@@ -93,78 +81,37 @@
             </section>
 
             <!-- Recommended for you -->
-
-            <section class="most-popular">
-                <h3 class="title-most-popular">Recommended for you</h3>
-                <article class="most-popular-box">
+            <section class="growing-recommended">
+                <h4 class="title-growing">¡Los más populares!</h4>
+                
+                <div class="grow-articles-recommended">
+                    <%for(let i = 0; i < products.length; i++){ %>
+                        <% if( products[i].category == "popular"){ %>
+                    <article class="popular-steps1">
+                        <div class="step-div1">
+                            <a href="#">
+                            <div class="image-step1"><img src="/img/<%=products[i].image %>" alt="Paso 1"></div>
+                            <h5 class="title-step"><%=products[i].name %></h5>
+                            <p class="product-price"> $<%=products[i].price %></p>
+                            </a>
+                        </div>
+                    </article>
+                    <% } %>
+                    <% } %>  
+                    
+                </div>
+                <ul class="slider-controler1">
                     <div class="back">
-                        <i class="fa-regular fa-square-caret-left"></i>
+                        <li><a href="#"><i class="fa-regular fa-square-caret-left"></i></a></li>
                     </div>
-                    <div class="product-conteiner">
-                        <div class="product-exhibitor-first">
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                        </div>
-                        
-                        <div class="product-exhibitor-second">
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                        </div>
-                        <div class="product-exhibitor-third">
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                            <div class="product-div">
-                                <img src="/img/img.png" alt="Producto">
-                                <p class="product-name">Product 1</p>   
-                                <h5 class="product-price"> $10.00</h5>
-                            </div>
-                        </div>
-                        
+                    <div>
+                        <li><a href="#">&bullet;</a></li>
+                        <li><a href="#">&bullet;</a></li>
+                        <li><a href="#">&bullet;</a></li>
                     </div>
                     <div class="next">
-                        <i class="fa-regular fa-square-caret-right"></i>
+                        <li><a href="#"><i class="fa-regular fa-square-caret-right"></i></a></li>
                     </div>
-
-                </article>
-                <ul class="slider-controler">
-                    <li><a href="#">&bullet;</a></li>
-                    <li><a href="#">&bullet;</a></li>
-                    <li><a href="#">&bullet;</a></li>
-                    <li><a href="#">&bullet;</a></li>
                 </ul>
             </section>
 
@@ -221,7 +168,7 @@
             <!-- Suscripción -->
             <section class="subscription">
                 <div class="container-subscr">    
-                    <div class="title-subscription">
+                    <div class="title-subscription1">
                         <h3>Subscribe</h3>
                         <p>Etiam in quam rhoncus, posuere arcu et, feugiat sem. Phasellus scelerisque mi in mattis hendrerit.</p>
                     </div>
