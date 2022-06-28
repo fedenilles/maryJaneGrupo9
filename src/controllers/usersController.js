@@ -7,10 +7,10 @@ const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const controller = {
     login: (req, res) => {
-        return res.render("login")
+        return res.render("users/login")
     },
     register: (req, res) => {
-        return res.render("register")
+        return res.render("users/register")
     },
 
 

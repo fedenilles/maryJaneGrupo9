@@ -5,6 +5,7 @@ const multer = require('multer');
 
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
+const uploadFile = require('../middleware/multerProductMiddleware');
 
 /*** GET CART***/
 router.get("/cart", productsController.cart);
@@ -16,7 +17,7 @@ router.get("/", productsController.shop) /* /products (GET) Listado de productos
 router.get("/create", productsController.create); 
 
 /*** STORE PRODUCT FORM ***//*Acción de creación (a donde se envía el formulario)*/
-router.post('/', productsController.store);  
+router.post('/',uploadFile.any('imageProduct'), productsController.store);  
 
 /*** EDIT PRODUCT FORM ***/
 router.get('/edit/:id', productsController.edit)

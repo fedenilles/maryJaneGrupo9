@@ -27,6 +27,4 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use("/",mainRoutes)
 app.use("/products",productsRoutes)
-app.use("/user",usersRoutes)
-
-
+app.use("/users",usersRoutes)

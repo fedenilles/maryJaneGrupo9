@@ -47,7 +47,7 @@
   {
     "id": 6,
     "product": "Kits",
-    "category": "normal", 
+    "category": "normal",
     "name": "Kit 1",
     "description": "Combo 1",
     "price": 3500,
@@ -56,7 +56,7 @@
   {
     "id": 7,
     "product": "Kits",
-    "category": "popular", 
+    "category": "popular",
     "name": "Kit 2",
     "description": "Combo 2",
     "price": 4000,
@@ -65,7 +65,7 @@
   {
     "id": 8,
     "product": "Kits",
-    "category": "normal", 
+    "category": "normal",
     "name": "Kit 3",
     "description": "Combo 3",
     "price": 3750,
@@ -74,7 +74,7 @@
   {
     "id": 9,
     "product": "Fertilizantes",
-    "category": "normal",    
+    "category": "normal",
     "name": "Calcium 1kg – Green House Powder Feeding",
     "price": 800,
     "image": "fertilizante1.png",
@@ -151,5 +151,54 @@
     "price": 4000,
     "image": "oil2.jpg",
     "description": "Cannabis Oil"
+  },
+  {
+    "id": 18,
+    "name": "Rodolfo Federico Nilles",
+    "price": "1225",
+    "description": "El Rodolfo los mato",
+    "image": "img.png"
+  },
+  {
+    "id": 19,
+    "name": "Fertilizante Nuevo",
+    "price": "15000",
+    "description": "jsadjkjsañlsañlakdsas",
+    "image": "img.png"
+  },
+  {
+    "id": 20,
+    "name": "sdaafdasfsd fede",
+    "price": "152200",
+    "description": "vafagadfsdfgafsdga fede",
+    "image": "img.png"
+  },
+  {
+    "id": 21,
+    "name": "Maria C Rossi",
+    "price": "15000",
+    "description": "fedeeeeeeeeeeeeeeeeeeeeeee",
+    "image": "img.png"
+  },
+  {
+    "id": 22,
+    "name": "hsdfd",
+    "price": "15000",
+    "description": "fdsdfhdh frgg",
+    "image": "img.png"
+  },
+  {
+    "id": 23,
+    "name": "jñlsdañljksd",
+    "price": "15000",
+    "description": "la puta madre",
+    "image": "img.png"
+  },
+  {
+    "id": 24,
+    "name": "Federico",
+    "price": "1500",
+    "description": "me cago en la leche",
+    "image": "img.png"
   }
 ]

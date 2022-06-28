@@ -13,7 +13,7 @@
                 </div>
             </div>
             <div class="col-12"> 
-                <form action="/products/" method="POST">
+                <form action="/products/" method="POST" enctype='multipart/form-data'>
                     <div class="row product-detail">
                         <div class="col-12 col-md-6">
                             <label for="name" class="form-label">Product Name</label>
@@ -30,7 +30,7 @@
                             <img src="/img/img.png" alt="" class="file-input-img">
                             <img src="/img/img.png" alt="" class="file-input-img">
                             </div>
-                            <input type="file" id="file" name="file" placeholder="Eg: 15" class="form-input file-input" value="">
+                            <input type="file" id="imageProduct" name="imageProduct" placeholder="Eg: 15" class="form-input file-input" value="imageProduct">
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="category" class="form-label">Category</label>
