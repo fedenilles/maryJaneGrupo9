@@ -4,18 +4,14 @@
 <body>
     <div class="container">
         <%-include ("./partials/header.ejs") %>
-
-           
-            <section class="productsection">
-            
-                <!-- Carrousel -->
-
+                 <section class="productsection">
+                            <!-- Carrousel -->
                 <div class="carrouselcontainer">
-                    
+                 
                     <h4> <%= product.product %> </h4>
                     <div class="imageProduct">
                         <div class="imagenGrande">
-                            <img src="/img/<%= product.image %>" alt="ImagenGrande">
+                            <img src="/img/products/<%= product.image %>" alt="ImagenGrande">
                         </div>                    
                     </div>
                 </div>
@@ -90,7 +86,7 @@
                     <article class="popular-steps1">
                         <div class="step-div1">
                             <a href="#">
-                            <div class="image-step1"><img src="/img/<%=products[i].image %>" alt="Paso 1"></div>
+                            <div class="image-step1"><img src="/img/products/<%=products[i].image %>" alt="Paso 1"></div>
                             <h5 class="title-step"><%=products[i].name %></h5>
                             <p class="product-price"> $<%=products[i].price %></p>
                             </a>

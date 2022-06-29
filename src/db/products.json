@@ -149,8 +149,8 @@
     "category": "popular",
     "name": "Oil",
     "price": 4000,
-    "image": "oil2.jpg",
-    "description": "Cannabis Oil"
+    "description": "Cannabis Oil",
+    "image": "oil2.jpg"
   },
   {
     "id": 18,
@@ -165,5 +165,14 @@
     "price": "126540",
     "description": "Sabemos que conservar y almacenar nuestros cogollos es muy importante, ya que gracias a un buen almacenamiento estos no van a perder su efecto, aromas y sabor. A la hora de elegir el lugar de almacenamiento, es fundamental que este tenga poca humedad y evitar que entre la luz, debemos evitar mezclar cogollos de distintas plantas.",
     "image": "1656475656356.jpg"
+  },
+  {
+    "id": 20,
+    "product": "Semillas",
+    "category": "",
+    "name": "Algo ",
+    "price": "5678",
+    "description": "Semilla de algo",
+    "image": "1656517593292.png"
   }
 ]

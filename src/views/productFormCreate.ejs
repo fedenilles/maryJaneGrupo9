@@ -4,9 +4,7 @@
 
     <body>
         <%-include ("./partials/header.ejs") %>
-
             <main>
-
                 <div class="container products-wrapper">
                     <div class="row">
                         <div class="col-12">
@@ -36,8 +34,8 @@
                                     <input type="file" id="'file" name="image" class="form-input file-input">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <label for="category" class="form-label">Category</label>
-                                    <select name="category" id="category" class="form-input">
+                                    <label for="product" class="form-label">Familia de Prductos</label>
+                                    <select name="product" id="product" class="form-input">
                                         <option value="">Choose an option</option>
                                         <option value="Semillas">Seeds</option>
                                         <option value="Fertilizantes">Fertilizers</option>
@@ -55,11 +53,8 @@
                             </div>
                         </form>
                     </div>
-
                 </div>
-
             </main>
-
             <%-include ("./partials/footer.ejs") %>
     </body>
 

@@ -1,194 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include ("./partials/head.ejs") %>
-
-
-<body>
-        
-	    <div class="container">
+<%-include ("./partials/head.ejs") %>
+    <body>
+        <div class="container">
             <%-include ("./partials/header.ejs") %>
-
-            <main>
-                <!-- Banner - Acá hay que armar varios articles que después van a ir cambiando -->
-                <!-- exhibidor de productos -->
-                <section class="exhibitor">
-                    <div class="back">
-                        <i class="fa-regular fa-square-caret-left"></i>
-                    </div>
-                    <article class="product-exhibitor">
-                        <h2 class="name">Quod Enchiridion</h2>
-                        
-                        <p class="product-description">Lorem Ipsum</p>   
-                        <div class="exhibitor-button">
-                            <button type="submit"> Enviar </button>
-                        </div>
-                    </article>
-
-                    <div class="next">
-                        <i class="fa-regular fa-square-caret-right"></i>
-                    </div>
-
-                </section>
-                <!-- Paso a Paso como cultivar marihuana-->
-                <section class="growing">
-                    <h4 class="title-growing">Cultivar nunca fue tán fácil!</h4>
-                    <div class="grow-articles">
-                        <article class="growing-steps-div">
-                            <div class="step-div-growing">
-                                <div class="image-step"><img src="/img/germinar.jpg" alt="Paso 1"></div>
-                                <h5 class="title-step">Germinar</h5>
-                                <p class="paraf-step">Descripcion primer paso para tu propia cosecha</p>
-                            </div>
-                        </article>
-                        <article class="growing-steps-div">
-                            <div class="step-div-growing">
-                                <div class="image-step"><img src="/img/sustrato.jpg" alt="Paso 1"></div>
-                                <h5 class="title-step">Sustrato</h5>
-                                <p class="paraf-step">Descripcion segundo paso para tu propia cosecha</p>
-                            </div>
-                        </article>
-                        <article class="growing-steps-div">
-                            <div class="step-div-growing">
-                                <div class="image-step"><img src="/img/transplanta.jpg" alt="Paso 1"></div>
-                                <h5 class="title-step">Trasplantá</h5>
-                                <p class="paraf-step">Descripcion tercer paso para tu propia cosecha</p>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- venta de articulos para cosechar -->
-
-                <section class="growing">
-                    <h4 class="title-growing">¡Empezá ahora!</h4>
-                    <div class="grow-articles">
-                        <article class="growing-steps">
-                            <div class="step-div">
-                                <div class="image-step"><img src="/img/fertilizantes.jpg" alt="Paso 1"></div>
-                                <h5 class="title-step">Fertilizantes</h5>
-                            </div>
-                        </article>
-                        <article class="growing-steps">
-                            <div class="step-div">
-                                <div class="image-step"><img src="/img/kit2.jpg" alt="Paso 1"></div>
-                                <h5 class="title-step">Kits</h5>
-                            </div>
-                        </article>
-                        <article class="growing-steps">
-                            <div class="step-div">
-                                <div class="image-step"><img src="/img/seeds2.png" alt="Paso 1"></div>
-                                <h5 class="title-step">Semillas</h5>
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-                <!-- mas populares -->
-                <!-- falta armar paquetes de productos para que se vayan mostrando -->
-
-                <section class="growing">
-                    <h4 class="title-growing">¡Los más populares!</h4>
-                     
-                    <div class="grow-articles">
-                        <%for(let i = 0; i < products.length; i++){ %>
-                            <% if( products[i].category == "popular"){ %>
-                        <article class="popular-steps">
-                            <div class="step-div">
-                                <a href="#">
-                                <div class="image-step"><img src="/img/<%=products[i].image %>" alt="Paso 1"></div>
-                                <h5 class="title-step"><%=products[i].name %></h5>
-                                <p class="product-price"> $<%=products[i].price %></p>
-                                </a>
-                            </div>
-                        </article>
-                        <% } %>
-                    <% } %>                         
-                    </div>
-                    <ul class="slider-controler1">
+                <main>
+                    <!-- Banner - Acá hay que armar varios articles que después van a ir cambiando -->
+                    <!-- exhibidor de productos -->
+                    <section class="exhibitor">
                         <div class="back">
-                            <li><a href="#"><i class="fa-regular fa-square-caret-left"></i></a></li>
+                            <i class="fa-regular fa-square-caret-left"></i>
                         </div>
-                        <div>
-                            <li><a href="#">&bullet;</a></li>
-                            <li><a href="#">&bullet;</a></li>
-                            <li><a href="#">&bullet;</a></li>
-                        </div>
+                        <article class="product-exhibitor">
+                            <h2 class="name">Quod Enchiridion</h2>
+
+                            <p class="product-description">Lorem Ipsum</p>
+                            <div class="exhibitor-button">
+                                <button type="submit"> Enviar </button>
+                            </div>
+                        </article>
+
                         <div class="next">
-                            <li><a href="#"><i class="fa-regular fa-square-caret-right"></i></a></li>
+                            <i class="fa-regular fa-square-caret-right"></i>
                         </div>
-                    </ul>
-                    
-                </section>
+                    </section>
+                    <!-- Paso a Paso como cultivar marihuana-->
+                    <section class="growing">
+                        <h4 class="title-growing">Cultivar nunca fue tán fácil!</h4>
+                        <div class="grow-articles">
+                            <article class="growing-steps-div">
+                                <div class="step-div-growing">
+                                    <div class="image-step"><img src="/img/germinar.jpg" alt="Paso 1"></div>
+                                    <h5 class="title-step">Germinar</h5>
+                                    <p class="paraf-step">Descripcion primer paso para tu propia cosecha</p>
+                                </div>
+                            </article>
+                            <article class="growing-steps-div">
+                                <div class="step-div-growing">
+                                    <div class="image-step"><img src="/img/sustrato.jpg" alt="Paso 1"></div>
+                                    <h5 class="title-step">Sustrato</h5>
+                                    <p class="paraf-step">Descripcion segundo paso para tu propia cosecha</p>
+                                </div>
+                            </article>
+                            <article class="growing-steps-div">
+                                <div class="step-div-growing">
+                                    <div class="image-step"><img src="/img/transplanta.jpg" alt="Paso 1"></div>
+                                    <h5 class="title-step">Trasplantá</h5>
+                                    <p class="paraf-step">Descripcion tercer paso para tu propia cosecha</p>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
 
-               
-                
-                <!-- listo para consumir -->
+                    <!-- venta de articulos para cosechar -->
 
-                <section class="consume">
-                    <h4 class="title-growing">Not interested in growing?</h4>
+                    <section class="growing">
+                        <h4 class="title-growing">¡Empezá ahora!</h4>
+                        <div class="grow-articles">
+                            <article class="growing-steps">
+                                <div class="step-div">
+                                    <div class="image-step"><img src="/img/products/fertilizantes.jpg" alt="Paso 1">
+                                    </div>
+                                    <h5 class="title-step">Fertilizantes</h5>
+                                </div>
+                            </article>
+                            <article class="growing-steps">
+                                <div class="step-div">
+                                    <div class="image-step"><img src="/img/products/kit2.jpg" alt="Paso 1"></div>
+                                    <h5 class="title-step">Kits</h5>
+                                </div>
+                            </article>
+                            <article class="growing-steps">
+                                <div class="step-div">
+                                    <div class="image-step"><img src="/img/products/seeds2.png" alt="Paso 1"></div>
+                                    <h5 class="title-step">Semillas</h5>
+                                </div>
+                            </article>
+                        </div>
+                    </section>
+
+                    <!-- mas populares -->
+                    <!-- falta armar paquetes de productos para que se vayan mostrando -->
+
+                    <section class="growing">
+                        <h4 class="title-growing">¡Los más populares!</h4>
+
+                        <div class="grow-articles">
+                            <%for(let i=0; i < products.length; i++){ %>
+                                <% if( products[i].category=="popular" ){ %>
+                                    <article class="popular-steps">
+                                        <div class="step-div">
+                                            <a href="#">
+                                                <div class="image-step"><img src="/img/products/<%=products[i].image %>"
+                                                        alt="Paso 1"></div>
+                                                <h5 class="title-step">
+                                                    <%=products[i].name %>
+                                                </h5>
+                                                <p class="product-price"> $<%=products[i].price %>
+                                                </p>
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <% } %>
+                                        <% } %>
+                        </div>
+                        <ul class="slider-controler1">
+                            <div class="back">
+                                <li><a href="#"><i class="fa-regular fa-square-caret-left"></i></a></li>
+                            </div>
+                            <div>
+                                <li><a href="#">&bullet;</a></li>
+                                <li><a href="#">&bullet;</a></li>
+                                <li><a href="#">&bullet;</a></li>
+                            </div>
+                            <div class="next">
+                                <li><a href="#"><i class="fa-regular fa-square-caret-right"></i></a></li>
+                            </div>
+                        </ul>
+
+                    </section>
+
+                    <!-- listo para consumir -->
+
+                    <section class="consume">
+                        <h4 class="title-growing">Not interested in growing?</h4>
                         <p>Check out our product line</p>
-                    <div class="consume-articles">
-                        <article class="consume-steps">
-                            <div class="consume-div">
-                                <p class="title-genero">Oils</p>
-                                <img src="/img/seeds1.png" alt="Oils">
-                                
-                            </div>
-                        </article>
-                        <article class="consume-steps">
-                            <div class="consume-div">
-                                <p class="title-genero">Gummies</p>
-                                <img src="/img/seeds1.png" alt="Gummies">
-                            </div>
-                        </article>
-                        <article class="consume-steps">
-                            <div class="consume-div">
-                                <p class="title-genero">Capsules</p>
-                                <img src="/img/seeds1.png" alt="Capsules">
-                            </div>
-                        </article>
-                        <article class="consume-steps">
-                            <div class="consume-div">
-                                <p class="title-genero">Topicals</p>
-                                <img src="/img/seeds1.png" alt="Topicals">
-                            </div>
-                        </article>
-                        <article class="consume-steps">
-                            <div class="consume-div">
-                                <p class="title-genero">Edibles</p>
-                                <img src="/img/seeds1.png" alt="Edibles">
-                            </div>
-                        </article>
-                        <article class="consume-steps">
-                            <div class="consume-div">
-                                <p class="title-genero">Pets</p>
-                                <img src="/img/seeds1.png" alt="Pets">
-                            </div>
-                        </article>
-                    </div>
-                </section>
-
-
-                <!---- Subscripción ------>
-
-                <section class="subscription">
-                    <div class="container-subscr">    
-                        <div class="title-subscription1">
-                            <h3>Subscribe</h3>
-                            <p>Etiam in quam rhoncus, posuere arcu et, feugiat sem. Phasellus scelerisque mi in mattis hendrerit.</p>
+                        <div class="consume-articles">
+                            <article class="consume-steps">
+                                <div class="consume-div">
+                                    <p class="title-genero">Oils</p>
+                                    <img src="/img/products/seeds1.png" alt="Oils">
+                                </div>
+                            </article>
+                            <article class="consume-steps">
+                                <div class="consume-div">
+                                    <p class="title-genero">Gummies</p>
+                                    <img src="/img/products/seeds1.png" alt="Gummies">
+                                </div>
+                            </article>
+                            <article class="consume-steps">
+                                <div class="consume-div">
+                                    <p class="title-genero">Capsules</p>
+                                    <img src="/img/products/seeds1.png" alt="Capsules">
+                                </div>
+                            </article>
+                            <article class="consume-steps">
+                                <div class="consume-div">
+                                    <p class="title-genero">Topicals</p>
+                                    <img src="/img/products/seeds1.png" alt="Topicals">
+                                </div>
+                            </article>
+                            <article class="consume-steps">
+                                <div class="consume-div">
+                                    <p class="title-genero">Edibles</p>
+                                    <img src="/img/products/seeds1.png" alt="Edibles">
+                                </div>
+                            </article>
+                            <article class="consume-steps">
+                                <div class="consume-div">
+                                    <p class="title-genero">Pets</p>
+                                    <img src="/img/products/seeds1.png" alt="Pets">
+                                </div>
+                            </article>
                         </div>
-                        <form action="#" class="subscribe">
-                            <input type="text" placeholder="youremail@gmail.com" class="inp-subscribe">
-                            <input type="button" value="Send" class="btn btn-subscribe">
-                        </form>
-                    </div>
-                </section>
+                    </section>
 
-            </main>
-        <%-include ("./partials/footer.ejs") %>
-        
+                    <!---- Subscripción ------>
 
+                    <section class="subscription">
+                        <div class="container-subscr">
+                            <div class="title-subscription1">
+                                <h3>Subscribe</h3>
+                                <p>Etiam in quam rhoncus, posuere arcu et, feugiat sem. Phasellus scelerisque mi in
+                                    mattis hendrerit.</p>
+                            </div>
+                            <form action="#" class="subscribe">
+                                <input type="text" placeholder="youremail@gmail.com" class="inp-subscribe">
+                                <input type="button" value="Send" class="btn btn-subscribe">
+                            </form>
+                        </div>
+                    </section>
+                </main>
+                <%-include ("./partials/footer.ejs") %>
         </div>
+    </body>
 
-</body>
 </html>

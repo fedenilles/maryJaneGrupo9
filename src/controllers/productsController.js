@@ -29,10 +29,10 @@ const controller = {
 	store: (req, res) => {
 		const producto = {
 			id: products[products.length - 1].id + 1,
+			product: req.body.product,
+			category:"",
 			name: req.body.name,
 			price: req.body.price,
-			discount: req.body.discount,
-			product: req.body.product,
 			description: req.body.description,
 			image: req.file?.filename || "img.png",
 		}
