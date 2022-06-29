@@ -154,51 +154,16 @@
   },
   {
     "id": 18,
-    "name": "Rodolfo Federico Nilles",
-    "price": "1225",
-    "description": "El Rodolfo los mato",
-    "image": "img.png"
+    "name": "Cogollos",
+    "price": "12466",
+    "description": "La pucha que tan caros",
+    "image": "1656474091134.jpg"
   },
   {
     "id": 19,
-    "name": "Fertilizante Nuevo",
-    "price": "15000",
-    "description": "jsadjkjsañlsañlakdsas",
-    "image": "img.png"
-  },
-  {
-    "id": 20,
-    "name": "sdaafdasfsd fede",
-    "price": "152200",
-    "description": "vafagadfsdfgafsdga fede",
-    "image": "img.png"
-  },
-  {
-    "id": 21,
-    "name": "Maria C Rossi",
-    "price": "15000",
-    "description": "fedeeeeeeeeeeeeeeeeeeeeeee",
-    "image": "img.png"
-  },
-  {
-    "id": 22,
-    "name": "hsdfd",
-    "price": "15000",
-    "description": "fdsdfhdh frgg",
-    "image": "img.png"
-  },
-  {
-    "id": 23,
-    "name": "jñlsdañljksd",
-    "price": "15000",
-    "description": "la puta madre",
-    "image": "img.png"
-  },
-  {
-    "id": 24,
-    "name": "Federico",
-    "price": "1500",
-    "description": "me cago en la leche",
-    "image": "img.png"
+    "name": "Cogollos Envasados Marca ACME",
+    "price": "126540",
+    "description": "Sabemos que conservar y almacenar nuestros cogollos es muy importante, ya que gracias a un buen almacenamiento estos no van a perder su efecto, aromas y sabor. A la hora de elegir el lugar de almacenamiento, es fundamental que este tenga poca humedad y evitar que entre la luz, debemos evitar mezclar cogollos de distintas plantas.",
+    "image": "1656475656356.jpg"
   }
 ]
