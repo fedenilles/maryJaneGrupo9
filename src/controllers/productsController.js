@@ -60,7 +60,7 @@ const controller = {
 					discount: req.body.discount,
 					product: req.body.product,
 					description: req.body.description,
-					image: req.file?.filename || "default-image.png"
+					image: req.file?.filename || "img.png"
 				}
 			}
 		};
