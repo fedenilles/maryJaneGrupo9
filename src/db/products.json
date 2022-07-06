@@ -174,5 +174,24 @@
     "price": "5678",
     "description": "Semilla de algo",
     "image": "1656517593292.png"
+  },
+  {
+    "id": 21,
+    "product": "Fertilizantes",
+    "category": "",
+    "name": "Federico",
+    "price": "1500",
+    "description": "fertilizante Federico",
+    "image": "1657068630576.png"
+  },
+  {
+    "id": 22,
+    "category": "normal",
+    "name": "Rodolfo Federico Nilles",
+    "price": "152200",
+    "description": "con categoria",
+    "image": "img.png",
+    "discount": "",
+    "product": "Kits"
   }
 ]

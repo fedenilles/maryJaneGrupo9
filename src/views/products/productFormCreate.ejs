@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include ("./partials/head.ejs") %>
+<%-include ("../partials/head.ejs") %>
 
     <body>
-        <%-include ("./partials/header.ejs") %>
+        <%-include ("../partials/header.ejs") %>
             <main>
                 <div class="container products-wrapper">
                     <div class="row">
@@ -34,7 +34,7 @@
                                     <input type="file" id="'file" name="image" class="form-input file-input">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <label for="product" class="form-label">Familia de Prductos</label>
+                                    <label for="product" class="form-label">Familia de Productos</label>
                                     <select name="product" id="product" class="form-input">
                                         <option value="">Choose an option</option>
                                         <option value="Semillas">Seeds</option>
@@ -42,6 +42,15 @@
                                         <option value="Kits">Harvest Kits</option>
                                         <option value="Consumo">Ready to Consume</option>
                                     </select>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="category" class="form-label">Categoria</label>
+                                    <div class="radio_input">
+                                        <input type="radio" name="category" value="popular" id="category" class="form-input">
+                                        <p> Popular</p> 
+                                        <input type="radio" name="category" value="normal" id="category" class="form-input">
+                                        <p>Normal</p> 
+                                    </div>                                     
                                 </div>
                                 <div class="col-12">
                                     <label for="description" class="form-label">Description</label>
@@ -55,7 +64,7 @@
                     </div>
                 </div>
             </main>
-            <%-include ("./partials/footer.ejs") %>
+            <%-include ("../partials/footer.ejs") %>
     </body>
 
 </html>

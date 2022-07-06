@@ -11,26 +11,26 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const controller = {
 	/* productGet */
 	shop: (req, res) => {
-		return res.render("shop", { products })
+		return res.render("products/shop", { products })
 	},
 	// Create - Form to create
 	create: (req, res) => {
 
-		return res.render("productFormCreate")
+		return res.render("products/productFormCreate")
 	},
 	//  Get Id Detail - Detail from one product
 	detail: (req, res) => {
 
 		id = req.params.id;
 		const product = products.find(product => product.id == id)
-		return res.render("productdetail", { product, products })
+		return res.render("products/productdetail", { product, products })
 	},
 	// POST Create -  Method to store
 	store: (req, res) => {
 		const producto = {
 			id: products[products.length - 1].id + 1,
 			product: req.body.product,
-			category:"",
+			category: req.body.category,
 			name: req.body.name,
 			price: req.body.price,
 			description: req.body.description,
@@ -47,7 +47,7 @@ const controller = {
 	edit: (req, res) => {
 		const id = req.params.id;
 		const product = products.find(product => product.id == id)
-		return res.render("productFormEdit", { product })
+		return res.render("products/productFormEdit", { product })
 	},
 	//  PUT Update - Method to update
 	update: (req, res) => {
@@ -57,10 +57,11 @@ const controller = {
 					...products[i],
 					name: req.body.name,
 					price: req.body.price,
+					category: req.body.category,
 					discount: req.body.discount,
 					product: req.body.product,
 					description: req.body.description,
-					image: req.file?.filename || "default-image.png"
+					image: req.file?.filename || "img.png",
 				}
 			}
 		};
