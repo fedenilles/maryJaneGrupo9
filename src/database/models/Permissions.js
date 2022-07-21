@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
     Permissions.associate = function(models) {
         Permissions.hasMany(models.User, {
            as: "User",
-           foreignKey: "user_id"
+           foreignKey: "category_id"
         })
     }
 

@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
             type: dataTypes.DECIMAL(3, 2).UNSIGNED,
             allowNull: false
         },
-        decription: {
+        description: {
             type: dataTypes.STRING(255),
             allowNull: false
         },
@@ -34,6 +34,10 @@ module.exports = (sequelize, dataTypes) => {
         },
     };
     let config = {
+        timestamps: true,
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
+        deletedAt: 'deletedAt',
         paranoid: false
     }
     const Product = sequelize.define(alias,cols,config);

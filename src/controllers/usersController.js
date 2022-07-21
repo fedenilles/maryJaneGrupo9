@@ -1,14 +1,13 @@
 const fs = require('fs');
 const path = require('path');
 const bcryptjs = require('bcryptjs');
-
+const db = require('../database/models');
+const sequelize = db.sequelize;
+const { Op } = require("sequelize");
 const {validationResult} = require('express-validator');
 
-const usersFilePath = path.join(__dirname, '../db/users.json');
-
-const users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
-const User = require('../database/models/User');
+const User = db.User;
+const Permissions = db.Permissions;
 
 const controller = {
     login: (req, res) => {
@@ -26,17 +25,16 @@ const controller = {
                 oldData: req.body
             });
         }else{
-            const user = {
-                id: users[users.length - 1].id + 1,
+			User.create({
                 first_name: req.body.name,
                 last_name: req.body.apellido,
                 email: req.body.email,
                 password: bcryptjs.hashSync(req.body.password, 10),
                 imagenPerfil: req.file.filename,
-            }
-            users.push(user);
-            fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-		    return res.redirect("/users/login");
+            })
+			.then(function() {
+                return res.redirect("/users/login");
+            })   
         }
     },
     loginProcess: (req, res) => {

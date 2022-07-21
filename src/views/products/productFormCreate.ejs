@@ -34,23 +34,22 @@
                                     <input type="file" id="'file" name="image" class="form-input file-input">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <label for="product" class="form-label">Familia de Productos</label>
-                                    <select name="product" id="product" class="form-input">
-                                        <option value="">Choose an option</option>
-                                        <option value="Semillas">Seeds</option>
-                                        <option value="Fertilizantes">Fertilizers</option>
-                                        <option value="Kits">Harvest Kits</option>
-                                        <option value="Consumo">Ready to Consume</option>
+                                    <label for="family_id" class="form-label">Familia de Productos</label>
+                                    <select name="family_id" class="form-input" required>
+                                        <option value="" disabled selected>- Choose an option - </option>
+                                        <% Family.forEach(Family => { %>
+                                        <option value="<%= Family.id %>"><%= Family.name %></option>
+                                        <% }); %>
                                     </select>
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <label for="category" class="form-label">Categoria</label>
-                                    <div class="radio_input">
-                                        <input type="radio" name="category" value="popular" id="category" class="form-input">
-                                        <p> Popular</p> 
-                                        <input type="radio" name="category" value="normal" id="category" class="form-input">
-                                        <p>Normal</p> 
-                                    </div>                                     
+                                    <label for="category_Id" class="form-label">Categoria</label>
+                                    <select name="category_Id" class="form-input" required>
+                                        <option value="" disabled selected>- Choose an option - </option>
+                                        <% Category.forEach(Category => { %>
+                                        <option value="<%= Category.id %>"><%= Category.name %></option>
+                                        <% }); %>
+                                    </select>                                  
                                 </div>
                                 <div class="col-12">
                                     <label for="description" class="form-label">Description</label>

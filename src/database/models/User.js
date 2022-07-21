@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = 'Users';
+    let alias = 'User';
     let cols = {
         id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
@@ -30,6 +30,10 @@ module.exports = (sequelize, dataTypes) => {
         },
     };
     let config = {
+        timestamps: true,
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
+        deletedAt: 'deletedAt',
 		paranoid: true
     }
     const Users = sequelize.define(alias, cols, config);
