@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<%-include ("./partials/head.ejs") %>
+<%-include ("../partials/head.ejs") %>
 
     <body>
-        <%-include ("./partials/header.ejs") %>
+        <%-include ("../partials/header.ejs") %>
             <main>
                 <div class="container products-wrapper">
                     <div class="row">
@@ -34,14 +34,22 @@
                                     <input type="file" id="'file" name="image" class="form-input file-input">
                                 </div>
                                 <div class="col-12 col-md-6">
-                                    <label for="product" class="form-label">Familia de Prductos</label>
-                                    <select name="product" id="product" class="form-input">
-                                        <option value="">Choose an option</option>
-                                        <option value="Semillas">Seeds</option>
-                                        <option value="Fertilizantes">Fertilizers</option>
-                                        <option value="Kits">Harvest Kits</option>
-                                        <option value="Consumo">Ready to Consume</option>
+                                    <label for="family_id" class="form-label">Familia de Productos</label>
+                                    <select name="family_id" class="form-input" required>
+                                        <option value="" disabled selected>- Choose an option - </option>
+                                        <% Family.forEach(Family => { %>
+                                        <option value="<%= Family.id %>"><%= Family.name %></option>
+                                        <% }); %>
                                     </select>
+                                </div>
+                                <div class="col-12 col-md-6">
+                                    <label for="category_Id" class="form-label">Categoria</label>
+                                    <select name="category_Id" class="form-input" required>
+                                        <option value="" disabled selected>- Choose an option - </option>
+                                        <% Category.forEach(Category => { %>
+                                        <option value="<%= Category.id %>"><%= Category.name %></option>
+                                        <% }); %>
+                                    </select>                                  
                                 </div>
                                 <div class="col-12">
                                     <label for="description" class="form-label">Description</label>
@@ -55,7 +63,7 @@
                     </div>
                 </div>
             </main>
-            <%-include ("./partials/footer.ejs") %>
+            <%-include ("../partials/footer.ejs") %>
     </body>
 
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include ("./partials/head.ejs") %>
+    <%-include ("../partials/head.ejs") %>
 <body>
-    <%-include ("./partials/header.ejs") %>
+    <%-include ("../partials/header.ejs") %>
 
     <main>
         
@@ -17,7 +17,7 @@
                     <div class="row product-detail">
                         <div class="col-12 col-md-6">
                             <label for="name" class="form-label">Product Name</label>
-                            <input type="text" id="name" name="name" placeholder="Eg: Delta 8 Gummies" class="form-input" value="<%= product.product %>">
+                            <input type="text" id="name" name="name" placeholder="Eg: Delta 8 Gummies" class="form-input" value="<%= product.name %>">
                         </div>
                         <div class="col-12 col-md-6">
                             <label for="price" class="form-label">Price</label>
@@ -28,14 +28,23 @@
                             <input type="text" id="discount" name="discount" placeholder="Eg: 15" class="form-input" value="">
                         </div>
                         <div class="col-12 col-md-6">
-                            <label for="category" class="form-label">Category</label>
-                            <select name="category" id="category" class="form-input">
+                            <label for="product" class="form-label">Products</label>
+                            <select name="product" id="product" class="form-input">
                                 <option value="">Choose an option</option>
-                                <option value="Semillas" <%= product.category == "Semillas" ? "selected" : null %> >Seeds</option>
-                                <option value="Fertilizantes" <%= product.category == "Fertilizantes" ? "selected" : null %> >Fertilizers</option>
-                                <option value="Kits" <%= product.category == "Kits" ? "selected" : null %> >Harvest Kits</option>
-                                <option value="Consumo" <%= product.category == "consumo" ? "selected" : null %> >Ready to Consume</option>
+                                <option value="Semillas" <%= product.product == "Semillas" ? "selected" : null %> >Seeds</option>
+                                <option value="Fertilizantes" <%= product.product == "Fertilizantes" ? "selected" : null %> >Fertilizers</option>
+                                <option value="Kits" <%= product.product == "Kits" ? "selected" : null %> >Harvest Kits</option>
+                                <option value="Consumo" <%= product.product == "consumo" ? "selected" : null %> >Ready to Consume</option>
                             </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="category" class="form-label">Categoria</label>
+                            <div class="radio_input">
+                                <input type="radio" name="category" value="popular" id="category" class="form-input">
+                                <p> Popular</p> 
+                                <input type="radio" name="category" value="normal" id="category" class="form-input">
+                                <p>Normal</p> 
+                            </div>                                     
                         </div>
                         <div class="col-12">
                             <label for="description" class="form-label">Description</label>
@@ -56,6 +65,6 @@
 
     </main>
 
-    <%-include ("./partials/footer.ejs") %>
+    <%-include ("../partials/footer.ejs") %>
 </body>
 </html>
