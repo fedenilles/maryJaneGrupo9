@@ -5,6 +5,7 @@ const path = require ("path");
 const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op } = require("sequelize");
+const { Console } = require("console");
 
 
 const Product = db.Product;
@@ -17,8 +18,7 @@ const controller = {
 		.then(function (products){
 			return res.render("index", {products})
 		})
-		
-
+		console.log(res.locals.isLogged)
 	}
 
 };

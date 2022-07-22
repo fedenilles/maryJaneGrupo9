@@ -35,9 +35,6 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         timestamps: true,
-        createdAt: 'createdAt',
-        updatedAt: 'updatedAt',
-        deletedAt: 'deletedAt',
         paranoid: false
     }
     const Product = sequelize.define(alias,cols,config);
