@@ -10,6 +10,7 @@ const Permissions = db.Permissions;
 
 const controller = {
 	login: (req, res) => {
+		console.log(res)
 		return res.render("users/login")
 	},
 	register: (req, res) => {
@@ -38,22 +39,25 @@ const controller = {
 	},
 	loginProcess: (req, res) => {
 		/* let userToLogin = User.findByField('email', req.body.email); */
+		console.log("Veo el userToLogin:")
+		console.log(req.body.email)
 		let userToLogin = User.findOne({
 			where: {
-				email: 
-					req.body.email
-				
+				email: req.body.email
 			}
 		})
-
+		
 		if (userToLogin) {
 			let isOkThePassword = bcryptjs.compareSync(req.body.password, userToLogin.password);
 			if (isOkThePassword) {
 				delete userToLogin.password;
 				req.session.userLogged = userToLogin;
 
+
 				if (req.body.remember_user) {
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+					console.log("Aca muestro lo que llega en el input mail:")
+					console.log(req.body.email)
 				}
 
 				return res.redirect('/');
@@ -75,9 +79,6 @@ const controller = {
 			}
 		});
 	},
-
-
-
 
 };
 

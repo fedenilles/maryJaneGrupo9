@@ -28,9 +28,13 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
 			defaultValue: "img.png"
         },
+        
     };
     let config = {
         timestamps: true,
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
+        deletedAt: 'deletedAt',
 		paranoid: true
     }
     const Users = sequelize.define(alias, cols, config);

@@ -36,12 +36,12 @@
               <h3 class="prductTitle">Seeds</h3>
               <div class="categoryRow">
                 <%for(let i=0; i < products.length; i++){ %>
-                  <% if( products[i].product=="Semillas" ){ %>
+                  <% if( products[i].families_id==1 ){ %>
                     <div class="product-card">
                       <a href="/products/<%= products[i].id %>">
                         <article>
                           <div class="product-image">
-                            <img src="/img/products/<%= products[i].image %>">
+                            <img src="/img/products/<%= products[i].imagen %>">
                           </div>
                           <div class="product-info">
                             <h5>
@@ -61,12 +61,12 @@
               <h3 class="prductTitle">Fertilizers</h3>
               <div class="categoryRow">
                 <%for(let i=0; i < products.length; i++){ %>
-                  <% if( products[i].product=="Fertilizantes" ){ %>
+                  <% if( products[i].families_id==3 ){ %>
                     <div class="product-card">
                       <a href="/products/<%= products[i].id %>">
                         <article>
                           <div class="product-image">
-                            <img src="/img/products/<%= products[i].image %>">
+                            <img src="/img/products/<%= products[i].imagen %>">
                           </div>
                           <div class="product-info">
                             <h5>
@@ -86,12 +86,12 @@
               <h3 class="prductTitle">Harvest Kits</h3>
               <div class="categoryRow">
                 <%for(let i=0; i < products.length; i++){ %>
-                  <% if( products[i].product=="Kits" ){ %>
+                  <% if( products[i].families_id==4 ){ %>
                     <div class="product-card">
                       <a href="/products/<%= products[i].id %>">
                         <article>
                           <div class="product-image">
-                            <img src="/img/products/<%= products[i].image %>">
+                            <img src="/img/products/<%= products[i].imagen %>">
                           </div>
                           <div class="product-info">
                             <h5>
@@ -111,12 +111,12 @@
               <h3 class="prductTitle">Ready to Consume</h3>
               <div class="categoryRow">
                 <%for(let i=0; i < products.length; i++){ %>
-                  <% if( products[i].product=="Consumo" ){ %>
+                  <% if( products[i].families_id==2 ){ %>
                     <div class="product-card">
                       <a href="/products/<%= products[i].id %>">
                         <article>
                           <div class="product-image">
-                            <img src="/img/products/<%= products[i].image %>">
+                            <img src="/img/products/<%= products[i].imagen %>">
                           </div>
                           <div class="product-info">
                             <h5>

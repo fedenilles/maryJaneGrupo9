@@ -14,6 +14,9 @@ module.exports = (sequelize, dataTypes) => {
     };
     let config = {
         tableName: "user_permissions",
+        createdAt: 'createdAt',
+        updatedAt: 'updatedAt',
+        deletedAt: 'deletedAt',
 		paranoid: true
     }
     const Permissions = sequelize.define(alias, cols, config);

@@ -87,11 +87,11 @@
 
                         <div class="grow-articles">
                             <%for(let i=0; i < products.length; i++){ %>
-                                <% if( products[i].category=="popular" ){ %>
+                                <% if( products[i].categories_Id==2 ){ %>
                                     <article class="popular-steps">
                                         <div class="step-div">
                                             <a href="#">
-                                                <div class="image-step"><img src="/img/products/<%=products[i].image %>"
+                                                <div class="image-step"><img src="/img/products/<%=products[i].imagen %>"
                                                         alt="Paso 1"></div>
                                                 <h5 class="title-step">
                                                     <%=products[i].name %>

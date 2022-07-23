@@ -25,16 +25,32 @@ app.use(session({
 	saveUninitialized: false,
 }));
 app.use(cookieParser());
-app.use(userLoggedMiddleware);
+//app.use(userLoggedMiddleware);
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: false }));
+
+
+var unless = function(path, middleware) {
+    return function(req, res, next) {
+        if (path === req.path) {
+            return next();
+        } else {
+            return middleware();
+        }
+    };
+};
 
 
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
+
+
+
 app.use("/",mainRoutes)
 app.use("/products",productsRoutes)
-app.use("/users",usersRoutes)
+app.use(unless("/users",userLoggedMiddleware),usersRoutes)
+
+
 
 app.listen(3000, () => console.log(`servidor corriendo en el puerto ${PORT}`));

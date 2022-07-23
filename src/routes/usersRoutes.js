@@ -12,14 +12,12 @@ const authMiddleware = require('../middleware/authMiddleware');
 const usersController = require('../controllers/usersController');
 
 /* router.use(userLoggedMiddleware); */
-
-
-router.get("/login", guestMiddleware, usersController.login);
+router.get("/login", usersController.login);
 
 // Procesar el login
 router.post('/login', usersController.loginProcess);
 
-router.get("/register", guestMiddleware, usersController.register); 
+router.get("/register", usersController.register); 
 
 router.post('/register', uploadFile.single('imagenPerfil'), validations, usersController.userRegister);
 

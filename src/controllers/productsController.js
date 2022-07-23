@@ -11,7 +11,13 @@ const Category = db.Category;
 const controller = {
 	/* productGet */
 	shop: (req, res) => {
-		return res.render("products/shop", { Product })
+
+		Product.findAll()
+		
+		.then(function(products){
+			return res.render("products/shop", { products })
+		})
+
 	},
 	// Create - Form to create
 	create: async (req, res) => {
@@ -27,7 +33,7 @@ const controller = {
 			name: req.body.name,
 			price: req.body.price,
 			description: req.body.description,
-			image: req.file?.filename,
+			imagen: req.file?.filename,
 		})
 		.then(function() {
 			return res.redirect("/products");
@@ -35,20 +41,43 @@ const controller = {
 	},
 	//  Get Id Detail - Detail from one product
 	detail: (req, res) => {
-
-		/* id = req.params.id;
-		const product = products.find(product => product.id == id)
-		return res.render("products/productdetail", { product, Product }) */
+		Product.findByPk(req.params.id)
+		.then(product => {
+			Product.findAll()
+			.then(products => {
+				res.render('products/productdetail', {product, products});
+			})
+		});
+		
 	},
 	
 	// Update - Form to edit
-	edit: (req, res) => {
+	edit: async (req,res) => {
+			const id = req.params.id
+			const product = await Product.findByPk(id)
+			return res.render("products/productFormEdit", {product})
 		/* const id = req.params.id;
 		const product = products.find(product => product.id == id)
 		return res.render("products/productFormEdit", { product }) */
 	},
 	//  PUT Update - Method to update
 	update: (req, res) => {
+		const id = req.params.id
+        Product.update({
+			families_id: req.body.family_id,
+			categories_Id: req.body.category_Id,
+			name: req.body.name,
+			price: req.body.price,
+			description: req.body.description,
+			imagen: req.file?.filename,
+        },{
+        where: {
+            id
+        }
+        })
+        .then(function(){
+            return res.redirect("/products")
+        })
 		/* for (let i = 0; i < products.length; i++) {
 			if (products[i].id == req.params.id) {
 				products[i] = {
@@ -59,11 +88,7 @@ const controller = {
 					discount: req.body.discount,
 					product: req.body.product,
 					description: req.body.description,
-<<<<<<< HEAD
-					image: req.file?.filename || "img.png"
-=======
 					image: req.file?.filename || "img.png",
->>>>>>> bf9474cda0bf2e10bf0c485ef844cc74838766f9
 				}
 			}
 		};
@@ -74,6 +99,13 @@ const controller = {
 
 	// Delete - Delete one product from DB
 	destroy: (req, res) => {
+
+		const id = req.params.id
+        Product.destroy({where: {id}})
+        .then(function(){
+            return res.redirect("/products")
+        })
+
 		/* const productosFiltrados = products.filter(product => product.id != req.params.id);
 
 		fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, 2));
