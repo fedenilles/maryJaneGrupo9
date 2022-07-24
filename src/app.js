@@ -45,13 +45,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 
-
-
 app.use("/",mainRoutes)
 app.use("/products",productsRoutes)
 /* app.use(unless("/users",userLoggedMiddleware),usersRoutes) */
 app.use("/users",usersRoutes)
-
 
 
 app.listen(3000, () => console.log(`servidor corriendo en el puerto ${PORT}`));
