@@ -13,17 +13,17 @@ const controller = {
 	shop: (req, res) => {
 
 		Product.findAll()
-		
-		.then(function(products){
-			return res.render("products/shop", { products })
-		})
+
+			.then(function (products) {
+				return res.render("products/shop", { products })
+			})
 
 	},
 	// Create - Form to create
 	create: async (req, res) => {
 		const Family = await db.Family.findAll();
 		const Category = await db.Category.findAll();
-            return res.render("products/productFormCreate", {Category, Family});
+		return res.render("products/productFormCreate", { Category, Family });
 	},
 	// POST Create -  Method to store
 	store: (req, res) => {
@@ -35,27 +35,35 @@ const controller = {
 			description: req.body.description,
 			imagen: req.file?.filename,
 		})
-		.then(function() {
-			return res.redirect("/products");
-		})
+			.then(function () {
+				return res.redirect("/products");
+			})
 	},
 	//  Get Id Detail - Detail from one product
-	detail: (req, res) => {
-		Product.findByPk(req.params.id)
-		.then(product => {
-			Product.findAll()
-			.then(products => {
-				res.render('products/productdetail', {product, products});
-			})
-		});
-		
+	detail: async (req, res) => {
+		const product = await Product.findByPk(req.params.id, {
+			include: [
+				{ association: "Family" },
+				{ association: "Category" }
+			]
+		})
+		const allProducts = await Product.findAll()
+		return res.render('products/productdetail', { product, allProducts });
+
 	},
-	
+
 	// Update - Form to edit
-	edit: async (req,res) => {
-			const id = req.params.id
-			const product = await Product.findByPk(id)
-			return res.render("products/productFormEdit", {product})
+	edit: (req, res) => {
+		Product.findByPk(req.params.id, {
+			include: [
+				{ association: "Family" },
+				{ association: "Category" }
+			]
+		})
+			.then((product) => {
+				return res.render("products/productFormEdit", { product })
+			}
+			)
 		/* const id = req.params.id;
 		const product = products.find(product => product.id == id)
 		return res.render("products/productFormEdit", { product }) */
@@ -63,21 +71,21 @@ const controller = {
 	//  PUT Update - Method to update
 	update: (req, res) => {
 		const id = req.params.id
-        Product.update({
+		Product.update({
 			families_id: req.body.family_id,
 			categories_Id: req.body.category_Id,
 			name: req.body.name,
 			price: req.body.price,
 			description: req.body.description,
 			imagen: req.file?.filename,
-        },{
-        where: {
-            id
-        }
-        })
-        .then(function(){
-            return res.redirect("/products")
-        })
+		}, {
+			where: {
+				id
+			}
+		})
+			.then(function () {
+				return res.redirect("/products")
+			})
 		/* for (let i = 0; i < products.length; i++) {
 			if (products[i].id == req.params.id) {
 				products[i] = {
@@ -101,10 +109,10 @@ const controller = {
 	destroy: (req, res) => {
 
 		const id = req.params.id
-        Product.destroy({where: {id}})
-        .then(function(){
-            return res.redirect("/products")
-        })
+		Product.destroy({ where: { id } })
+			.then(function () {
+				return res.redirect("/products")
+			})
 
 		/* const productosFiltrados = products.filter(product => product.id != req.params.id);
 

@@ -8,7 +8,7 @@
                             <!-- Carrousel -->
                 <div class="carrouselcontainer">
                  
-                    <h4> <%= product.families_id %> </h4>
+                    <h4> <%= product.Family.name %> </h4>
                     <div class="imageProduct">
                         <div class="imagenGrande">
                             <img src="/img/products/<%= product.imagen %>" alt="ImagenGrande">
@@ -81,14 +81,14 @@
                 <h4 class="title-growing">¡Los más populares!</h4>
                 
                 <div class="grow-articles-recommended">
-                    <%for(let i = 0; i < products.length; i++){ %>
-                        <% if( products[i].categories_Id == 2){ %>
+                    <%for(let i = 0; i < allProducts.length; i++){ %>
+                        <% if( allProducts[i].categories_Id == 2){ %>
                     <article class="popular-steps1">
                         <div class="step-div1">
                             <a href="#">
-                            <div class="image-step1"><img src="/img/products/<%=products[i].imagen %>" alt="Paso 1"></div>
-                            <h5 class="title-step"><%=products[i].name %></h5>
-                            <p class="product-price"> $<%=products[i].price %></p>
+                            <div class="image-step1"><img src="/img/products/<%=allProducts[i].imagen %>" alt="Paso 1"></div>
+                            <h5 class="title-step"><%=allProducts[i].name %></h5>
+                            <p class="product-price"> $<%=allProducts[i].price %></p>
                             </a>
                         </div>
                     </article>
