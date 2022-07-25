@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include ("../partials/head.ejs") %>
+<body>
+    <div class="container">
+        <%-include ("../partials/header.ejs") %>
+                 <section class="productsection">
+                            <!-- Carrousel -->
+                <div class="carrouselcontainer">
+                 
+                    <h4> <%= product.Family.name %> </h4>
+                    <div class="imageProduct">
+                        <div class="imagenGrande">
+                            <img src="/img/products/<%= product.imagen %>" alt="ImagenGrande">
+                        </div>                    
+                    </div>
+                </div>
+
+
+                
+                <div class="productname">
+                    <h2> <%= product.name %> </h2> 
+                </div>
+
+                <div class="star-rating">
+                    <input type="radio" id="5-stars" name="rating" value="5" />
+                    <label for="5-stars" class="star">&#9733;</label>
+                    <input type="radio" id="4-stars" name="rating" value="4" />
+                    <label for="4-stars" class="star">&#9733;</label>
+                    <input type="radio" id="3-stars" name="rating" value="3" />
+                    <label for="3-stars" class="star">&#9733;</label>
+                    <input type="radio" id="2-stars" name="rating" value="2" />
+                    <label for="2-stars" class="star">&#9733;</label>
+                    <input type="radio" id="1-star" name="rating" value="1" />
+                    <label for="1-star" class="star">&#9733;</label>
+                </div>  
+
+                <p class="price-prod"> $<%= product.price %> </p>
+
+                <div class="option">
+                        <select name="opciones" id="opciones">
+                        <option value="opcion-1">Option 1</option>
+                        <option value="opcion-2">Option 2</option>
+                        <option value="opcion-3">Option 3</option>
+                        <option value="opción-4">Option 4</option>
+                        </select>
+                </div>
+
+                <div class="cart-form">
+                        <form action="" method="">
+                            <div class="quantity-form">
+                                <input type="button" value="-" class="minus">
+                                <input type="number" id="quantity" min="1" name="quantity" value="1" class="number">
+                                <input type="button" value="+" class="plus"> 
+                            </div>
+                            <div class="formBtn">
+                                <button type="submit"> Add to cart </button> 
+                            </div>
+                        </form>
+                </div>
+
+    
+
+                    <!-- Descripción del artículo -->
+                    <div class="productDescription">
+                        <p> <%= product.description %> </p>
+                    </div>
+                    
+
+                    <!-- Acordion -->
+                    <div>
+                        <button class="accordion">Other details</button>
+                        <div class="panel">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec pellentesque ante. Phasellus sem erat, ornare id venenatis eget, tempus quis nisl.</p>
+                    </div>
+
+            </section>
+
+            <!-- Recommended for you -->
+            <section class="growing-recommended">
+                <h4 class="title-growing">¡Los más populares!</h4>
+                
+                <div class="grow-articles-recommended">
+                    <%for(let i = 0; i < allProducts.length; i++){ %>
+                        <% if( allProducts[i].categories_Id == 2){ %>
+                    <article class="popular-steps1">
+                        <div class="step-div1">
+                            <a href="#">
+                            <div class="image-step1"><img src="/img/products/<%=allProducts[i].imagen %>" alt="Paso 1"></div>
+                            <h5 class="title-step"><%=allProducts[i].name %></h5>
+                            <p class="product-price"> $<%=allProducts[i].price %></p>
+                            </a>
+                        </div>
+                    </article>
+                    <% } %>
+                    <% } %>  
+                    
+                </div>
+                <ul class="slider-controler1">
+                    <div class="back">
+                        <li><a href="#"><i class="fa-regular fa-square-caret-left"></i></a></li>
+                    </div>
+                    <div>
+                        <li><a href="#">&bullet;</a></li>
+                        <li><a href="#">&bullet;</a></li>
+                        <li><a href="#">&bullet;</a></li>
+                    </div>
+                    <div class="next">
+                        <li><a href="#"><i class="fa-regular fa-square-caret-right"></i></a></li>
+                    </div>
+                </ul>
+            </section>
+
+
+            
+            <!-- Reviews -->
+
+            <section class="reviews">
+                <h3 class="reviewstitle"> Reviews </h3>
+                <div class="containerReviews">
+                    <div class="imagenReviews">
+                        <img src="/img/img.png" alt="ImagenReviews">
+                    </div>
+                    <div class="boxReviews">
+                        <div class="nameReview"> 
+                            <h4> John Doe </h4>
+                            <p> 4/23/2022</p>
+                        </div>
+                        <div class="star-rating-2">
+                            <input type="radio" id="5-stars" name="rating" value="5" disabled/>
+                            <label for="5-stars" class="star">&#9733;</label>
+                            <input type="radio" id="4-stars" name="rating" value="4" disabled/>
+                            <label for="4-stars" class="star">&#9733;</label>
+                            <input type="radio" id="3-stars" name="rating" value="3" disabled/>
+                            <label for="3-stars" class="star">&#9733;</label>
+                            <input type="radio" id="2-stars" name="rating" value="2" disabled/>
+                            <label for="2-stars" class="star">&#9733;</label>
+                            <input type="radio" id="1-star" name="rating" value="1" disabled/>
+                            <label for="1-star" class="star">&#9733;</label>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec pellentesque ante. Phasellus sem erat, ornare id venenatis eget, tempus quis nisl.</p>
+                    </div>
+                </div>    
+                    <div class="boxHelp">
+                        <p class="reviews-help"> Did this help? </p> 
+                        <i class="fa-solid fa-thumbs-up"></i> <i class="fa-solid fa-thumbs-down"></i> 
+                    </div> 
+
+                    <div class="pagination">
+                        <a href="#">&laquo;</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">&raquo;</a>
+                    </div> 
+
+            </section>
+
+
+
+            <!-- Suscripción -->
+            <section class="subscription">
+                <div class="container-subscr">    
+                    <div class="title-subscription1">
+                        <h3>Subscribe</h3>
+                        <p>Etiam in quam rhoncus, posuere arcu et, feugiat sem. Phasellus scelerisque mi in mattis hendrerit.</p>
+                    </div>
+                    <form action="#" class="subscribe">
+                        <input type="text" placeholder="youremail@gmail.com" class="inp-subscribe">
+                        <input type="button" value="Send" class="btn btn-subscribe">
+                    </form>
+                </div>
+            </section>
+
+
+
+            <%-include ("../partials/footer.ejs") %>
+            </div>
+
+</body>
+</html>

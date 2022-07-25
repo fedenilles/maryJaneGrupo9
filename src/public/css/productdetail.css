@@ -9,7 +9,8 @@
   width: 100%;
 }
 .carrouselcontainer h4{
-  margin-bottom: 20px;
+  margin: 20px 0;
+  font-size: 40px
 }
 .imageProduct{
   display: block;
@@ -95,11 +96,11 @@
   }
 
   /* Price */
-  .price{
-      font-size: 20px;
+.price-prod{
+      font-size: 22px;
       text-align: center;
       font-weight: bold;
-      margin-top: 5px;
+      margin: 15px 0;
   }
   
   /* Options */
@@ -200,60 +201,62 @@ form .quantity-form input[type="button"] {
 
 /* Recommended for you */
 
-.most-popular{
-  padding:30px 0;
+.growing-recommended {
+    margin-top: 20px;
+    background-color: transparent;
+    border-bottom: solid 1px #737373;
+    border-top: solid 1px #737373;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
-.title-most-popular{
-  text-align: center;
-  font-weight: bold;
-  padding: 5px 0;
+.title-growing{
+    text-align: center;
+    margin: 20px 0;
+    font-size: 20px;
 }
-.most-popular-box{
-  display: flex;
-  justify-content: space-between;
+.popular-steps1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    border: 1px solid lightgray
 }
-.product-conteiner{
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-}
-.product-exhibitor-first{
-  display: flex;
-  justify-content: space-around;
-}
-.product-exhibitor-second{
-  display: none;
-}
-.product-exhibitor-third{
-  display: none;
-}
-.product-div{
-  display: flex;
-  flex-direction: column;
-  width: 90%;
-  margin: 6px;
-  justify-content: center;
-  align-items: center;
+.step-div1{
+    margin: auto;
+    width: 50%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-.product-div img{
-  width: 100px;
-  height: 100px
+.step-div1 a{
+  text-decoration: none;
+  color: #000
 }
 
-.product-price{
-  font-weight: 500;
+.image-step{
+    margin-top:5px;
+    width: 100%;
 }
 
-.back {
-  align-self: center;
-  padding-left: 10px;
+.image-step img {
+    width: 100%;
+    height: 200px;
 }
-.next {
-  align-self: center;
-  padding-right: 10px;
+.title-step{
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 0;
+}
+.paraf-step {
+    padding: 5px 0;
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: 200%;
 }
 
 
@@ -290,10 +293,6 @@ form .quantity-form input[type="button"] {
   width: 100%;
   
 }
-
-
-
-
 
 
 .boxReviews { 
@@ -412,26 +411,25 @@ form .quantity-form input[type="button"] {
 }
 
 
-@media (min-width: 375px){
-
-  .product-exhibitor-first{
-    display: flex;
-}
-.product-exhibitor-second{
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-}
-}
-
 @media (min-width: 760px){
-  .product-exhibitor-third{
-      display: flex;
-      width: 100%;
-      justify-content: space-around;
+  .grow-articles-recommended {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
   }
 
-  .product-exhibitor-first{
-      display: none;
+  .step-div1 {
+    width: 90%;
+  }
+
+  .popular-steps1 {
+    width: 22%;
+  }
+
+  .popular-steps1 img{
+    width: 100%;
   }
 }

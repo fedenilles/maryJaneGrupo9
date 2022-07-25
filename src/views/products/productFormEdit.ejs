@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include ("../partials/head.ejs") %>
+<body>
+    <%-include ("../partials/header.ejs") %>
+
+    <main>
+        
+        <div class="container products-wrapper">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="products-title">Editing <i><%= product.Family.name %></i></h2>
+                </div>
+            </div>
+            <div class="col-12">
+                <form action="/products/<%= product.id %>?_method=PUT" method="POST">
+                    <div class="row product-detail">
+                        <div class="col-12 col-md-6">
+                            <label for="name" class="form-label">Product Name</label>
+                            <input type="text" id="name" name="name" placeholder="Eg: Delta 8 Gummies" class="form-input" value="<%= product.name %>">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="price" class="form-label">Price</label>
+                            <input type="text" id="price" name="price" placeholder="Eg: 5678" class="form-input" value="<%= product.price %>">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="discount" class="form-label">Discount</label>
+                            <input type="text" id="discount" name="discount" placeholder="Eg: 15" class="form-input" value="">
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="product" class="form-label">Products</label>
+                            <select name="product" id="product" class="form-input">
+                                <option value="">Choose an option</option>
+                                <option value="Semillas" <%= product.families_id == 1 ? "selected" : null %> >Seeds</option>
+                                <option value="Fertilizantes" <%= product.families_id== 3 ? "selected" : null %> >Fertilizers</option>
+                                <option value="Kits" <%= product.families_id == 4 ? "selected" : null %> >Harvest Kits</option>
+                                <option value="Consumo" <%= product.families_id == 2 ? "selected" : null %> >Ready to Consume</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-6">
+                            <label for="category" class="form-label">Categoria</label>
+                            <div class="radio_input">
+                                <input type="radio" name="category" value="popular" id="category" class="form-input">
+                                <p> Popular</p> 
+                                <input type="radio" name="category" value="normal" id="category" class="form-input">
+                                <p>Normal</p> 
+                            </div>                                     
+                        </div>
+                        <div class="col-12">
+                            <label for="description" class="form-label">Description</label>
+                            <textarea name="description" id="description" class="form-input"><%= product.description %></textarea>
+                        </div>
+                        <div class="col-12">
+                            <button type="submit" class="buy-now-button edit">Save</button>
+                
+                        </div>
+                    </div>
+                </form>
+                <form action="/products/<%= product.id %>?_method=DELETE" method="POST" style="display: inline-flex">
+                    <button type="submit" class="buy-now-button delete">Delete</button>
+                </form>
+            </div>
+    
+        </div>
+
+    </main>
+
+    <%-include ("../partials/footer.ejs") %>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%-include ("../partials/head.ejs") %>
+<body>
+	    <div class="container">
+            <%-include ("../partials/header.ejs") %>
+
+
+            <main>
+                
+                <!-- Top content -->
+        <div class="top-content">
+        	
+            <div class="inner-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2 text">
+                        <a href="/"> <h1><strong>Maryjane</strong> Growshop </h1> </a>
+                            <div class="description">
+                            	<p>
+                                    Registrate para conocer<br> todos los beneficios                            	
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        
+                        <div class="col-sm-6 col-sm-offset-3 form-box">
+                            <div class="img-login-form"><i class="fa-solid fa-user"></i> </div>
+                        	<div class="form-top">
+                                
+                        		<div class="form-top-left">
+                        			<h3>Registro</h3>
+                        		</div>
+                        	</div>
+                            <div class="form-bottom"> 
+			                    <form method="POST" action="/users/register" enctype="multipart/form-data" class="login-form">
+			                    	<div class="form-group">
+			                    		<span>Nombre </span>
+			                        	<input type="text" name="name" placeholder="Nombre" class="form-name form-control" id="name_login">
+                                        <% if (locals.errors && errors.name) { %>
+                                            <div class="text-danger">
+                                                <%= errors.name.msg %> 
+                                            </div>
+                                        <% } %>
+                                    </div>
+			                        <div class="form-group">
+			                        	<span>Apellido </span>
+			                        	<input type="text" name="apellido" placeholder="Apellido" class="form-apellido form-control" id="apellido_login">
+                                        <% if (locals.errors && errors.apellido) { %>
+                                            <div class="text-danger">
+                                                <%= errors.apellido.msg %> 
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                    <div class="form-group">
+			                        	<span>Email </span>
+			                        	<input type="email" name="email" placeholder="Email" class="form-email form-control" id="email_login">
+                                        <% if (locals.errors && errors.email) { %>
+                                            <div class="text-danger">
+                                                <%= errors.email.msg %>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                    <div class="form-group">
+			                        	<span>Contraseña </span>
+			                        	<input type="password" name="password" placeholder="Contraseña" class="form-password-reg form-control" id="password_login">
+                                        <% if (locals.errors && errors.password) { %>
+                                            <div class="text-danger">
+                                                <%= errors.password.msg %> 
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                    <div class="form-group">
+			                        	<span>Confirmar Contraseña </span>
+			                        	<input type="password" name="repassword" placeholder="Confirmar contraseña" class="form-repassword form-control" id="repassword_login">
+                                        <% if (locals.errors && errors.repassword) { %>
+                                            <div class="text-danger">
+                                                <%= errors.repassword.msg %> 
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                    <div class="form-group">
+                                        <label><b>Imagen de perfil:</b></label>
+                                        <input type="file" name="imagenPerfil">
+                                            <% if (locals.errors && errors.imagenPerfil) { %>
+                                                <div class="text-danger">
+                                                    <%= errors.imagenPerfil.msg %>
+                                                </div>
+                                            <% } %>
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="btn btnIn">Registrate</button>
+                                    </div>
+			        
+                                    <div class="password form-group">
+                                        <div class="password-recovery"> 
+                                            <a href="users/login"> Ya tenés una cuenta?</a> 
+                                        </div>
+                                    </div>
+			                    </form>
+                                
+		                    </div>
+                        </div>
+                    </div>
+                    
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+
+            </main>
+
+
+
+
+            <%-include ("../partials/footer.ejs") %>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<%-include ("../partials/head.ejs") %>
+
+  <body>
+    <div class="container">
+      <%-include ("../partials/header.ejs") %>
+        <main>
+          <div class="product-filter">
+            <div class="prod-search">
+              <form class="form" action="#" method="GET">
+                <input type="text" placeholder="Buscar productos, marcas y más" class="searchInput">
+                <i class="fa fa-search"></i>
+              </form>
+            </div>
+            <div class="title">
+              <h1>Products</h1>
+            </div>
+            <div class="sort">
+              <div class="collection-sort">
+                <label>Filter by:</label>
+                <select>
+                  <option value="/">Todos</option>
+                </select>
+              </div>
+              <div class="collection-sort">
+                <label>Sort by:</label>
+                <select>
+                  <option value="/">Categoria</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <section class="products">
+            <div class="productosCategory">
+              <h3 class="prductTitle">Seeds</h3>
+              <div class="categoryRow">
+                <%for(let i=0; i < products.length; i++){ %>
+                  <% if( products[i].families_id==1 ){ %>
+                    <div class="product-card">
+                      <a href="/products/<%= products[i].id %>">
+                        <article>
+                          <div class="product-image">
+                            <img src="/img/products/<%= products[i].imagen %>">
+                          </div>
+                          <div class="product-info">
+                            <h5>
+                              <%= products[i].name %>
+                            </h5>
+                            <h6>$ <%= products[i].price %>
+                            </h6>
+                          </div>
+                        </article>
+                      </a>
+                    </div>
+                    <% } %>
+                      <% } %>
+              </div>
+            </div>
+            <div class="productosCategory">
+              <h3 class="prductTitle">Fertilizers</h3>
+              <div class="categoryRow">
+                <%for(let i=0; i < products.length; i++){ %>
+                  <% if( products[i].families_id==3 ){ %>
+                    <div class="product-card">
+                      <a href="/products/<%= products[i].id %>">
+                        <article>
+                          <div class="product-image">
+                            <img src="/img/products/<%= products[i].imagen %>">
+                          </div>
+                          <div class="product-info">
+                            <h5>
+                              <%= products[i].name %>
+                            </h5>
+                            <h6>$ <%= products[i].price %>
+                            </h6>
+                          </div>
+                        </article>
+                      </a>
+                    </div>
+                    <% } %>
+                      <% } %>
+              </div>
+            </div>
+            <div class="productosCategory">
+              <h3 class="prductTitle">Harvest Kits</h3>
+              <div class="categoryRow">
+                <%for(let i=0; i < products.length; i++){ %>
+                  <% if( products[i].families_id==4 ){ %>
+                    <div class="product-card">
+                      <a href="/products/<%= products[i].id %>">
+                        <article>
+                          <div class="product-image">
+                            <img src="/img/products/<%= products[i].imagen %>">
+                          </div>
+                          <div class="product-info">
+                            <h5>
+                              <%= products[i].name %>
+                            </h5>
+                            <h6>$ <%= products[i].price %>
+                            </h6>
+                          </div>
+                        </article>
+                      </a>
+                    </div>
+                    <% } %>
+                      <% } %>
+              </div>
+            </div>
+            <div class="productosCategory">
+              <h3 class="prductTitle">Ready to Consume</h3>
+              <div class="categoryRow">
+                <%for(let i=0; i < products.length; i++){ %>
+                  <% if( products[i].families_id==2 ){ %>
+                    <div class="product-card">
+                      <a href="/products/<%= products[i].id %>">
+                        <article>
+                          <div class="product-image">
+                            <img src="/img/products/<%= products[i].imagen %>">
+                          </div>
+                          <div class="product-info">
+                            <h5>
+                              <%= products[i].name %>
+                            </h5>
+                            <h6>$ <%= products[i].price %>
+                            </h6>
+                          </div>
+                        </article>
+                      </a>
+                    </div>
+                    <% } %>
+                      <% } %>
+              </div>
+            </div>
+          </section>
+        </main>
+        <%-include ("../partials/footer.ejs") %>
+    </div>
+  </body>
+
+</html>

@@ -13,11 +13,6 @@
 }
 
 
-.back, .next {
-    align-self: center;
-    padding-left: 10px;
-    font-size: 20px;
-}
 .product-exhibitor {
     height: 100%;
     width: 50%;
@@ -52,7 +47,9 @@
 
 
 
-/* --------------- Paso a Paso como cultivar marihuana -------------- */
+/* --------------- Paso a Paso como cultivar marihuana  -------------- */
+
+/* --------------- Y Section 2 -> Empeza ahora  -------------- */
 
 .growing{
     background-color: transparent;
@@ -82,14 +79,30 @@
     flex-direction: column;
     align-items: center;
 }
+
+.step-div-growing {
+    margin: auto;
+    width: 300px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-div-growing .paraf-step {
+    padding: 5px 0;
+    font-size: 14px;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
 .image-step{
     margin-top:5px;
-    width: 300px;
+    width: 100%;
 }
 
 .image-step img {
     width: 100%;
-    height: 200px;
 }
 .title-step{
     font-weight: bold;
@@ -103,155 +116,54 @@
     width: 200%;
 }
 
-/* --------------- venta de articulos para cosechar  ------------------- */
-
-.start-now{
-    background-color: transparent;
-    border-bottom: solid 1px #737373;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.title-startnow{
-    text-align: center;
-    margin: 20px 0;
-    font-weight: bold;
-    font-size: 20px;
-}
-.start-boxes{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-}
-.start-div{
-    margin: auto;
-    text-align: center;
-    width: 100%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.image-workshops {
-    width: 100%
-}
-
-.image-workshops img {
-    width: 70%;
-    height: 150px;
-}
-
-.title-workshops{
-    text-align: center;
-    margin: 20px 0;
-    font-size: 14px;
-}
-.title-packages{
-    text-align: center;
-    margin: 20px 0;
-
-}
-.title-seeds{
-    text-align: center;
-    margin: 20px 0;
-
-}
 
 /* ----------- MOST POPULAR --------------- */
 
 .most-popular{
     background-color: transparent;
-    border-bottom: solid 1px black;
-    padding:30px 0;
-}
-.title-most-popular{
-    text-align: center;
-    font-weight: bold;
-    padding: 10px 0;
-    margin-bottom: 10px;
-    font-size: 20px;
-}
-.most-popular-box{
+    border-bottom: solid 1px #737373;
     display: flex;
-    justify-content: space-between;
-}
-.product-conteiner{
-    display: flex;
-    flex-direction: column;
-    width: 80%;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
-    background-color: transparent;
 }
 
-.product-conteiner img {
-    width: 100%;
-}
-
-.product-conteiner a{
-    text-decoration: none;
-    color: black;
-    font-size: 1rem;
-}
-
-.product-exhibitor-first{
-    display: flex;
-    justify-content: space-evenly;
-    width: 90%;
-}
-
-
-.product-exhibitor-third{
-    display: none;
-}
-
-.product-exhibitor-first a{
-    width:100%;
-}
-
-.product-div{
+.product-exhibitor-third {
     display: flex;
     flex-direction: column;
-    width: 90%;
     justify-content: space-between;
+    text-align: center;
 }
 
-.product-div img{
-    width:200px;
-    height: 200px;
-}
-
-.product-price{
-    font-weight: 500;
-    font-size: 16px;
+.step-div a{
+    text-decoration: none;
 }
 
 /* -----------------  Slider Most Popular ---------------- */
 
-.slider-controler {
+.slider-controler1 {
 	position: relative;
-	width:30%;
+	width:57%;
     height: 40px;
-    display: flex;
-    justify-content: center;
-	text-align: center;
+    display: none;
+    justify-content: space-evenly;
+    align-items: center;
+	text-align: justify;
     background-color: rgba(0,0,0,0.3);
 	padding: 5px;
 	z-index: 100;
     border-radius: 5px;
-    margin: 0 auto;
+    margin: 15px auto;
 }
 
-.slider-controler li {
-	margin: 0 0.3rem;
-	display: inline-block;
-	vertical-align: top;
+
+.slider-controler1 li {
+	margin: 0 0.7rem;
+    display: inline-block;
 }
 
-.slider-controler a {
-	display: inline-block;
+.slider-controler1 a {
+	display: inline;
 	vertical-align: top;
 	text-decoration: none;
 	color: #fff;
@@ -260,61 +172,13 @@
 
 /* ------------- Listo para consumir ------------ */
 
-
-.title-consume-conteiner{
-    width: 100%;
+.consume {
+    background-color: transparent;
+    border-bottom: solid 1px #737373;
     display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-}
-.title-ready{
-    padding: 15px 0 8px 0;
-    font-weight: bold;
-    font-size: 20px;
-}
-.title-consume-conteiner p {
-    font-size: 16px;
-    font-weight: bold;
-}
-.divisions{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 15px 0;
-}
-.mobil-genero{
-    display: flex;
-    width: 100%;
     justify-content: center;
-    align-items: center;
-    padding: 8px;
-}
-
-.title-genero {
-    font-size: 14px
-}
-
-.genero-div{
-    width: 35%;
-    height: 200px;
-    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    padding: 0 10px;
-}
-.genero-div img {
-    width: 50%;
-    height: 50%
-}
-.genero-div h5 {
-    font-weight: bold;
-    text-align: center;
-    padding-top: 5px;
-}
-.laptok-div{
-    display: none;
 }
 
 /* ------- Subscription --------- */ 
@@ -331,19 +195,20 @@
     margin: 0 auto
 }
 
-.subscription .title-subscription {
+.subscription .title-subscription1 {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.title-subscription p {
+.title-subscription1 p {
     margin-top: 20px;
-    line-height: 1.5em;
+    line-height: 1.5rem;
+    font-size: 20px;
 }
 
-.subscription .title-subscription h3 {
-    font-size: 2em;
+.title-subscription1 h3 {
+    font-size: 40px;
 }
 
 .subscription .subscribe {
@@ -376,6 +241,7 @@
     letter-spacing: 0.2em;
 }
 
+
 /* ----------- MEDIA QUERIES ------------- */
 
 @media (min-width: 375px){
@@ -392,8 +258,46 @@
         flex-direction: row;
         justify-content: space-between;
     }
+
+    .popular-steps{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+   .consume {
+    width: 100%;
+    display: flex;
+   }
+
+   .consume-articles {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+   }
+
+    .consume-steps{
+        width: 40%;
+    }
+
+    .consume-div img {
+        margin-bottom: 0;
+    }
+
+    .consume-div .title-genero {
+        margin-top: 0;
+    }
+
+    .consume-steps p{
+        font-size: 20px;
+    }
+
+    .consume-div {
+        width: 100%;
+    }
     .step-div{
-        width: 30%;
+        width: 100%;
         padding: 0 5px;
     }
     .start-boxes{
@@ -406,18 +310,22 @@
         padding: 0 5px;
     }
 
+    .slider-controler1 {
+        display: flex;
+    }
+
     .start-div img{
         width: 100%;
         padding: 0 5px;
     }
 
+   
+
     .product-exhibitor-first{
         display: flex;
     }
     
-    .mobil-genero{
-        display: none;
-    }
+   
     .laptok-div{
         display: flex;
         width: 100%;
@@ -434,18 +342,33 @@
     height: 200px;
     }
 
+    .slider-controler1 {
+        width: 30%;
+    }
+
+    .popular-steps {
+        border: 1px solid lightgray;
+        width: 22%;
+    }
+
     .product-exhibitor-third{
         display: flex;
         
         justify-content: space-around;
     }
 
-    .product-exhibitor-first{
-        display: none;
-    }
-
     .product-div img{
         width:300px;
         height: 200px;
+    }
+
+    .image-workshops {
+        width: 70%
+    }
+}
+
+@media (min-width: 760px){
+    .consume-steps{
+        width: 22%;
     }
 }

@@ -1,7 +1,7 @@
 .product-filter {
     display: flex;
     align-content: center;
-    margin-top: 5px;
+    margin-top: 15px;
   }
 
 .searchInput {
@@ -94,7 +94,7 @@
   width: 100%;
 }
 .product-card {
-    padding: 2%;
+    padding: 1% 2%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,11 +113,12 @@
   }
 
 .product-info h5 {
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .product-info h6 {
-  font-size: 16px;
+  font-size: 20px;
+  margin-top: 5px;
 }
 
 .product-info {
