@@ -28,6 +28,11 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
 			defaultValue: "img.png"
         },
+        user_id: {
+            type: dataTypes.INTEGER(10).UNSIGNED,
+            allowNull: false,
+            defaultValue: 2
+        }
         
     };
     let config = {

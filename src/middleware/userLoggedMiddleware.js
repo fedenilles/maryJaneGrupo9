@@ -5,34 +5,27 @@ const Permissions = db.Permissions;
 
 
 function userLoggedMiddleware(req, res, next) {
-	/* res.session.locals.isLogged = false;
-	console.log("UserEmail:")
-	console.log(req.cookies.userEmail)
+    res.locals.isLogged = false;
 
-	if (!req.cookies.userEmail){ return res.render("users/login") }
-
-	let emailInCookie = req.cookies.userEmail;
-	console.log("emailInCookie:")
-	console.log(emailInCookie)
-    
-	let userFromCookie = User.findOne({
+    const emailInCookie = req.cookies.userEmail;
+    /* let userFromCookie = User.findByField('email', emailInCookie); */
+    User.findOne({
         where: {
-			email: "emailInCookie@hotmail.com"
-		}
-	})
-	
-	if (userFromCookie.email == req.cookies.userEmail) {
-		req.session.userLogged = userFromCookie ;
-	}
+            email: emailInCookie
 
-	if (req.session.userLogged) {
-		res.locals.isLogged = true;
-		res.locals.userLogged = req.session.userLogged;
-		
-	}
- 
+        }
+    })
+	.then (function (userFromCookie) {
+		if (userFromCookie) {
+			req.session.userLogged = userFromCookie;
+		}
 	
-	next();*/
+		if (req.session.userLogged) {
+			res.locals.isLogged = true;
+			res.locals.userLogged = req.session.userLogged;
+		}	
+	})
+    next();
 }
 
 module.exports = userLoggedMiddleware;

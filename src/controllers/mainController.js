@@ -18,7 +18,6 @@ const controller = {
 		.then(function (products){
 			return res.render("index", {products})
 		})
-		console.log(res.locals.isLogged)
 	}
 
 };
