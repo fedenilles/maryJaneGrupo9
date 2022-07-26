@@ -10,7 +10,6 @@ const Permissions = db.Permissions;
 
 const controller = {
 	login: (req, res) => {
-		console.log(res)
 		return res.render("users/login")
 	},
 	register: (req, res) => {

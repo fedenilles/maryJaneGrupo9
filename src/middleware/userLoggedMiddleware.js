@@ -8,6 +8,8 @@ function userLoggedMiddleware(req, res, next) {
     res.locals.isLogged = false;
 
     const emailInCookie = req.cookies.userEmail;
+
+	if(emailInCookie){
     /* let userFromCookie = User.findByField('email', emailInCookie); */
     User.findOne({
         where: {
@@ -25,6 +27,7 @@ function userLoggedMiddleware(req, res, next) {
 			res.locals.userLogged = req.session.userLogged;
 		}	
 	})
+	}
     next();
 }
 
