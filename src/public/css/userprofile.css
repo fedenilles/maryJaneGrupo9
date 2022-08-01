@@ -42,3 +42,8 @@
 .shadow-none {
     box-shadow: none!important;
 }
+
+.row {
+    display: flex;
+    align-items: center;
+}

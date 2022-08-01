@@ -12,9 +12,6 @@ const controller = {
 	login: (req, res) => {
 		return res.render("users/login")
 	},
-	profile: (req,res) => {
-		return res.render("users/user_profile")
-	},
 	register: (req, res) => {
 		return res.render("users/register")
 	},
@@ -35,9 +32,7 @@ const controller = {
 				imagenPerfil: req.file.filename,
 			})
 				.then(function () {
-                    console.log(req.body.name);
 					return res.redirect("/users/login");
-                    
 				})
 		}
 	},
@@ -54,10 +49,11 @@ const controller = {
                     delete userToLogin.password;
                     req.session.userLogged = userToLogin;
     
-    
+					console.log(req.body.remember_user)
                     if (req.body.remember_user) {
                         res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
                     }
+					
     
                     return res.redirect('/');
                 }
@@ -80,7 +76,41 @@ const controller = {
         })
         
 	},
+	profile: (req,res) => {
 
+		User.findByPk(req.session.userLogged.id)
+		.then(function(usuario){
+			return res.render("users/user_profile", {usuario})
+		})
+		
+	},
+	profileUpdate: (req,res) => {
+		User.findByPk(req.params.id)
+		const resultValidation = validationResult(req);
+
+		if (resultValidation.errors.length > 0) {
+			return res.render('users/register', {
+				errors: resultValidation.mapped(),
+				oldData: req.body
+			});
+		} else {
+			User.update({
+				first_name: req.body.name,
+				last_name: req.body.apellido,
+				email: req.body.email,
+				password: bcryptjs.hashSync(req.body.password, 10),
+				imagenPerfil: req.file.filename,
+			})
+				.then(function () {
+					return res.redirect("/users/profile");
+				})
+		}
+	},
+	logout: (req,res) => {
+		req.session.destroy(function() {
+			res.redirect('/');
+	})
+	}
 };
 
 module.exports = controller;
