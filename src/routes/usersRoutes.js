@@ -21,6 +21,6 @@ router.get("/register",guestMiddleware, usersController.register);
 
 router.post('/register', uploadFile.single('imagenPerfil'), validations, usersController.userRegister);
 
-/* router.get('/profile/', authMiddleware, usersController.profile); */
+router.get('/profile/', usersController.profile);
 
 module.exports = router;

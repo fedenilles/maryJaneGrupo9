@@ -12,6 +12,9 @@ const controller = {
 	login: (req, res) => {
 		return res.render("users/login")
 	},
+	profile: (req,res) => {
+		return res.render("users/user_profile")
+	},
 	register: (req, res) => {
 		return res.render("users/register")
 	},
