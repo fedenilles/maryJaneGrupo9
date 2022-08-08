@@ -1,7 +1,7 @@
 const path = require('path');
 const db = require('../database/models');
 const sequelize = db.sequelize;
-const { Op } = require("sequelize");
+const { Op, or } = require("sequelize");
 
 
 const Product = db.Product;
@@ -123,6 +123,41 @@ const controller = {
 	cart: (req, res) => {
 		return res.render("cart")
 	},
+	search: (req, res) => {
+		console.log("que viene del search");
+		console.log(req.query.mandarina);
+		Product.findOne({
+			include: [
+				{ association: "Family" },
+				{ association: "Category" }
+			]
+		}, {
+			where: {
+				[Op.like]: {
+					name: "%" + req.query.mandarina + "%"
+				},
+				/* [Op.or]: [
+					{
+						[Op.like]: {
+							name: "%" + req.body.search + "%"
+						},
+						[Op.like]: {
+							description: "%" + req.body.search + "%"
+						}
+					}
+				] */
+				
+					
+				
+			}
+		}
+		) 	.catch(error => res.send(error))
+			.then((products) => {
+				/* console.log(products); */
+			return res.render("products/searchProducts", { products })
+		})
+		/* return res.render("products/shop") */
+},
 
 };
 

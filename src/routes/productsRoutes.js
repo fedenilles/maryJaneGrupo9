@@ -25,8 +25,13 @@ router.put('/:id', productsController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', productsController.destroy); 
 
+/* Buscar productos */
+router.get("/search/:mandarina?", productsController.search) 
+
 /*** SHOW PRODUCT DETAIL BY ID ***//* /products/:id (GET) Detalle de un producto particular */
 router.get("/:id?", productsController.detail) 
+
+
 
 
 module.exports = router;
