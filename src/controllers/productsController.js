@@ -3,6 +3,10 @@ const db = require('../database/models');
 const sequelize = db.sequelize;
 const { Op, or } = require("sequelize");
 
+const Product = db.Product;
+const Family = db.Family;
+const Category = db.Category;
+
 const controller = {
 	/* productGet */
 	shop: (req, res) => {
@@ -91,51 +95,29 @@ const controller = {
 			.then(function () {
 				return res.redirect("/products")
 			})
-
-		/* const productosFiltrados = products.filter(product => product.id != req.params.id);
-
-		fs.writeFileSync(productsFilePath, JSON.stringify(productosFiltrados, null, 2));
-		return res.redirect("/products"); */
 	},
 
 	cart: (req, res) => {
 		return res.render("cart")
 	},
 	search: (req, res) => {
-		console.log("que viene del search");
-		console.log(req.query.mandarina);
-		Product.findOne({
+		console.log("que viene del search" + req.query.mandarina);
+		Product.findAll({
 			include: [
 				{ association: "Family" },
 				{ association: "Category" }
-			]
-		}, {
+			],
 			where: {
-				[Op.like]: {
-					name: "%" + req.query.mandarina + "%"
-				},
-				/* [Op.or]: [
-					{
-						[Op.like]: {
-							name: "%" + req.body.search + "%"
-						},
-						[Op.like]: {
-							description: "%" + req.body.search + "%"
-						}
-					}
-				] */
-				
-					
-				
-			}
-		}
-		) 	.catch(error => res.send(error))
+				name: { [Op.like]: "%" + req.query.mandarina + "%" }
+			},
+		})
+			.catch(error => res.send(error))
 			.then((products) => {
 				/* console.log(products); */
-			return res.render("products/searchProducts", { products })
-		})
-		/* return res.render("products/shop") */
-},
+				return res.render("products/searchProducts", { products })
+			})
+	}
+
 
 };
 
