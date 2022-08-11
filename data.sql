@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-08-2022 a las 03:49:16
--- Versión del servidor: 10.4.20-MariaDB
--- Versión de PHP: 8.0.8
+-- Tiempo de generación: 09-08-2022 a las 16:03:10
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -22,29 +22,6 @@ SET time_zone = "+00:00";
 --
 CREATE DATABASE IF NOT EXISTS `maryjane_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
 USE `maryjane_db`;
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `products`
---
-
-DROP TABLE IF EXISTS `products`;
-CREATE TABLE IF NOT EXISTS `products` (
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  `price` int(100) UNSIGNED NOT NULL,
-  `description` varchar(255) COLLATE utf8_spanish2_ci DEFAULT 'null',
-  `imagen` varchar(255) COLLATE utf8_spanish2_ci DEFAULT 'img.png',
-  `categories_Id` int(10) UNSIGNED NOT NULL,
-  `families_id` int(10) UNSIGNED NOT NULL,
-  `createdAt` timestamp NULL DEFAULT current_timestamp(),
-  `updatedAt` timestamp NULL DEFAULT NULL,
-  `deletedAt` timestamp NULL DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `productsCategory` (`categories_Id`),
-  KEY `productsFamily` (`families_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `products`
@@ -68,22 +45,6 @@ INSERT INTO `products` (`id`, `name`, `price`, `description`, `imagen`, `categor
 (16, 'Grinder 2', 300, 'Small device that breaks down dried and cured cannabis buds and plant parts into small pieces..', 'picador2.png', 1, 2, '2022-07-20 01:47:53', NULL, NULL),
 (17, 'Oil', 4000, 'Cannabis Oil', 'oil2.jpg', 2, 2, '2022-07-20 01:47:53', NULL, NULL);
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `product_catagories`
---
-
-DROP TABLE IF EXISTS `product_catagories`;
-CREATE TABLE IF NOT EXISTS `product_catagories` (
-  `createdAt` timestamp NULL DEFAULT current_timestamp(),
-  `updatedAt` timestamp NULL DEFAULT NULL,
-  `deletedAt` timestamp NULL DEFAULT NULL,
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
 --
 -- Volcado de datos para la tabla `product_catagories`
 --
@@ -92,22 +53,6 @@ INSERT INTO `product_catagories` (`createdAt`, `updatedAt`, `deletedAt`, `id`, `
 ('2022-07-17 01:46:20', NULL, NULL, 1, 'Normal'),
 ('2022-07-17 01:46:20', NULL, NULL, 2, 'Popular'),
 ('2022-07-17 01:46:20', NULL, NULL, 3, 'In Offer');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `product_families`
---
-
-DROP TABLE IF EXISTS `product_families`;
-CREATE TABLE IF NOT EXISTS `product_families` (
-  `createdAt` timestamp NULL DEFAULT current_timestamp(),
-  `updatedAt` timestamp NULL DEFAULT NULL,
-  `deletedAt` timestamp NULL DEFAULT NULL,
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `product_families`
@@ -118,27 +63,6 @@ INSERT INTO `product_families` (`createdAt`, `updatedAt`, `deletedAt`, `id`, `na
 ('2022-07-20 01:26:27', NULL, NULL, 2, 'Consumo'),
 ('2022-07-20 01:26:27', NULL, NULL, 3, 'Fertilizantes'),
 ('2022-07-20 01:26:27', NULL, NULL, 4, 'Kits');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `users`
---
-
-DROP TABLE IF EXISTS `users`;
-CREATE TABLE IF NOT EXISTS `users` (
-  `createdAt` timestamp NULL DEFAULT current_timestamp(),
-  `updatedAt` timestamp NULL DEFAULT NULL,
-  `deletedAt` timestamp NULL DEFAULT NULL,
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `first_name` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  `last_name` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  `password` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  `imagenPerfil` varchar(255) COLLATE utf8_spanish2_ci NOT NULL DEFAULT 'img.img',
-  `user_id` int(10) UNSIGNED NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=49 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
 -- Volcado de datos para la tabla `users`
@@ -160,22 +84,6 @@ INSERT INTO `users` (`createdAt`, `updatedAt`, `deletedAt`, `id`, `first_name`, 
 ('2022-07-17 01:34:13', NULL, NULL, 36, 'Joaquin', 'Wolf', 'joaquin@maryjane.com', '12345678', 'img.png', 1),
 ('2022-08-01 01:43:32', '2022-08-01 01:43:32', NULL, 48, 'Joaco', 'Wolf', 'joacow88@gmail.com', '$2a$10$6b7sQwenn6c3gp9OHnGc7ON6hQBGTpoy88B/5K9d5Ef5q6MT5LC0S', '1659318212006.jpg', 2);
 
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `user_permissions`
---
-
-DROP TABLE IF EXISTS `user_permissions`;
-CREATE TABLE IF NOT EXISTS `user_permissions` (
-  `createdAt` timestamp NULL DEFAULT current_timestamp(),
-  `updatedAt` timestamp NULL DEFAULT NULL,
-  `deletedAt` timestamp NULL DEFAULT NULL,
-  `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
-
 --
 -- Volcado de datos para la tabla `user_permissions`
 --
@@ -183,17 +91,6 @@ CREATE TABLE IF NOT EXISTS `user_permissions` (
 INSERT INTO `user_permissions` (`createdAt`, `updatedAt`, `deletedAt`, `id`, `name`) VALUES
 ('2022-07-17 01:38:34', NULL, NULL, 1, 'admin'),
 ('2022-07-17 01:38:34', NULL, NULL, 2, 'user');
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `products`
---
-ALTER TABLE `products`
-  ADD CONSTRAINT `productsCategory` FOREIGN KEY (`categories_Id`) REFERENCES `product_catagories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  ADD CONSTRAINT `productsFamily` FOREIGN KEY (`families_id`) REFERENCES `product_families` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
