@@ -1,7 +1,7 @@
 const path = require('path');
 const db = require('../database/models');
-const sequelize = db.sequelize;
-const { Op, or } = require("sequelize");
+const { Op } = require("sequelize");
+
 
 const Product = db.Product;
 const Family = db.Family;
@@ -19,9 +19,9 @@ const controller = {
 
 	// Create - Form to create
 	create: async (req, res) => {
-		const Family = await db.Family.findAll();
-		const Category = await db.Category.findAll();
-		return res.render("products/productFormCreate", { Category, Family });
+		const productFamily = await Family.findAll();
+		const productCategory = await Category.findAll();
+		return res.render("products/productFormCreate", { productCategory, productFamily });
 	},
 
 	// POST Create -  Method to store
@@ -101,15 +101,28 @@ const controller = {
 		return res.render("cart")
 	},
 	search: (req, res) => {
-		console.log("que viene del search" + req.query.mandarina);
+		//console.log("que viene del search:? " + req.query.searchItem);
+		//https://sequelize.org/v5/manual/models-usage.html ver apartado Eager loading
 		Product.findAll({
 			include: [
 				{ association: "Family" },
 				{ association: "Category" }
 			],
 			where: {
-				name: { [Op.like]: "%" + req.query.mandarina + "%" }
+				[Op.or]: [
+					{
+						'$Product.name$': { [Op.like]: "%" + req.query.searchItem + "%" }
+					},
+					{
+						'$Family.name$': { [Op.like]: "%" + req.query.searchItem + "%" }
+					},
+					{
+						'$Category.name$': { [Op.like]: "%" + req.query.searchItem + "%" }
+					}
+				]
 			},
+			offset: 1,
+			limit: 100
 		})
 			.catch(error => res.send(error))
 			.then((products) => {
