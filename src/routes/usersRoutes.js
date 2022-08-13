@@ -15,7 +15,7 @@ const usersController = require('../controllers/usersController');
 router.get("/login",guestMiddleware, usersController.login);
 
 // Procesar el login
-router.post('/login', usersController.loginProcess);
+router.post('/login',validations, usersController.loginProcess);
 
 router.get("/register",guestMiddleware, usersController.register); 
 
