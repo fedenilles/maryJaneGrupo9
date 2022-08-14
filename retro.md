@@ -84,3 +84,33 @@ Trabajamos parte en equipo y por separado.  Realmente estamos muy contentos con 
 
 - Tomar cerveza y dormir
 - Adelgazar, andar en Bici y comer asados
+
+Retrospectiva Sprint 7
+
+Igualmente venimos trabajando muy coordinados, detectando oportunidades de mejora y trabajando muy colaborativamente.
+Trabajamos parte en equipo y por separado.  Realmente estamos muy contentos con la dinamica del equipo.
+Logramos alcanzar los objetivos del sprint, tuvimos alguna dificultades pero se resolvieron en equipo
+
+
+## 1) ¿Qué queremos mantener? 
+
+- Comunicación del equipo
+- La predisposición por parte de todos
+- La organización
+- El uso del tablero
+- Ordenamos el repositorio
+- Organizamos la Base de Datos
+
+## 2) ¿Qué queremos mejorar?
+
+- Tiempo para llevar a cabo
+- Transformamos los Sprint en un detalle para darle seguimiento (lo logramos trabajando con un archivo en Drive con el detalle del Sprint)
+
+## 3) ¿Qué queremos hacer menos?
+
+- Programar 
+
+## 4) ¿Qué queremos hacer más?
+
+- Tomar cerveza y dormir
+- Adelgazar, andar en Bici y comer asados
