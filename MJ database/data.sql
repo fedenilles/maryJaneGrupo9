@@ -59,10 +59,11 @@ INSERT INTO `product_catagories` (`createdAt`, `updatedAt`, `deletedAt`, `id`, `
 --
 
 INSERT INTO `product_families` (`createdAt`, `updatedAt`, `deletedAt`, `id`, `name`) VALUES
-('2022-07-20 01:26:27', NULL, NULL, 1, 'Semillas'),
-('2022-07-20 01:26:27', NULL, NULL, 2, 'Consumo'),
-('2022-07-20 01:26:27', NULL, NULL, 3, 'Fertilizantes'),
+('2022-07-20 01:26:27', NULL, NULL, 1, 'Seeds'),
+('2022-07-20 01:26:27', NULL, NULL, 2, 'Consume'),
+('2022-07-20 01:26:27', NULL, NULL, 3, 'Fertilizers'),
 ('2022-07-20 01:26:27', NULL, NULL, 4, 'Kits');
+
 
 --
 -- Volcado de datos para la tabla `users`

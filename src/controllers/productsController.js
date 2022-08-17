@@ -121,7 +121,7 @@ const controller = {
 					}
 				]
 			},
-			offset: 1,
+			offset: 0,
 			limit: 100
 		})
 			.catch(error => res.send(error))

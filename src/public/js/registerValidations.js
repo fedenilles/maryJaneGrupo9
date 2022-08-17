@@ -1,3 +1,4 @@
+
 const form = document.getElementById('login-form');
 const inputs = document.querySelectorAll('#login-form input');
 
@@ -78,6 +79,26 @@ const validarRepassword = () => {
 	}
 }
 
+function fileValidation(){
+    var fileInput = document.getElementById('imagenPerfil');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+        fileInput.value = '';
+        return false;
+    }else{
+        //Image preview
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
+}
+
 inputs.forEach((input) => {
     input.addEventListener('keyup', validarFormulario);
     input.addEventListener('blur', validarFormulario);
@@ -88,7 +109,7 @@ form.addEventListener('submit', (e) => {
 
     const terminos = document.getElementById('terminos');
     if(campos.email && campos.password){
-        form.reset();
+        /* form.reset(); */
 
         document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
         setTimeout(() => {
@@ -98,6 +119,7 @@ form.addEventListener('submit', (e) => {
         document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
             icono.classList.remove('formulario__grupo-correcto');
         });
+        form.submit();
     } else {
         document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
     }
