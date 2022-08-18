@@ -5,6 +5,7 @@ const router = express.Router();
 // ************ Controller Require ************
 const productsController = require('../controllers/productsController');
 const uploadFile = require('../middleware/multerMiddleware');
+const validationsProducts = require('../middleware/validateProductsMiddleware');
 
 /*** GET CART***/
 router.get("/cart", productsController.cart);
@@ -16,7 +17,7 @@ router.get("/", productsController.shop) /* /products (GET) Listado de productos
 router.get('/create', productsController.create); 
 
 /*** STORE PRODUCT FORM ***//*Acción de creación (a donde se envía el formulario)*/
-router.post('/create',uploadFile.single('image'), productsController.store);  
+router.post('/create', validationsProducts,uploadFile.single('image'), productsController.store);  
 
 /*** EDIT PRODUCT FORM ***/
 router.get('/edit/:id', productsController.edit)
@@ -25,8 +26,13 @@ router.put('/:id', productsController.update);
 /*** DELETE ONE PRODUCT***/ 
 router.delete('/:id', productsController.destroy); 
 
+/* Buscar productos */
+router.get("/search/:mandarina?", productsController.search) 
+
 /*** SHOW PRODUCT DETAIL BY ID ***//* /products/:id (GET) Detalle de un producto particular */
 router.get("/:id?", productsController.detail) 
+
+
 
 
 module.exports = router;

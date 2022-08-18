@@ -31,10 +31,10 @@
                             <label for="product" class="form-label">Products</label>
                             <select name="product" id="product" class="form-input">
                                 <option value="">Choose an option</option>
-                                <option value="Semillas" <%= product.families_id == 1 ? "selected" : null %> >Seeds</option>
-                                <option value="Fertilizantes" <%= product.families_id== 3 ? "selected" : null %> >Fertilizers</option>
-                                <option value="Kits" <%= product.families_id == 4 ? "selected" : null %> >Harvest Kits</option>
-                                <option value="Consumo" <%= product.families_id == 2 ? "selected" : null %> >Ready to Consume</option>
+                                <option value="<%= product.families_id %>" <%= product.families_id == 1 ? "selected" : null %> >Seeds</option>
+                                <option value="<%= product.families_id %>" <%= product.families_id == 2 ? "selected" : null %> >Fertilizers</option>
+                                <option value="<%= product.families_id %>" <%= product.families_id == 4 ? "selected" : null %> >Harvest Kits</option>
+                                <option value="<%= product.families_id %>" <%= product.families_id == 3 ? "selected" : null %> >Ready to Consume</option>
                             </select>
                         </div>
                         <div class="col-12 col-md-6">

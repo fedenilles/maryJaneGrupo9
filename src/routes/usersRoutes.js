@@ -15,12 +15,18 @@ const usersController = require('../controllers/usersController');
 router.get("/login",guestMiddleware, usersController.login);
 
 // Procesar el login
-router.post('/login', usersController.loginProcess);
+router.post('/login',validations, usersController.loginProcess);
 
 router.get("/register",guestMiddleware, usersController.register); 
 
 router.post('/register', uploadFile.single('imagenPerfil'), validations, usersController.userRegister);
 
-/* router.get('/profile/', authMiddleware, usersController.profile); */
+router.get('/profile/', authMiddleware, usersController.profile);
+
+router.get('/edit/:id', usersController.profileEdit);
+
+router.put('/:id', usersController.profileUpdate);
+
+router.get('/logout', usersController.logout);
 
 module.exports = router;

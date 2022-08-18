@@ -12,17 +12,21 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <form action="/products/create" method="POST" enctype='multipart/form-data'>
+                        <form class="form-Product" action="/products/create" method="POST" enctype='multipart/form-data'>
                             <div class="row product-detail">
                                 <div class="col-12 col-md-6">
                                     <label for="name" class="form-label">Product Name</label>
                                     <input type="text" id="name" name="name" placeholder="Eg: Delta 8 Gummies"
-                                        class="form-input" value="">
+                                        class="form-input" value="" data-nombre="name">
+                                    <br>
+                                    <span></span>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <label for="price" class="form-label">Price</label>
                                     <input type="text" id="price" name="price" placeholder="Eg: 5678" class="form-input"
-                                        value="">
+                                        value="" data-nombre="price">
+                                    <br>
+                                    <span></span>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <label for="file" class="form-label">Image</label>
@@ -31,13 +35,16 @@
                                         <img src="/img/img.png" alt="" class="file-input-img">
                                         <img src="/img/img.png" alt="" class="file-input-img">
                                     </div>
-                                    <input type="file" id="'file" name="image" class="form-input file-input">
+                                    <div id="imagePreview"></div>
+                                    <input type="file" id="file" name="image" class="form-input file-input" data-nombre="file" onchange="return ProductFileValidation()">>
+                                    <br>
+                                    <span></span>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <label for="family_id" class="form-label">Familia de Productos</label>
                                     <select name="family_id" class="form-input" required>
                                         <option value="" disabled selected>- Choose an option - </option>
-                                        <% Family.forEach(Family => { %>
+                                        <% productFamily.forEach(Family => { %>
                                         <option value="<%= Family.id %>"><%= Family.name %></option>
                                         <% }); %>
                                     </select>
@@ -46,14 +53,16 @@
                                     <label for="category_Id" class="form-label">Categoria</label>
                                     <select name="category_Id" class="form-input" required>
                                         <option value="" disabled selected>- Choose an option - </option>
-                                        <% Category.forEach(Category => { %>
+                                        <% productCategory.forEach(Category => { %>
                                         <option value="<%= Category.id %>"><%= Category.name %></option>
                                         <% }); %>
                                     </select>                                  
                                 </div>
                                 <div class="col-12">
                                     <label for="description" class="form-label">Description</label>
-                                    <textarea name="description" id="description" class="form-input"></textarea>
+                                    <textarea name="description" id="description" class="form-input" data-nombre="description"></textarea>
+                                    <br>
+                                    <span></span>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="buy-now-button">Save</button>
@@ -64,6 +73,7 @@
                 </div>
             </main>
             <%-include ("../partials/footer.ejs") %>
+            <script src="/js/productsValidations.js"></script>
     </body>
 
 </html>

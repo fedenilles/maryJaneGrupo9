@@ -11,7 +11,7 @@ module.exports = [
     body('repassword').notEmpty().isLength(8).withMessage('Tienes que repetir la contraseña'),
 	body('imagenPerfil').custom((value, { req }) => {
 		let file = req.file;
-		let acceptedExtensions = ['.jpg', '.png', '.gif'];
+		let acceptedExtensions = ['.jpg', 'jpeg' ,'.png', '.gif'];
 
 		if (!file) {
 			throw new Error('Tienes que subir una imagen');
