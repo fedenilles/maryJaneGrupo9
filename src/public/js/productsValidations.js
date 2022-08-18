@@ -3,11 +3,12 @@ window.onload = function(){
     let form = document.querySelector(".form-Product")
     let inputName = document.getElementById("name");
     let inputPrice = document.getElementById("price");
-    let inputFileProduct = document.getElementById("file");
+    /* let inputFileProduct = document.getElementById("file"); */
     let inputDescription = document.getElementById("description");
     let listadoErrores = document.querySelector(".errores");
 
     const arrayInputs = [inputName, inputPrice, inputFileProduct, inputDescription]
+
 
 
     form.addEventListener("submit", function(e){
@@ -27,9 +28,9 @@ window.onload = function(){
                 inputName.nextElementSibling.nextElementSibling.style.color = "red"
                 inputName.nextElementSibling.nextElementSibling.innerHTML = "El Precio es obligatorio"
             }
-            if(inputFileProduct.value ===""){
+/*             if(inputFileProduct.value ===""){
     
-            };
+            }; */
             if(inputDescription.value.length < 20){
                 errores++;
                 inputName.nextElementSibling.nextElementSibling.style.color = "red"
@@ -39,6 +40,7 @@ window.onload = function(){
                 e.preventDefault();
             }
     });
+
     arrayInputs.forEach(function(input) {
         input.addEventListener("blur", function() {
             
@@ -56,4 +58,23 @@ window.onload = function(){
             }
         })
     });
+}
+function ProductFileValidation(){
+    var fileInput = document.getElementById('file');
+    var filePath = fileInput.value;
+    var allowedExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
+    if(!allowedExtensions.exec(filePath)){
+        alert('Please upload file having extensions .jpeg/.jpg/.png/.gif only.');
+        fileInput.value = '';
+        return false;
+    }else{
+        //Image preview
+        if (fileInput.files && fileInput.files[0]) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                document.getElementById('imagePreview').innerHTML = '<img src="'+e.target.result+'"/>';
+            };
+            reader.readAsDataURL(fileInput.files[0]);
+        }
+    }
 }

@@ -23,8 +23,9 @@ router.post('/register', uploadFile.single('imagenPerfil'), validations, usersCo
 
 router.get('/profile/', authMiddleware, usersController.profile);
 
+router.get('/edit/:id', usersController.profileEdit);
 
-//router.put('/edit/:id', authMiddleware, usersController.profileUpdate);
+router.put('/:id', usersController.profileUpdate);
 
 router.get('/logout', usersController.logout);
 

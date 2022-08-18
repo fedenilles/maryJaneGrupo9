@@ -49,7 +49,7 @@
     
         const terminos = document.getElementById('terminos');
         if(campos.email && campos.password){
-            form.reset();
+            
     
             document.getElementById('formulario__mensaje-exito').classList.add('formulario__mensaje-exito-activo');
             setTimeout(() => {
@@ -59,6 +59,7 @@
             document.querySelectorAll('.formulario__grupo-correcto').forEach((icono) => {
                 icono.classList.remove('formulario__grupo-correcto');
             });
+            form.submit();
         } else {
             document.getElementById('formulario__mensaje').classList.add('formulario__mensaje-activo');
         }

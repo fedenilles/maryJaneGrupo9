@@ -15,7 +15,7 @@
 <div class="container">
   <%-include ("../partials/header.ejs") %>
     <div class="main-body">
-  
+      <form action="/users/<%= usuario.id %>?_method=PUT" method="post">
       <div class="row gutters-sm">
             <div class="col-md-4 mb-3">
               <div class="card">
@@ -75,7 +75,7 @@
                       <h6 class="mb-0">Password: </h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <input type="text" name="password" placeholder="Password">
+                      <input type="password" name="password" placeholder="Password">
                     </div>
                   </div>
                   <hr>
@@ -84,15 +84,14 @@
                       <h6 class="mb-0">Confirmar Password: </h6>
                     </div>
                     <div class="col-sm-9 text-secondary">
-                      <input type="text" placeholder="Confirmar Password">
+                      <input type="password" placeholder="Confirmar Password">
                     </div>
                   </div>
                   <hr>
                   <div class="row">
                     <div class="col-sm-12">
                       <button type="submit" class="btn btn-info">Save</button>
-                      <a class="btn btn-info " href="#">Guardar</a>
-                      <a class="btn btn-info " href="#">Salir</a>
+                      <a class="btn btn-info " href="/users/profile">Exit</a>
                     </div>
                   </div>
                 </div>
@@ -103,6 +102,7 @@
           </div>
 
         </div>
+      </form>
     </div>
 
     <%-include ("../partials/footer.ejs") %>

@@ -204,12 +204,12 @@ input[type=button]:hover{
 
 .bottom-bottom-form h3{
 	margin-top: 30px;
-	color: white;
+	color: #444;
 	font-size: 16px
 }
 
 .bottom-bottom-form a{
-	color: white;
+	color: blue;
 	text-decoration: underline;
 
 }

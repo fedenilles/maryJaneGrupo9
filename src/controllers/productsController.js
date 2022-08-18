@@ -1,6 +1,7 @@
 const path = require('path');
 const db = require('../database/models');
 const { Op } = require("sequelize");
+const { log } = require('console');
 
 
 const Product = db.Product;
@@ -68,12 +69,13 @@ const controller = {
 	},
 	//  PUT Update - Method to update
 	update: (req, res) => {
+		console.log(req.body)
 		const id = req.params.id
 		Product.update({
 			families_id: req.body.family_id,
 			categories_Id: req.body.category_Id,
 			name: req.body.name,
-			price: req.body.price,
+			price: Number(req.body.price),
 			description: req.body.description,
 			imagen: req.file?.filename,
 		}, {
