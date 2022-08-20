@@ -8,9 +8,9 @@
         <main>
           <div class="product-filter">
             <div class="prod-search">
-              <form class="form" action="#" method="GET">
-                <input type="text" placeholder="Buscar productos, marcas y más" class="searchInput">
-                <i class="fa fa-search"></i>
+              <form class="form" action="/products/search" method="get">
+                <input type="text" name="searchItem" placeholder="Buscar productos, marcas y más" class="searchInput">
+                <input type="submit" value="Buscar">
               </form>
             </div>
             <div class="title">
@@ -33,7 +33,7 @@
           </div>
           <section class="products">
             <div class="productosCategory">
-              <h3 class="prductTitle">Seeds</h3>
+              <h3 class="prductTitle">Search products for: <b><%=searchItem%></b> </h3>
               <div class="categoryRow">
                 <%for(let i=0; i < products.length; i++){ %>
                   <% if( products[i].families_id==1 ){ %>
@@ -58,7 +58,6 @@
               </div>
             </div>
             <div class="productosCategory">
-              <h3 class="prductTitle">Fertilizers</h3>
               <div class="categoryRow">
                 <%for(let i=0; i < products.length; i++){ %>
                   <% if( products[i].families_id==3 ){ %>
@@ -83,7 +82,6 @@
               </div>
             </div>
             <div class="productosCategory">
-              <h3 class="prductTitle">Harvest Kits</h3>
               <div class="categoryRow">
                 <%for(let i=0; i < products.length; i++){ %>
                   <% if( products[i].families_id==4 ){ %>
@@ -108,7 +106,6 @@
               </div>
             </div>
             <div class="productosCategory">
-              <h3 class="prductTitle">Ready to Consume</h3>
               <div class="categoryRow">
                 <%for(let i=0; i < products.length; i++){ %>
                   <% if( products[i].families_id==2 ){ %>

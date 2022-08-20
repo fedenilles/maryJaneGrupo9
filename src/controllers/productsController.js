@@ -70,10 +70,13 @@ const controller = {
 	//  PUT Update - Method to update
 	update: (req, res) => {
 		console.log(req.body)
+		console.log('family_id: '+req.body.family)
+		console.log('catagory_id: '+req.body.category)
+
 		const id = req.params.id
 		Product.update({
-			families_id: req.body.family_id,
-			categories_Id: req.body.category_Id,
+			families_id: req.body.family,
+			categories_id: req.body.category,
 			name: req.body.name,
 			price: Number(req.body.price),
 			description: req.body.description,
@@ -105,6 +108,8 @@ const controller = {
 	search: (req, res) => {
 		//console.log("que viene del search:? " + req.query.searchItem);
 		//https://sequelize.org/v5/manual/models-usage.html ver apartado Eager loading
+		
+		const searchItem = req.query.searchItem
 		Product.findAll({
 			include: [
 				{ association: "Family" },
@@ -129,7 +134,7 @@ const controller = {
 			.catch(error => res.send(error))
 			.then((products) => {
 				/* console.log(products); */
-				return res.render("products/searchProducts", { products })
+				return res.render("products/searchProducts", { products, searchItem })
 			})
 	}
 

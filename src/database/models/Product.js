@@ -12,7 +12,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false
         },
         price: {
-            type: dataTypes.DECIMAL(3, 2).UNSIGNED,
+            type: dataTypes.DECIMAL(7, 2).UNSIGNED,
             allowNull: false
         },
         description: {
@@ -24,7 +24,7 @@ module.exports = (sequelize, dataTypes) => {
             allowNull: false,
             defaultValue: "img.png"
         },
-        categories_Id: {
+        categories_id: {
             type: dataTypes.INTEGER(10).UNSIGNED,
             allowNull: false,
         },
