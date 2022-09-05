@@ -12,7 +12,8 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <form class="form-Product" action="/products/create" method="POST" enctype='multipart/form-data'>
+                        <form class="form-Product" action="/products/create" method="POST"
+                            enctype='multipart/form-data'>
                             <div class="row product-detail">
                                 <div class="col-12 col-md-6">
                                     <label for="name" class="form-label">Product Name</label>
@@ -36,7 +37,8 @@
                                         <img src="/img/img.png" alt="" class="file-input-img">
                                     </div>
                                     <div id="imagePreview"></div>
-                                    <input type="file" id="file" name="image" class="form-input file-input" data-nombre="file" onchange="return ProductFileValidation()">>
+                                    <input type="file" id="file" name="image" class="form-input file-input"
+                                        data-nombre="file" onchange="return ProductFileValidation()">>
                                     <br>
                                     <span></span>
                                 </div>
@@ -44,23 +46,28 @@
                                     <label for="family_id" class="form-label">Familia de Productos</label>
                                     <select name="family_id" class="form-input" required>
                                         <option value="" disabled selected>- Choose an option - </option>
-                                        <% productFamily.forEach(Family => { %>
-                                        <option value="<%= Family.id %>"><%= Family.name %></option>
-                                        <% }); %>
+                                        <% productFamily.forEach(Family=> { %>
+                                            <option value="<%= Family.id %>">
+                                                <%= Family.name %>
+                                            </option>
+                                            <% }); %>
                                     </select>
                                 </div>
                                 <div class="col-12 col-md-6">
                                     <label for="category_Id" class="form-label">Categoria</label>
                                     <select name="category_Id" class="form-input" required>
                                         <option value="" disabled selected>- Choose an option - </option>
-                                        <% productCategory.forEach(Category => { %>
-                                        <option value="<%= Category.id %>"><%= Category.name %></option>
-                                        <% }); %>
-                                    </select>                                  
+                                        <% productCategory.forEach(Category=> { %>
+                                            <option value="<%= Category.id %>">
+                                                <%= Category.name %>
+                                            </option>
+                                            <% }); %>
+                                    </select>
                                 </div>
                                 <div class="col-12">
                                     <label for="description" class="form-label">Description</label>
-                                    <textarea name="description" id="description" class="form-input" data-nombre="description"></textarea>
+                                    <textarea name="description" id="description" class="form-input"
+                                        data-nombre="description"></textarea>
                                     <br>
                                     <span></span>
                                 </div>
@@ -73,7 +80,7 @@
                 </div>
             </main>
             <%-include ("../partials/footer.ejs") %>
-            <script src="/js/productsValidations.js"></script>
+                <script src="/js/productsValidations.js"></script>
     </body>
 
 </html>

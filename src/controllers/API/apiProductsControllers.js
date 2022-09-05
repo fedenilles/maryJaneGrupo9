@@ -30,7 +30,7 @@ const controller = {
     }
 
 
-    /*     detail: (req, res) => {
+/*          detail: (req, res) => {
             User.findByPk(req.params.id)
                 .then(user => {
                     let respuesta = {

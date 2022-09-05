@@ -1,141 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%-include ("../partials/head.ejs") %>
-<body>
-	    <div class="container">
+<%-include ("../partials/head.ejs") %>
+
+    <body>
+        <div class="container">
             <%-include ("../partials/header.ejs") %>
 
+                <main>
 
-            <main>
-                
-                <!-- Top content -->
-        <div class="top-content">
-        	
-            <div class="inner-bg">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2 text">
-                        <a href="/"> <h1><strong>Maryjane</strong> Growshop </h1> </a>
-                            <div class="description">
-                            	<p>
-                                    Registrate para conocer<br> todos los beneficios                            	
-                                </p>
+                    <!-- Top content -->
+                    <div class="top-content">
+
+                        <div class="inner-bg">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-sm-8 col-sm-offset-2 text">
+                                        <a href="/">
+                                            <h1><strong>Maryjane</strong> Growshop </h1>
+                                        </a>
+                                        <div class="description">
+                                            <p>
+                                                Registrate para conocer<br> todos los beneficios
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+
+                                    <div class="col-sm-6 col-sm-offset-3 form-box">
+                                        <div class="img-login-form"><i class="fa-solid fa-user"></i> </div>
+                                        <div class="form-top">
+
+                                            <div class="form-top-left">
+                                                <h3>Registro</h3>
+                                            </div>
+                                        </div>
+                                        <div class="form-bottom">
+                                            <form method="POST" action="/users/register" enctype="multipart/form-data"
+                                                class="login-form" id="login-form">
+                                                <div class="form-group" id="grupo__name">
+                                                    <span>Nombre </span>
+                                                    <input type="text" name="name" placeholder="Nombre"
+                                                        class="form-name form-control" id="name_login">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                    <% if (locals.errors && errors.name) { %>
+                                                        <div class="text-danger">
+                                                            <%= errors.name.msg %>
+                                                        </div>
+                                                        <% } %>
+                                                            <p class="formulario__input-error">El Nombre tiene que ser
+                                                                de 4 a 16 dígitos y solo puede contener letras.</p>
+                                                </div>
+                                                <div class="form-group" id="grupo__apellido">
+                                                    <span>Apellido </span>
+                                                    <input type="text" name="apellido" placeholder="Apellido"
+                                                        class="form-apellido form-control" id="apellido_login">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                    <% if (locals.errors && errors.apellido) { %>
+                                                        <div class="text-danger">
+                                                            <%= errors.apellido.msg %>
+                                                        </div>
+                                                        <% } %>
+                                                            <p class="formulario__input-error">El Apellido tiene que ser
+                                                                de 4 a 16 dígitos y solo puede contener letras.</p>
+                                                </div>
+                                                <div class="form-group" id="grupo__email">
+                                                    <span>Email </span>
+                                                    <input type="email" name="email" placeholder="Email"
+                                                        class="form-email form-control" id="email_login">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                    <% if (locals.errors && errors.email) { %>
+                                                        <div class="text-danger">
+                                                            <%= errors.email.msg %>
+                                                        </div>
+                                                        <% } %>
+                                                            <p class="formulario__input-error">El correo solo puede
+                                                                contener letras, numeros, puntos, guiones y guion bajo.
+                                                            </p>
+                                                </div>
+                                                <div class="form-group" id="grupo__password">
+                                                    <span>Contraseña </span>
+                                                    <input type="password" name="password" placeholder="Contraseña"
+                                                        class="form-password-reg form-control" id="password">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                    <% if (locals.errors && errors.password) { %>
+                                                        <div class="text-danger">
+                                                            <%= errors.password.msg %>
+                                                        </div>
+                                                        <% } %>
+                                                            <p class="formulario__input-error">La contraseña tiene que
+                                                                ser de 4 a 12 dígitos.</p>
+                                                </div>
+                                                <div class="form-group" id="grupo__repassword">
+                                                    <span>Confirmar Contraseña </span>
+                                                    <input type="password" name="repassword"
+                                                        placeholder="Confirmar contraseña"
+                                                        class="form-repassword form-control" id="repassword">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                    <% if (locals.errors && errors.repassword) { %>
+                                                        <div class="text-danger">
+                                                            <%= errors.repassword.msg %>
+                                                        </div>
+                                                        <% } %>
+                                                            <p class="formulario__input-error">Ambas contraseñas deben
+                                                                ser iguales.</p>
+                                                </div>
+                                                <div class="form-group" id="grupo__file">
+                                                    <label><b>Imagen de perfil:</b></label>
+                                                    <input type="file" name="imagenPerfil" id="imagenPerfil"
+                                                        onchange="return fileValidation()">
+                                                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                                                    <% if (locals.errors && errors.imagenPerfil) { %>
+                                                        <div class="text-danger">
+                                                            <%= errors.imagenPerfil.msg %>
+                                                        </div>
+                                                        <% } %>
+                                                            <!-- Image preview -->
+                                                            <div id="imagePreview"></div>
+                                                            <p class="formulario__input-error">Debes Subir una foto en
+                                                                formato JPG, JPEG, PNG, GIF</p>
+                                                </div>
+                                                <div class="formulario__mensaje" id="formulario__mensaje">
+                                                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por
+                                                        favor rellena el formulario correctamente. </p>
+                                                </div>
+                                                <div class="form-group">
+                                                    <button type="submit" class="btn btnIn">Registrate</button>
+                                                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+                                                        Formulario enviado exitosamente!</p>
+                                                </div>
+
+                                                <div class="password form-group">
+                                                    <div class="password-recovery">
+                                                        <a href="login"> Ya tenés una cuenta?</a>
+                                                    </div>
+                                                </div>
+                                            </form>
+
+                                        </div>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
-                    <div class="row">
-                        
-                        <div class="col-sm-6 col-sm-offset-3 form-box">
-                            <div class="img-login-form"><i class="fa-solid fa-user"></i> </div>
-                        	<div class="form-top">
-                                
-                        		<div class="form-top-left">
-                        			<h3>Registro</h3>
-                        		</div>
-                        	</div>
-                            <div class="form-bottom"> 
-			                    <form method="POST" action="/users/register" enctype="multipart/form-data" class="login-form" id="login-form">
-			                    	<div class="form-group" id="grupo__name">
-			                    		<span>Nombre </span>
-			                        	<input type="text" name="name" placeholder="Nombre" class="form-name form-control" id="name_login">
-                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                        <% if (locals.errors && errors.name) { %>
-                                            <div class="text-danger">
-                                                <%= errors.name.msg %> 
-                                            </div>
-                                        <% } %>
-                                        <p class="formulario__input-error">El Nombre tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
-                                    </div>
-			                        <div class="form-group" id="grupo__apellido">
-			                        	<span>Apellido </span>
-			                        	<input type="text" name="apellido" placeholder="Apellido" class="form-apellido form-control" id="apellido_login">
-                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                        <% if (locals.errors && errors.apellido) { %>
-                                            <div class="text-danger">
-                                                <%= errors.apellido.msg %> 
-                                            </div>
-                                        <% } %>
-                                        <p class="formulario__input-error">El Apellido tiene que ser de 4 a 16 dígitos y solo puede contener letras.</p>
-                                    </div>
-                                    <div class="form-group" id="grupo__email">
-			                        	<span>Email </span>
-			                        	<input type="email" name="email" placeholder="Email" class="form-email form-control" id="email_login">
-                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                        <% if (locals.errors && errors.email) { %>
-                                            <div class="text-danger">
-                                                <%= errors.email.msg %>
-                                            </div>
-                                        <% } %>
-                                        <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y guion bajo.</p>
-                                    </div>
-                                    <div class="form-group" id="grupo__password">
-			                        	<span>Contraseña </span>
-			                        	<input type="password" name="password" placeholder="Contraseña" class="form-password-reg form-control" id="password">
-                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                        <% if (locals.errors && errors.password) { %>
-                                            <div class="text-danger">
-                                                <%= errors.password.msg %> 
-                                            </div>
-                                        <% } %>
-                                        <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
-                                    </div>
-                                    <div class="form-group" id="grupo__repassword">
-			                        	<span>Confirmar Contraseña </span>
-			                        	<input type="password" name="repassword" placeholder="Confirmar contraseña" class="form-repassword form-control" id="repassword">
-					                    <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                        <% if (locals.errors && errors.repassword) { %>
-                                            <div class="text-danger">
-                                                <%= errors.repassword.msg %> 
-                                            </div>
-                                        <% } %>
-                                        <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
-                                    </div>
-                                    <div class="form-group" id="grupo__file">
-                                        <label><b>Imagen de perfil:</b></label>
-                                        <input type="file" name="imagenPerfil" id="imagenPerfil" onchange="return fileValidation()">
-                                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
-                                            <% if (locals.errors && errors.imagenPerfil) { %>
-                                                <div class="text-danger">
-                                                    <%= errors.imagenPerfil.msg %>
-                                                </div>
-                                            <% } %>
-                                            <!-- Image preview -->
-                                            <div id="imagePreview"></div>
-                                            <p class="formulario__input-error">Debes Subir una foto en formato JPG, JPEG, PNG, GIF</p>
-                                    </div>
-                                    <div class="formulario__mensaje" id="formulario__mensaje">
-                                        <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario correctamente. </p>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btnIn">Registrate</button>
-                                        <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!</p>
-                                    </div>
-			        
-                                    <div class="password form-group">
-                                        <div class="password-recovery"> 
-                                            <a href="login"> Ya tenés una cuenta?</a> 
-                                        </div>
-                                    </div>
-			                    </form>
-                                
-		                    </div>
-                        </div>
-                    </div>
-                    
-                    </div>
-                </div>
-            </div>
-            
+
+                </main>
         </div>
 
-            </main>
+        <%-include ("../partials/footer.ejs") %>
 
+            <script src="/js/registerValidations.js"></script>
+    </body>
 
-
-
-            <%-include ("../partials/footer.ejs") %>
-
-
-    <script src="/js/registerValidations.js"></script>
-</body>
 </html>
