@@ -1,8 +1,6 @@
 const path = require('path');
 const db = require('../database/models');
 const { Op } = require("sequelize");
-const { log } = require('console');
-
 
 const Product = db.Product;
 const Family = db.Family;
