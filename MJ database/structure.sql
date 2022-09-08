@@ -54,11 +54,11 @@ CREATE TABLE `products` (
 
 -- --------------------------------------------------------
 --
--- Estructura de tabla para la tabla `product_catagories`
+-- Estructura de tabla para la tabla `product_categories`
 --
-DROP TABLE IF EXISTS `product_catagories`;
+DROP TABLE IF EXISTS `product_categories`;
 
-CREATE TABLE `product_catagories` (
+CREATE TABLE `product_categories` (
   `createdAt` timestamp NULL DEFAULT current_timestamp(),
   `updatedAt` timestamp NULL DEFAULT NULL,
   `deletedAt` timestamp NULL DEFAULT NULL,
@@ -129,10 +129,10 @@ ADD
   KEY `productsCategory` (`categories_id`);
 
 --
--- Indices de la tabla `product_catagories`
+-- Indices de la tabla `product_categories`
 --
 ALTER TABLE
-  `product_catagories`
+  `product_categories`
 ADD
   PRIMARY KEY (`id`);
 
@@ -174,10 +174,10 @@ MODIFY
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT de la tabla `product_catagories`
+-- AUTO_INCREMENT de la tabla `product_categories`
 --
 ALTER TABLE
-  `product_catagories`
+  `product_categories`
 MODIFY
   `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
@@ -214,7 +214,7 @@ MODIFY
 ALTER TABLE
   `products`
 ADD
-  CONSTRAINT `productsCategory` FOREIGN KEY (`categories_id`) REFERENCES `product_catagories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `productsCategory` FOREIGN KEY (`categories_id`) REFERENCES `product_categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
 ADD
   CONSTRAINT `productsFamily` FOREIGN KEY (`families_id`) REFERENCES `product_families` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
