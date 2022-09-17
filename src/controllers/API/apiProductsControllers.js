@@ -24,6 +24,7 @@ const controller = {
                 ['name', 'Nombre'],
                 ['price', 'Precio'],
                 ['description', 'Descripcion'],
+                [db.sequelize.fn('concat', req.protocol, "://", req.get('host'), '/img/products/', db.sequelize.col('product.imagen')), 'imagen'],
                 [db.sequelize.fn('concat', req.protocol, "://", req.get('host'), '/api/products/', db.sequelize.col('product.id')), "URL"],
             ],
 
@@ -36,11 +37,20 @@ const controller = {
         return res.status(200).json({
             meta: {
                 Status: res.statusCode,
-                "Total productos": allProducts.length,
-                'Productos por Categoria': qProduct
+                Productos: allProducts.length,
+                Categorias: qProduct
 
             },
             data: allProducts
+
+            /* Nombre": "JACK HERER Facu",
+"Precio": "9.99",
+"Descripcion": "dfaskfasñldkgas\r\nlñkgas\r\n{gklasd\r\n{",
+"imagen": "seeds1.png",
+"URL": "http://localhost:3001/api/products/1",
+"Family": {
+"Nombre": "Seeds" */
+/* } */
         })
     },
 

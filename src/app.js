@@ -2,10 +2,13 @@ const createError = require('http-errors');	//si tenemos tiempor para jugar pagi
 const cookieParser = require('cookie-parser');
 const express = require ("express");
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
 const path = require ("path");
 const methodOverride =  require('method-override'); // Pasar poder usar los métodos PUT y DELETE
 const session = require('express-session');
+const cors = require("cors")
+
+app.use(cors());
 
 /* Middlewares */
 const userLoggedMiddleware = require('./middleware/userLoggedMiddleware');
@@ -43,4 +46,4 @@ app.use("/api/users",apiUsersRoutes)
 app.use("/api/products",apiProductsRoutes)
 
 
-app.listen(3000, () => console.log(`servidor corriendo en el puerto ${PORT}`));
+app.listen(3001, () => console.log(`servidor corriendo en el puerto ${PORT}`));

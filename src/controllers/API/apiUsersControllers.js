@@ -9,7 +9,14 @@ const controller = {
     list: (req, res) => {
         User
             .findAll({
-                attributes: ['id', ['first_name', 'Nombre'], ['last_name', 'Apellido'], ['email', 'Email'], [db.sequelize.fn('concat', req.protocol, "://", req.get('host'), '/api/users/', db.sequelize.col('user.id')), "URL"]],
+                attributes: [
+                    'id',
+                    ['first_name', 'Nombre'], 
+                    ['last_name', 'Apellido'], 
+                    ['email', 'Email'], 
+                    [db.sequelize.fn('concat', req.protocol, "://", req.get('host'), '/img/users/', db.sequelize.col('user.imagenPerfil')), 'Avatar'], 
+                    [db.sequelize.fn('concat', req.protocol, "://", req.get('host'), '/api/users/', db.sequelize.col('user.id')), "URL"],
+                ]
             })
             /*https://sequelize.org/docs/v6/core-concepts/raw-queries/*/
 
@@ -17,7 +24,7 @@ const controller = {
                 return res.status(200).json({
                     meta: {
                         Status: res.statusCode,
-                        "Total usuarios": users.length,
+                        Total: users.length,
                     },
                     data: users
                 })
