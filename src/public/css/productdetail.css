@@ -162,6 +162,10 @@ form .quantity-form input[type="button"] {
   width:50%;
 }
 
+.btn-Edit-Product {
+  background-color: #2a9008;
+}
+
 .cart-form .formBtn button{
   width: 100%;
   height: 40px;

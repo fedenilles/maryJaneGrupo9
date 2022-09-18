@@ -65,8 +65,9 @@
                     <div class="productDescription">
                         <p> <%= product.description %> </p>
                     </div>
-                    
-
+                    <div class="col-sm-12">
+                        <a class=" btn btn-info " style="background-color: #2a9008" href="/products/edit/<%= product.id %>">Editar</a>
+                    </div>
                     <!-- Acordion -->
                     <div>
                         <button class="accordion">Other details</button>
@@ -94,6 +95,7 @@
                     </article>
                     <% } %>
                     <% } %>  
+
                     
                 </div>
                 <ul class="slider-controler1">
